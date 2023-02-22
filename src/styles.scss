@@ -23,44 +23,47 @@ $body: 'Quicksand', sans-serif;
 
 @mixin Title {
     font-family: $headings;
-    font-size: 45px;
+    font-size: 65px;
+    font-weight: 500;
     letter-spacing: 2px;
+    color: $white;
 }
 
 @mixin headingOne {
     font-family: $headings;
     font-size: 40px;
     letter-spacing: 2px;
+    color: $white;
 }
 
 @mixin headingTwo {
     font-family: $headings;
     font-size: 32px;
-    color: $black;
+    color: $white;
 }
 
 @mixin headingThree {
     font-family: $headings;
     font-size: 28px;
-    color: $black;
+    color: $white;
 }
 
 @mixin headingFour {
     font-family: $headings;
     font-size: 22px;
-    color: $black;
+    color: $white;
 }
 
 @mixin headingFive {
     font-family: $headings;
     font-size: 18px;
-    color: $black;
+    color: $white;
 }
 
 @mixin headingSix {
     font-family: $headings;
     font-size: 15px;
-    color: $black;
+    color: $white;
 }
 
 h1 {
@@ -103,6 +106,13 @@ h6 {
     font-family: $body;
     font-weight: 400;
     font-size: 14px;
+    color: $white;
+}
+
+p{
+    @include body();
+    width: fit-content;
+    height: fit-content;  
 }
 
 @mixin smallText {

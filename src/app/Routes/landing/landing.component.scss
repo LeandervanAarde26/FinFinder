@@ -1,0 +1,17 @@
+@import '../../../styles.scss';
+
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+  background: rgb(30,30,30);
+  background: linear-gradient(0deg, rgba(30,30,30,1) 23%, rgba(0,0,0,1) 68%);
+
+  
+  h2{
+    width: 100% ;
+    text-align: center;
+  }
+
+}
