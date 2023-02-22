@@ -1,1 +1,130 @@
-/* You can add global styles to this file, and also import other style files */
+// Colours to be used in the project
+
+$white: #F7F7F7;
+$grey: #424242;
+$darkGrey: #303030;
+$darkestGrey: #212121;
+$pureBlack: #000000;
+
+$orange: #F7931E;
+$Navy: #07407B;
+$blue: #7FCDEE;
+
+// Sematic colours 
+$danger: #DE0000;
+$success: #00B112;
+$warning: #F5DD00;
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+$headings: 'Barlow Condensed', sans-serif;
+$body: 'Quicksand', sans-serif;
+// Text sizes
+
+@mixin Title {
+    font-family: $headings;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+@mixin headingOne {
+    font-family: $headings;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+@mixin headingTwo {
+    font-family: $headings;
+    font-size: 32px;
+    color: $black;
+}
+
+@mixin headingThree {
+    font-family: $headings;
+    font-size: 28px;
+    color: $black;
+}
+
+@mixin headingFour {
+    font-family: $headings;
+    font-size: 22px;
+    color: $black;
+}
+
+@mixin headingFive {
+    font-family: $headings;
+    font-size: 18px;
+    color: $black;
+}
+
+@mixin headingSix {
+    font-family: $headings;
+    font-size: 15px;
+    color: $black;
+}
+
+h1 {
+    @include headingOne();
+    width: fit-content;
+    height: fit-content;
+}
+
+h2 {
+    @include headingTwo();
+    width: fit-content;
+    height: fit-content;
+}
+
+h3 {
+    @include headingThree();
+    width: fit-content;
+    height: fit-content;
+}
+
+h4 {
+    @include headingFour();
+    width: fit-content;
+    height: fit-content;
+}
+
+h5 {
+    @include headingFive();
+    width: fit-content;
+    height: fit-content;
+}
+
+h6 {
+    @include headingSix();
+    width: fit-content;
+    height: fit-content;
+}
+
+@mixin body {
+    font-family: $body;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+@mixin smallText {
+    font-family: $body;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+// General configuration. 
+
+html, body{
+    height: 100%;
+}
+
+.App {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
