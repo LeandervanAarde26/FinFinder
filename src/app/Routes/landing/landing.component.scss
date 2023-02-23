@@ -1,17 +1,24 @@
 @import '../../../styles.scss';
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  flex: 1;
   gap: 20px;
-  background: rgb(30,30,30);
-  background: linear-gradient(0deg, rgba(30,30,30,1) 23%, rgba(0,0,0,1) 68%);
+  background: rgb(30, 30, 30);
+  background: linear-gradient(0deg, $darkestGrey 23%, $pureBlack 68%);
 
-  
-  h2{
-    width: 100% ;
+  h2 {
+    width: 100%;
     text-align: center;
   }
 
+
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    padding: 5px 30px;
+  }
 }

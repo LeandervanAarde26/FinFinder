@@ -1,14 +1,21 @@
 <div class="header">
     <div class="header__information">
         <h2> Welcome to,</h2>
-        <span class="header__information__name">{{heading}}</span>
-        <p class="header__information__content">{{content}}</p>
-
+        <div class="header__information__animationsContainer">
+            <div class="header__information__company">
+                <h1 class="header__information__company__name">Fin Finder</h1>
+                <div class="header__information__company__icon"></div>
+            </div>
+            <div *ngIf="state" [@slideInOut]>
+                <span class="header__information__animationsContainer__name">{{heading}}</span>
+                <p class="header__information__animationsContainer__content">{{content}}</p>
+            </div>
+        </div>
         <div class="header__information__buttons">
-            <app-button></app-button>
+            <app-button class="primary" label="Sign up now"></app-button>
+            <h6> Already have an inventory?</h6>
+            <app-button class="secondary__outlined" label="Sign into your account"></app-button>
         </div>
     </div>
     <div class="header__image"></div>
-    <p></p>
-
 </div>

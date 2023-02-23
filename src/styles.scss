@@ -4,11 +4,12 @@ $white: #F7F7F7;
 $grey: #424242;
 $darkGrey: #303030;
 $darkestGrey: #212121;
+$LigthBlack: #181818;
 $pureBlack: #000000;
 
 $orange: #F7931E;
 $Navy: #07407B;
-$blue: #7FCDEE;
+$blue: #53bbe7;
 
 // Sematic colours 
 $danger: #DE0000;
@@ -20,7 +21,11 @@ $warning: #F5DD00;
 $headings: 'Barlow Condensed', sans-serif;
 $body: 'Quicksand', sans-serif;
 // Text sizes
-
+@mixin boxShadow{
+    box-shadow: 6px 7px 25px -1px rgba(0,0,0,0.7);
+-webkit-box-shadow: 6px 7px 25px -1px rgba(0,0,0,0.7);
+-moz-box-shadow: 6px 7px 25px -1px rgba(0,0,0,0.7);
+}
 @mixin Title {
     font-family: $headings;
     font-size: 65px;
