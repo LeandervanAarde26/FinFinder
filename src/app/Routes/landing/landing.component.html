@@ -2,8 +2,6 @@
     <app-header></app-header>
     <h2>Our Services</h2>
     <div class="container__services">
-        <app-service-card></app-service-card>
-        <app-service-card></app-service-card>
-        <app-service-card></app-service-card>
+        <app-service-card  *ngFor="let card of serviceContent" Image="{{card.Image}}" Title="{{card.Title}}" Content="{{card.Content}}"></app-service-card>
     </div>
 </div>
