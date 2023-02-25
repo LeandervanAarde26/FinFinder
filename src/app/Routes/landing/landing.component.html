@@ -2,6 +2,44 @@
     <app-header></app-header>
     <h2>Our Services</h2>
     <div class="container__services">
-        <app-service-card  *ngFor="let card of serviceContent" Image="{{card.Image}}" Title="{{card.Title}}" Content="{{card.Content}}"></app-service-card>
+        <app-service-card *ngFor="let card of serviceContent" Image="{{card.Image}}" Title="{{card.Title}}"
+            Content="{{card.Content}}"></app-service-card>
+    </div>
+    <div class="container__serviceInformation">
+        <div class="container__serviceInformation__left">
+            <img src="../../../assets/MockImage.png" alt="MockupImage" class="container__serviceInformation__image">
+        </div>
+
+        <div class="container__serviceInformation__right">
+            <div class="container__serviceInformation__right__imgCon"></div>
+            <h2>Some sort of heading here</h2>
+            <p>There will be a sentence here about some of the cooler services on the application, the images will be
+                replaced with the final mockups that will showcase the features on the application to the user before it
+                even does anything, it is going to be super cool and stuff and Im going to do it in like week 7 or
+                something when there is a bit of backend being added and I can work with some real life application data
+                and stuff but this is really just some placeholder for now and Im going to set a width on this otherwise
+                its just going to be super long on both ends and not really going to center as nicely, but watch out for
+                it because its going to be really cool and stuff and Im going to make it awesome and fun and Im going to
+                stop typing now even though Im really having fun</p>
+        </div>
+    </div>
+    <div class="container__serviceInformation">
+        <div class="container__serviceInformation__left">
+            <img src="../../../assets/malawi.png" alt="Swimming fish" class="fish malawi ">
+            <h2>Some sort of heading here</h2>
+            <p>There will be a sentence here about some of the cooler services on the application, the images will be
+                replaced with the final mockups that will showcase the features on the application to the user before it
+                even does anything, it is going to be super cool and stuff and Im going to do it in like week 7 or
+                something when there is a bit of backend being added and I can work with some real life application data
+                and stuff but this is really just some placeholder for now and Im going to set a width on this otherwise
+                its just going to be super long on both ends and not really going to center as nicely, but watch out for
+                it because its going to be really cool and stuff and Im going to make it awesome and fun and Im going to
+                stop typing now even though Im really having fun</p>
+        </div>
+
+        <div class="container__serviceInformation__right">
+            <img src="../../../assets/MockImage.png" alt="MockupImage" class="container__serviceInformation__image">
+        </div>
+
     </div>
 </div>

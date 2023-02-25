@@ -9,5 +9,4 @@ export class ServiceCardComponent {
   @Input() Title : string;
   @Input() Content : string;
   @Input() Image : string;
-
 }

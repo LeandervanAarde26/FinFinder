@@ -19,7 +19,7 @@ import { Content } from './headerContent.model';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   headerContent: Content[] = [
-    new Content("New and Exciting!", "Are you tired of feeling like a fish out of water when it comes to managing your fishing tanks? Say goodbye to boring and hello to Finfinder - the ultimate inventory management system for all you fishing enthusiasts out there!"),
+    new Content("A new World", "Are you tired of feeling like a fish out of water when it comes to managing your fishing tanks? Say goodbye to boring and hello to Finfinder - the ultimate inventory management system for all you fishing enthusiasts out there!"),
     new Content(" ", " "),
 
     new Content("Explore", "With Finfinder, you're in the driver's seat. You can build your own custom tanks and track your fish with ease. So, whether you're a hardcore angler or a casual hobbyist, Finfinder is the perfect way to dive into the exciting and intriguing world of fishing."),
@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     new Content("Start today!", "Why settle for a one-size-fits-all approach to fishing tanks when you can let your imagination run wild with Finfinder? So, jump in and take your fishing experience to the next level! Give Finfinder a try today and see for yourself what all the fuss is about."),
     new Content(" ", " ")
-
   ];
   heading: string = this.headerContent[0].Title
   content: string = this.headerContent[0].Content

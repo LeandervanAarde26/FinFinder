@@ -10,6 +10,8 @@ import { HeaderComponent } from './Components/header/header.component';
 import { ServicesComponent } from './Components/services/services.component';
 import { ButtonComponent } from './Components/button/button.component';
 import { ServiceCardComponent } from './Components/service-card/service-card.component';
+import { FooterComponent } from './footer/footer.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { ServiceCardComponent } from './Components/service-card/service-card.com
     HeaderComponent,
     ServicesComponent,
     ButtonComponent,
-    ServiceCardComponent
+    ServiceCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

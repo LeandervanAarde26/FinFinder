@@ -2,7 +2,7 @@
 
 .header {
     background-color: $pureBlack;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: row;
 
@@ -12,27 +12,30 @@
         padding: 3%;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        // gap: 15px;
+        justify-content: space-between;
 
         &__animationsContainer {
             height: 25%;
 
             &__name {
                 @include Title();
+                font-size: 50px !important;
             }
 
             &__content {
                 width: 135%;
                 position: relative;
-
             }
         }
+
         &__company {
 
             display: flex;
             align-items: center;
             gap: 20px;
             margin-bottom: 4%;
+            margin-top: -9%;
 
             &__icon {
                 width: 80px;
@@ -64,10 +67,10 @@
     &__image {
         background-color: $pureBlack;
         flex: 1.2;
-        background-image: url('../../../assets/Fish.png');
+        background-image: url('../../../assets/FishMain.png');
         background-position: right;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-x: -15%;
+        // background-position-x: 0%;
     }
 }
