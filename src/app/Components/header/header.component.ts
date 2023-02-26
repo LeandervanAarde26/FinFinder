@@ -1,6 +1,8 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Content } from './headerContent.model';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -39,9 +41,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   state = true
   // length = this.headerContent.length
 
-  constructor() {
+  constructor(private router: Router) { }
 
-  }
   ngOnInit() {
     this.interval = setInterval(() => {
       this.index = (this.index + 1) % this.headerContent.length;
@@ -54,5 +55,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     clearInterval(this.interval)
   };
+
+  goToLogin(event){
+    // this.router.navigate(['/login'])
+    console.log('work', event)
+  }
 
 }

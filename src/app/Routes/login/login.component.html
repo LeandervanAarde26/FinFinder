@@ -1,1 +1,20 @@
-<p>login works!</p>
+<div class="container">
+    <div class="container__left">
+        <h2>View inventory</h2>
+        <span class="container__left__instruction">First things first, lets find your questions. Remind us what your email is?</span>
+        <form class="container__left__form">
+            <app-input name="Email" label="E-mail" type="email" required=true placeHolder="Your Email"></app-input>
+        </form>
+        <div class="container__left__buttons">
+            <app-button class="primary" label="Get my Questions" style="width:170px;"></app-button>
+            <p>Don't have an account?</p>
+            <app-button class="tertiary" label="Register an account" style="width:170px;"></app-button>
+        </div>
+    </div>
+
+    <div class="container__right">
+        <div class="container__right__triangle">
+            <img src="../../../assets/FishMain.png" class="container__right__triangle__bg" alt="">
+        </div>
+    </div>
+</div>

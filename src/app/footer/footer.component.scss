@@ -1,7 +1,7 @@
 @import "../../styles.scss";
 
 .footerContainer {
-    height: 15vh;
+    height: 12vh;
     background: rgb(33,33,33);
     background: linear-gradient(0deg, darken($darkestGrey, 12%) 2%, darken($darkGrey, 12%) 92%);
     display: flex;
@@ -9,6 +9,10 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
+    // background-color: red;
+    flex-grow: 1;
+    
+ 
 
     &__logo {
         flex-basis: 20%;

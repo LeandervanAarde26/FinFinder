@@ -12,6 +12,7 @@ import { ButtonComponent } from './Components/button/button.component';
 import { ServiceCardComponent } from './Components/service-card/service-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatIconModule } from '@angular/material/icon';
+import { InputComponent } from './Components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
     ServicesComponent,
     ButtonComponent,
     ServiceCardComponent,
-    FooterComponent
+    FooterComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

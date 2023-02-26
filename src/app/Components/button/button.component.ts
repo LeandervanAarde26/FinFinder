@@ -10,11 +10,7 @@ export class ButtonComponent {
   @Input() class: string;
   @Output() clickHandler = new EventEmitter<any>();
 
-
-
   onClickHandler(e) {
     this.clickHandler.emit(e)
   }
-
-
 }
