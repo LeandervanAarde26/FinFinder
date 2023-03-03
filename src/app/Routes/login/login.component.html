@@ -1,14 +1,23 @@
 <div class="container">
     <div class="container__left">
         <h2>View inventory</h2>
-        <span class="container__left__instruction">First things first, lets find your questions. Remind us what your email is?</span>
-        <form class="container__left__form">
-            <app-input name="Email" label="E-mail" type="email" required=true placeHolder="Your Email"></app-input>
+        <span class="container__left__instruction">First things first, lets find your questions. Remind us what your
+            email is?</span>
+        <form class="container__left__form" [formGroup]="signIn">
+
+            <span class="container__left__form__invalid"
+                *ngIf="!signIn.get('Email').valid && signIn.get('Email').touched">Please enter a valid email
+                address</span>
+
+            <app-input name="Email" label="E-mail" type="email" required=true placeHolder="Your Email"
+                [controlname]="signIn.controls['Email']"></app-input>
+            
         </form>
         <div class="container__left__buttons">
-            <app-button class="primary" label="Get my Questions" style="width:170px;"></app-button>
+            <app-button class="primary" label="Get my Questions" style="width:170px;" (clickHandler)="getQuestions()"></app-button>
             <p>Don't have an account?</p>
-            <app-button class="tertiary" label="Register an account" style="width:170px;"></app-button>
+            <app-button routerLink="/register" class="tertiary" label="Register an account"
+                style="width:170px;"></app-button>
         </div>
     </div>
 

@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="header__information__buttons">
-           <app-button class="primary" label="Sign up now" (clickHandler)="goToLogin($event)"></app-button>
+           <app-button class="primary" routerLink="/register" label="Sign up now" (clickHandler)="goToLogin($event)"></app-button>
             <h6> Already have an inventory?</h6>
             <app-button routerLink="/login" class="secondary__outlined" (clickHandler)="goToLogin($event)" label="Sign into your account"></app-button>
         </div>

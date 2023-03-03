@@ -1,0 +1,66 @@
+@import '../../../styles.scss';
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 88vh;
+    background: rgb(30, 30, 30);
+    background: linear-gradient(0deg, darken($darkGrey, 12%) 34%, $darkestGrey 77%);
+
+    &__left,  &__center, &__right{
+        display: flex;
+        flex-basis: 33.3%;
+        padding: 20px 30px;
+        flex-direction: column;
+        gap: 20px;
+
+        &__sectionHeading{
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        &__instruction {
+            color: $white;
+            @include headingSix();
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+
+            &__invalid{
+                color: $danger;
+                font-size: 12px;
+            }
+        }
+
+        &__btn{
+            display: flex;
+            flex-basis: 80%;
+            justify-content: end;
+            // align-items: end;s
+            width: 89%;
+            
+        }
+
+
+    }
+
+    // &__left{
+
+
+    // }
+
+    // &__center{
+
+    //     // background-color: blue;
+    // }
+
+    // &__right{
+
+    //     // background-color: green;
+    // }
+
+}

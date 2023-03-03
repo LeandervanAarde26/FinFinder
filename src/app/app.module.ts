@@ -13,6 +13,11 @@ import { ServiceCardComponent } from './Components/service-card/service-card.com
 import { FooterComponent } from './footer/footer.component';
 import { MatIconModule } from '@angular/material/icon';
 import { InputComponent } from './Components/input/input.component';
+import { RegisterComponent } from './Routes/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './Routes/dashboard/dashboard.component';
+import { NavigationBarComponent } from './Components/navigation-bar/navigation-bar.component';
+import { DashboardViewComponent } from './Components/dashboard-view/dashboard-view.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +29,18 @@ import { InputComponent } from './Components/input/input.component';
     ButtonComponent,
     ServiceCardComponent,
     FooterComponent,
-    InputComponent
+    InputComponent,
+    RegisterComponent,
+    DashboardComponent,
+    NavigationBarComponent,
+    DashboardViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

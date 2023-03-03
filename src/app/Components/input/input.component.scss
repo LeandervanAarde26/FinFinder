@@ -21,6 +21,10 @@ input{
     
 }
 
+input.ng-invalid.ng-touched{
+    border-bottom: 2px solid $danger;
+}
+
 ::placeholder{
     color: white; 
     opacity: 0.7;
