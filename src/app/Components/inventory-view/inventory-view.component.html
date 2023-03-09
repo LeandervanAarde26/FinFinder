@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="container__header">
+        <h2>Welcome, username to your inventory!</h2>
+    </div>
+
+    <div class="container__filters">
+        <app-button *ngFor="let filter of quickFilterItems; index as i" [label]="filter" class="{{!filterState ? 'filter' : 'filter__active'}}" ></app-button>
+    </div>
+
+    <div class="container__cards">
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+        <app-inventory-card></app-inventory-card>
+
+    </div>
+</div>

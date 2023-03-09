@@ -18,6 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './Routes/dashboard/dashboard.component';
 import { NavigationBarComponent } from './Components/navigation-bar/navigation-bar.component';
 import { DashboardViewComponent } from './Components/dashboard-view/dashboard-view.component';
+import { InventoryViewComponent } from './Components/inventory-view/inventory-view.component';
+import { InventoryCardComponent } from './Components/inventory-card/inventory-card.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { DashboardViewComponent } from './Components/dashboard-view/dashboard-vi
     RegisterComponent,
     DashboardComponent,
     NavigationBarComponent,
-    DashboardViewComponent
+    DashboardViewComponent,
+    InventoryViewComponent,
+    InventoryCardComponent
   ],
   imports: [
     BrowserModule,

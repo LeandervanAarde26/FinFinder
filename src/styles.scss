@@ -26,6 +26,12 @@ $body: 'Quicksand', sans-serif;
 -webkit-box-shadow: 6px 7px 25px -1px rgba(0,0,0,0.7);
 -moz-box-shadow: 6px 7px 25px -1px rgba(0,0,0,0.7);
 }
+
+@mixin shadowTwo{
+    box-shadow: 5px 8px 24px 3px rgba(0,0,0,0.34);
+-webkit-box-shadow: 5px 8px 24px 3px rgba(0,0,0,0.34);
+-moz-box-shadow: 5px 8px 24px 3px rgba(0,0,0,0.34);
+}
 @mixin Title {
     font-family: $headings;
     font-size: 65px;

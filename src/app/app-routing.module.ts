@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardViewComponent } from './Components/dashboard-view/dashboard-view.component';
+import { InventoryViewComponent } from './Components/inventory-view/inventory-view.component';
 import { DashboardComponent } from './Routes/dashboard/dashboard.component';
 import { LandingComponent } from './Routes/landing/landing.component';
 import { LoginComponent } from './Routes/login/login.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'dashboard', component: DashboardComponent, children: [
-    {path: '', component: DashboardViewComponent}
+    {path: '', component: DashboardViewComponent},
+    {path: 'inventory', component: InventoryViewComponent}
   ]}
 ];
 

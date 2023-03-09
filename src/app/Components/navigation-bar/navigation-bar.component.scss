@@ -40,7 +40,6 @@
         width: 100%;
         flex-basis: 100%;
         gap: 30px;
-  
         padding: 15px;
 
         &__item{
@@ -48,6 +47,7 @@
             font-weight: 500;
             cursor: pointer;
             transition: 0.8s ease ;
+            margin-left: 20px;
 
             &:hover{
                 color: $orange;
