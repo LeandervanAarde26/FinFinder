@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    transition: .34s ease-in ;
+    transition: .34s ease-in;
     padding: 20px;
 
     &__imageContainer {
@@ -19,19 +19,19 @@
         flex-grow: 40%;
         min-height: 250px;
 
-    &__image{
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-        max-width: 400px;
-        aspect-ratio: 16/9;
+        &__image {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            aspect-ratio: 16/9;
 
-        transition: 800ms ease-in;
+            transition: 800ms ease-in;
 
-        &:hover{
-            transform: scale(1.3);
+            &:hover {
+                transform: scale(1.3);
+            }
         }
-    }
 
     }
 
@@ -41,22 +41,7 @@
     }
 
 
-&:hover{
-   border-bottom: 5px solid $orange; 
+    &:hover {
+        border-bottom: 5px solid $orange;
+    }
 }
-}
-
-
-// @keyframes slider {
-//     0%{
-//         border-bottom-width: 20px;
-//         border-bottom: 10% solid orange;
-//     }
-
-//     100%{
-//         border-bottom-width: 190px;
-//         border-bottom: 2px solid orange;
-//     }
-
-
-// }

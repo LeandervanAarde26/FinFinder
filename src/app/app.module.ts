@@ -20,6 +20,8 @@ import { NavigationBarComponent } from './Components/navigation-bar/navigation-b
 import { DashboardViewComponent } from './Components/dashboard-view/dashboard-view.component';
 import { InventoryViewComponent } from './Components/inventory-view/inventory-view.component';
 import { InventoryCardComponent } from './Components/inventory-card/inventory-card.component';
+import { SearchInputComponent } from './Components/search-input/search-input.component';
+import { SingleItemViewComponent } from './Components/single-item-view/single-item-view.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { InventoryCardComponent } from './Components/inventory-card/inventory-ca
     NavigationBarComponent,
     DashboardViewComponent,
     InventoryViewComponent,
-    InventoryCardComponent
+    InventoryCardComponent,
+    SearchInputComponent,
+    SingleItemViewComponent
   ],
   imports: [
     BrowserModule,

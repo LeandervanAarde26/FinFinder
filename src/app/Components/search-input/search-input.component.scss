@@ -1,0 +1,10 @@
+@import '../../../styles.scss';
+input{
+    width: 20vw;
+    height: 38px;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid $blue;
+    @include body();
+}

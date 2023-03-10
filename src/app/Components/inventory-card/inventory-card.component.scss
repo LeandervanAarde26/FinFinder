@@ -31,6 +31,17 @@
             aspect-ratio: 12/9;
             object-fit: cover;
         }
+
+        &__amount{
+            border: 2px solid $blue;
+            padding: 10px;
+            border-radius: 55px;
+            max-width: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1/1;
+        }
     }
 
     &__body{
