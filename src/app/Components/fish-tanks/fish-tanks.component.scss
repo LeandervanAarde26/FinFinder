@@ -9,16 +9,10 @@
     // background-color: red;
     overflow: scroll;
     -ms-overflow-style: none;
-   
 
-    &::-webkit-scrollbar {
-        display: none;
-      }
-
-      &__header, &__filters{
+    &__header, &__filters{
         display: flex;
         height: 6vh;
-        // background-color: blue;
       }
 
       &__header{
@@ -43,15 +37,13 @@
           flex-direction: row;
           gap: 10px;
         }
-      
-
       }
 
       &__cards{
         // background-color: blue;
         flex-direction: column;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(552px, 1fr));
         column-gap: 15px;
         padding: 15px;
         row-gap: 15px;

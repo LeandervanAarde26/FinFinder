@@ -1,14 +1,13 @@
+import { UserFishInterFace } from "../Interfaces/UserFish.interface";
+
 export class UserModel {
     public id: string;
     public username: string;
     public Email: string; 
-    public fish: [{
-        id: string, 
-        quantity: number, 
-    }];
+    public fish: UserFishInterFace[];
     public locations: string []; 
 
-    constructor(id: string, username: string, Email: string, fish: [{id: string, quantity: number}], locations: string[] ){
+    constructor(id: string, username: string, Email: string, fish: UserFishInterFace[], locations: string[] ){
         this.id = id;
         this.username = username;
         this.Email = Email;

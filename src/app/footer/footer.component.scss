@@ -2,21 +2,19 @@
 
 .footerContainer {
     height: 12vh;
-    background: rgb(33,33,33);
+    background: rgb(33, 33, 33);
     background: linear-gradient(0deg, darken($darkestGrey, 12%) 2%, darken($darkGrey, 12%) 92%);
     display: flex;
     flex: 1;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    // background-color: red;
     flex-grow: 1;
-    
- 
+    position: relative;
+    z-index: 1;
 
     &__logo {
         flex-basis: 20%;
-        // height: inherit;
         padding: 10px;
         display: flex;
         justify-content: center;
@@ -24,7 +22,6 @@
         flex-direction: column;
         gap: 1px;
 
-        // 
         &__img {
             height: 90%;
         }
@@ -33,7 +30,6 @@
             @include smallText();
             color: $white;
         }
-
     }
 
     &__text {
@@ -42,7 +38,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        // background-color: red;
 
         &__wrapper {
             display: flex;
@@ -54,10 +49,8 @@
             &__about {
                 @include body();
                 cursor: pointer;
-
             }
         }
-
     }
 
     &__contact {
@@ -67,15 +60,13 @@
         flex-direction: column;
         gap: 20px;
 
-
         &__wrapper {
             display: flex;
             justify-content: center;
-
         }
 
-      &__btnCon{
-        width: 40%;
-      }
+        &__btnCon {
+            width: 40%;
+        }
     }
 }

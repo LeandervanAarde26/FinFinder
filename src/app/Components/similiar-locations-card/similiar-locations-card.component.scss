@@ -1,0 +1,38 @@
+@import '../../../styles.scss';
+
+.cardBody {
+    display: flex;
+    flex-basis: 100%;
+    background-color: darken($darkestGrey, 0%);
+    @include shadowTwo();
+    height: 15vh;
+    flex-direction: row;
+
+    &__tankImage {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 40%;
+        // max-width: 40%;
+        height: 100%;
+        background-image: url('../../../assets/Fishtank.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    &__TankName {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 60%;
+        // max-width: 60%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        &__name {
+            color: $blue;
+        }
+    }
+
+}

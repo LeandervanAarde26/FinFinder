@@ -2,7 +2,7 @@
    <div class="container__Nav">
     <app-navigation-bar></app-navigation-bar>
    </div>
-   <div class="container__routes">
-    <router-outlet></router-outlet>
+   <div class="container__routes" [@routeAnimations]="getRouteAnimationData()"  >
+    <router-outlet ></router-outlet>
    </div>
 </div>

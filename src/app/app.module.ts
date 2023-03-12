@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './Routes/landing/landing.component';
 import { LoginComponent } from './Routes/login/login.component';
 import { HeaderComponent } from './Components/header/header.component';
-import { ServicesComponent } from './Components/services/services.component';
 import { ButtonComponent } from './Components/button/button.component';
 import { ServiceCardComponent } from './Components/service-card/service-card.component';
 import { FooterComponent } from './footer/footer.component';
@@ -22,6 +21,12 @@ import { InventoryViewComponent } from './Components/inventory-view/inventory-vi
 import { InventoryCardComponent } from './Components/inventory-card/inventory-card.component';
 import { SearchInputComponent } from './Components/search-input/search-input.component';
 import { SingleItemViewComponent } from './Components/single-item-view/single-item-view.component';
+import { SimiliarLocationsCardComponent } from './Components/similiar-locations-card/similiar-locations-card.component';
+import { FishTanksComponent } from './Components/fish-tanks/fish-tanks.component';
+import { MyFishTankCardComponent } from './Components/my-fish-tank-card/my-fish-tank-card.component';
+import { SingleTankViewComponent } from './Components/single-tank-view/single-tank-view.component';
+import { UpdateCardComponent } from './Components/update-card/update-card.component';
+import { CreateFishtankViewComponent } from './Components/create-fishtank-view/create-fishtank-view.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,6 @@ import { SingleItemViewComponent } from './Components/single-item-view/single-it
     LandingComponent,
     LoginComponent,
     HeaderComponent,
-    ServicesComponent,
     ButtonComponent,
     ServiceCardComponent,
     FooterComponent,
@@ -41,7 +45,13 @@ import { SingleItemViewComponent } from './Components/single-item-view/single-it
     InventoryViewComponent,
     InventoryCardComponent,
     SearchInputComponent,
-    SingleItemViewComponent
+    SingleItemViewComponent,
+    SimiliarLocationsCardComponent,
+    FishTanksComponent,
+    MyFishTankCardComponent,
+    SingleTankViewComponent,
+    UpdateCardComponent,
+    CreateFishtankViewComponent
   ],
   imports: [
     BrowserModule,

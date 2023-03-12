@@ -1,12 +1,17 @@
+import { DecorationsInterface } from "../Interfaces/Decorations.interface";
+import { TankInterFace } from "../Interfaces/Tanks.interface";
+import { UserFishInterFace } from "../Interfaces/UserFish.interface";
+import { UtilitiesInterface } from "../Interfaces/Utilities.interface";
+
 export class Prebuilts {
-    public tank: { id: string, size: number, stock: number};
+    public tank: TankInterFace[];
     public imagePath: string;
-    public occupied: [{fish: string, quantity: number}];
-    public decor: [{decorName: string, quantity: number}];
-    public utilities: [{utilityName: string, quantity: number}];
+    public occupied: UserFishInterFace[];
+    public decor: DecorationsInterface[];
+    public utilities: UtilitiesInterface[];
     public remainingSpace: number
 
-    constructor(tank: { id: string, size: number, stock: number }, imagePath: string, occupied: [{ fish: string, quantity: number }], decor: [{ decorName: string, quantity: number }], utilities: [{ utilityName: string, quantity: number }], remainingSpace: number) {
+    constructor(tank: TankInterFace[], imagePath: string, occupied: UserFishInterFace[], decor: DecorationsInterface[], utilities:  UtilitiesInterface[], remainingSpace: number) {
         this.tank = tank;
         this.imagePath = imagePath;
         this.occupied = occupied;
