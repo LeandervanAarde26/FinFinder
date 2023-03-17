@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {OnInit, Component} from "@angular/core";
 import { FormControl } from '@angular/forms';
 import { FishModel } from 'src/app/shared/Models/Fish.model';
 import { FishService } from 'src/app/shared/services/fish.service';
@@ -22,8 +22,7 @@ export class InventoryViewComponent implements OnInit {
   ngOnInit() {
     this.fishService.getAllFish().subscribe((data)=>{
       this.fish = data;
-         console.log(this.fish)
-    
+         console.log(this.fish)  
     })
 
   }
