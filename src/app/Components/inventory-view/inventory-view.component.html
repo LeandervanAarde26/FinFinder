@@ -14,6 +14,6 @@
     </div>
 
     <div class="container__cards">
-        <app-inventory-card *ngFor="let item of fish" name="{{item.name}}" image="{{item.imagePath}}" routerLink="/dashboard/item"></app-inventory-card>
+        <app-inventory-card *ngFor="let item of userMaterial['fish']" name="{{item.name}}" image="{{item.imagePath}}" quantity="{{item.quantity}}" routerLink="/dashboard/item"></app-inventory-card>
     </div>
 </div>

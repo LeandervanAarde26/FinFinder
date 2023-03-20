@@ -9,4 +9,5 @@ import { Component, Input} from '@angular/core';
 export class InventoryCardComponent {
   @Input() name: string;
   @Input() image: string; 
+  @Input() quantity: number;
 }

@@ -11,6 +11,6 @@ export class FishService{
     baseUrl:string = 'http://localhost:3000/'
 
     getAllFish(): Observable<FishModel[]> {
-       return this.http.get<FishModel[]>(`${this.baseUrl}allfish`)
+       return this.http.get<FishModel[]>(`${this.baseUrl}fish`)
     }
 }
