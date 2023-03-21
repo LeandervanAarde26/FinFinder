@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { UserRegisterService } from 'src/app/shared/services/register.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { UserRegisterService } from 'src/app/shared/services/register.service';
 })
 export class RegistersteptwoComponent implements OnInit {
 
-  constructor(private registerService: UserRegisterService){}
+  constructor(private registerService: AuthService){}
   
   registerForm: FormGroup;
 

@@ -10,6 +10,21 @@
     cursor: pointer;
 }
 
+
+.disabled {
+    background-color: $grey;
+    &__text {
+        font-weight: 600;
+        color: darken($white, 20%);
+        cursor: none;
+    }
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
 .primary {
     background-color: $orange;
     &__text {

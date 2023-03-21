@@ -31,6 +31,7 @@ import { CreateFishtankViewComponent } from './Components/create-fishtank-view/c
 import { RegistersteponeComponent } from './Components/registerstepone/registerstepone.component';
 import { RegistersteptwoComponent } from './Components/registersteptwo/registersteptwo.component';
 import { RegistersteptwoanswersComponent } from './Components/registersteptwoanswers/registersteptwoanswers.component';
+import { RegModalComponent } from './Components/reg-modal/reg-modal.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { RegistersteptwoanswersComponent } from './Components/registersteptwoans
     CreateFishtankViewComponent,
     RegistersteponeComponent,
     RegistersteptwoComponent,
-    RegistersteptwoanswersComponent
+    RegistersteptwoanswersComponent,
+    RegModalComponent
   ],
   imports: [
     BrowserModule,

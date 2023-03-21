@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #0000009f;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+    &__modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: $darkestGrey;
+        border: 2px solid $blue;
+        padding: 28px;
+        padding-bottom: 20px;
+        width: 32%;
+        aspect-ratio: 16/9;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+
+        &__img {
+            max-width: 100%;
+            max-height: 90%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // background-color: red;
+
+            &__image{
+                max-width: 80%;
+                transform: translateY(5%);
+                object-fit: contain;
+            }
+        }
+
+        &__buttons{
+            // background-color: red;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+}

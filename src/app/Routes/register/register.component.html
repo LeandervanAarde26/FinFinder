@@ -1,12 +1,19 @@
 <div class="container">
+    <app-reg-modal *ngIf="regComplete"></app-reg-modal>
     <div class="container__left">
         <img class="container__left__img" src="../../../assets/discus.png" alt="discuss fish">
     </div>
 
     <div class="container__center" [ngStyle]="{'display': next ? 'flex' : 'flex'}">
-        <app-registerstepone (sub)="onSubmit()" [ngStyle]="{'display': next ? 'none' : ''}"></app-registerstepone >
-        <app-registersteptwo [ngStyle]="{'display': next ? '' : 'none'}" > </app-registersteptwo>
-        <app-button class="secondary" label="Continue" (clickHandler)="goNext()" [ngStyle]="{'display': next ? 'none' : ''}"></app-button>
+        <app-registerstepone (sub)="onSubmit()" [ngStyle]="{'display': next ? 'none' : ''}"></app-registerstepone>
+        <app-registersteptwo [ngStyle]="{'display': next ? '' : 'none'}"> </app-registersteptwo>
+
+        <app-button [ngStyle]="{'display': next ? 'none' : ''}"
+            [class]="registerForm.controls['Username'].value === '' || registerForm.controls['Email'].value === '' ? 'disabled' : 'secondary'"
+            label="Continue"
+            (clickHandler)="goNext()"
+            ></app-button>
+            
     </div>
 
     <div class="container__right">
@@ -15,6 +22,7 @@
             <app-button class="secondary" label="Register user" style="width:170px;"
                 (clickHandler)="onSubmit()"></app-button>
         </div>
-        <img [ngStyle]="{'display': next ? 'none' : ''}"  class="container__left__img" src="../../../assets/Gourami.png" alt="discuss fish" >
+        <img [ngStyle]="{'display': next ? 'none' : ''}" class="container__left__img" src="../../../assets/Gourami.png"
+            alt="discuss fish">
     </div>
 </div>
