@@ -1,17 +1,18 @@
 import { UserFishInterFace } from "../Interfaces/UserFish.interface";
+import { UserQuestionInterface } from "../Interfaces/UserQuestions.interface";
 
 export class UserModel {
     public id: string;
-    public username: string;
+    public Username: string;
     public Email: string; 
-    public fish: UserFishInterFace[];
-    public locations: string []; 
+    public Questions: UserQuestionInterface[];
+ 
 
-    constructor(id: string, username: string, Email: string, fish: UserFishInterFace[], locations: string[] ){
+
+    constructor(id: string, Username: string, Email: string, Questions:UserQuestionInterface[] ){
         this.id = id;
-        this.username = username;
+        this.Username = Username;
         this.Email = Email;
-        this.fish = fish;
-        this.locations = locations;
+        this.Questions = Questions; 
     }
 }

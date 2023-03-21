@@ -28,6 +28,9 @@ import { MyFishTankCardComponent } from './Components/my-fish-tank-card/my-fish-
 import { SingleTankViewComponent } from './Components/single-tank-view/single-tank-view.component';
 import { UpdateCardComponent } from './Components/update-card/update-card.component';
 import { CreateFishtankViewComponent } from './Components/create-fishtank-view/create-fishtank-view.component';
+import { RegistersteponeComponent } from './Components/registerstepone/registerstepone.component';
+import { RegistersteptwoComponent } from './Components/registersteptwo/registersteptwo.component';
+import { RegistersteptwoanswersComponent } from './Components/registersteptwoanswers/registersteptwoanswers.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { CreateFishtankViewComponent } from './Components/create-fishtank-view/c
     MyFishTankCardComponent,
     SingleTankViewComponent,
     UpdateCardComponent,
-    CreateFishtankViewComponent
+    CreateFishtankViewComponent,
+    RegistersteponeComponent,
+    RegistersteptwoComponent,
+    RegistersteptwoanswersComponent
   ],
   imports: [
     BrowserModule,

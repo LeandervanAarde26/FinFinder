@@ -35,6 +35,12 @@ export class InventoryViewComponent implements OnInit {
 
   }
 
+  viewId(id){
+    console.log(id)
+
+    console.log("Hey there!!")
+  }
+
 }
 
 

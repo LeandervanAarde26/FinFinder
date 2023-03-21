@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="container__heading">Create your Inventory</h2>
+    <span class="container__instruction">Please fill in information to start your underwater adventure!</span>
+
+    <form class="container__form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <span class="container__form__invalid"
+            *ngIf="!registerForm.get('Username').valid && registerForm.get('Username').touched">Usernames are
+            required</span>
+        <app-input name="Username" label="Username" type="text" required=true placeHolder="eg. FunkyFish69"
+            [controlname]="registerForm.controls['Username']"></app-input>
+
+        <span class="container__form__invalid"
+            *ngIf="!registerForm.get('Email').valid && registerForm.get('Email').touched">Please enter a valid email
+            address</span>
+
+        <app-input name="Email" label="E-mail" type="email" required=true placeHolder="Your Email"
+            [controlname]="registerForm.controls['Email']"></app-input>
+    </form>
+</div>
+
+        <!-- <app-button class="primary" label="Tester" (clickHandler)="onSubmit()"></app-button> -->
+

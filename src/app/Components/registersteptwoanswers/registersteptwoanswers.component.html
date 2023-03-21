@@ -1,0 +1,24 @@
+<h2 class="container__sectionHeading">Answer these questions</h2>
+<span class="container__instruction">Make sure they are exactly as you want, these answers are CaSe
+    SeNsItIvE</span>
+<form class="container__form" (ngSubmit)="onSubmit()">
+
+    <span class="container__form__invalid"
+        *ngIf="!registerForm.get('AnswerOne').valid && registerForm.get('AnswerOne').touched">Answer fields are
+        required</span>
+    <app-input name="AnswerOne" label="Answer One" type="text" required=true placeHolder="eg. Bloob bloob"
+        [controlname]="registerForm.controls['AnswerOne']"></app-input>
+
+    <span class="container__form__invalid"
+        *ngIf="!registerForm.get('AnswerTwo').valid && registerForm.get('AnswerTwo').touched">Answer fields are
+        required</span>
+    <app-input name="AnswerTwo" label="Answer Two" type="text" required=true placeHolder="eg. A live one"
+        [controlname]="registerForm.controls['AnswerTwo']"></app-input>
+
+    <span class="container__form__invalid"
+        *ngIf="!registerForm.get('AnswerThree').valid && registerForm.get('AnswerThree').touched">Answer fields
+        are required</span>
+    <app-input name="AnswerThree" label="Answer Three" type="text" required=true placeHolder="eg. A FSH!"
+        [controlname]="registerForm.controls['AnswerThree']"></app-input>
+
+</form>

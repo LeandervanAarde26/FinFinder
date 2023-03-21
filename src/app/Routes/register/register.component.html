@@ -1,81 +1,20 @@
 <div class="container">
     <div class="container__left">
-        <h2 class="container__left__sectionHeading">Create your Inventory</h2>
-        <span class="container__left__instruction">Please fill in information to start your underwater adventure!</span>
-        <form class="container__left__form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-            <span class="container__left__form__invalid"
-                *ngIf="!registerForm.get('Username').valid && registerForm.get('Username').touched">Usernames are
-                required</span>
-
-            <app-input name="Username" label="Username" type="text" required=true placeHolder="eg. FunkyFish69"
-                [controlname]="registerForm.controls['Username']"></app-input>
-
-            <span class="container__left__form__invalid"
-                *ngIf="!registerForm.get('Email').valid && registerForm.get('Email').touched">Please enter a valid email
-                address</span>
-
-            <app-input name="Email" label="E-mail" type="email" required=true placeHolder="Your Email"
-                [controlname]="registerForm.controls['Email']"></app-input>
-        </form>
+        <img class="container__left__img" src="../../../assets/discus.png" alt="discuss fish">
     </div>
 
-    <div class="container__center">
-        <h2 class="container__center__sectionHeading">Create your security question</h2>
-        <span class="container__center__instruction">To secure your account, give us some questions that only you can
-            answer</span>
-
-        <form class="container__center__form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-            <span class="container__center__form__invalid"
-                *ngIf="!registerForm.get('QuestionOne').valid && registerForm.get('QuestionOne').touched">Question
-                fields are required</span>
-            <app-input name="questionOne" label="Question One" type="text" required=true
-                placeHolder="eg. What did the fish say?" [controlname]="registerForm.controls['QuestionOne']">
-            </app-input>
-
-            <span class="container__center__form__invalid"
-                *ngIf="!registerForm.get('QuestionTwo').valid && registerForm.get('QuestionTwo').touched">Question
-                fields are required</span>
-            <app-input name="questionTwo" label="Question Two" type="text" required=true
-                placeHolder="eg. What is my favorite fish?"
-                [controlname]="registerForm.controls['QuestionTwo']"></app-input>
-
-            <span class="container__center__form__invalid"
-                *ngIf="!registerForm.get('QuestionThree').valid && registerForm.get('QuestionThree').touched">Question
-                fields are required</span>
-            <app-input name="questionThree" label="Question Three" type="text" required=true
-                placeHolder="eg. What do you call a fish with no I's?"
-                [controlname]="registerForm.controls['QuestionThree']"></app-input>
-        </form>
+    <div class="container__center" [ngStyle]="{'display': next ? 'flex' : 'flex'}">
+        <app-registerstepone (sub)="onSubmit()" [ngStyle]="{'display': next ? 'none' : ''}"></app-registerstepone >
+        <app-registersteptwo [ngStyle]="{'display': next ? '' : 'none'}" > </app-registersteptwo>
+        <app-button class="secondary" label="Continue" (clickHandler)="goNext()" [ngStyle]="{'display': next ? 'none' : ''}"></app-button>
     </div>
 
     <div class="container__right">
-        <h2 class="container__right__sectionHeading">Answer these questions</h2>
-        <span class="container__center__instruction">Make sure they are exactly as you want, these answers are CaSe
-            SeNsItIvE</span>
-        <form class="container__center__form" (ngSubmit)="onSubmit()">
-
-            <span class="container__center__form__invalid"
-                *ngIf="!registerForm.get('AnswerOne').valid && registerForm.get('AnswerOne').touched">Answer fields are
-                required</span>
-            <app-input name="AnswerOne" label="Answer One" type="text" required=true placeHolder="eg. Bloob bloob"
-                [controlname]="registerForm.controls['AnswerOne']"></app-input>
-
-            <span class="container__center__form__invalid"
-                *ngIf="!registerForm.get('AnswerTwo').valid && registerForm.get('AnswerTwo').touched">Answer fields are
-                required</span>
-            <app-input name="AnswerTwo" label="Answer Two" type="text" required=true placeHolder="eg. A live one"
-                [controlname]="registerForm.controls['AnswerTwo']"></app-input>
-
-            <span class="container__center__form__invalid"
-                *ngIf="!registerForm.get('AnswerThree').valid && registerForm.get('AnswerThree').touched">Answer fields
-                are required</span>
-            <app-input name="AnswerThree" label="Answer Three" type="text" required=true placeHolder="eg. A FSH!"
-                [controlname]="registerForm.controls['AnswerThree']"></app-input>
-        </form>
-
-        <div class="container__right__btn">
-            <app-button class="primary" label="Register user" style="width:170px;"
+        <app-registersteptwoanswers [ngStyle]="{'display': next ? '' : 'none'}"></app-registersteptwoanswers>
+        <div class="container__right__btn" [ngStyle]="{'display': next ? '' : 'none'}">
+            <app-button class="secondary" label="Register user" style="width:170px;"
                 (clickHandler)="onSubmit()"></app-button>
         </div>
+        <img [ngStyle]="{'display': next ? 'none' : ''}"  class="container__left__img" src="../../../assets/Gourami.png" alt="discuss fish" >
     </div>
 </div>
