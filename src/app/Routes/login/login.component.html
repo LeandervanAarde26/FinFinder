@@ -1,9 +1,10 @@
 <div class="container">
     <div class="container__left">
         <h2>View inventory</h2>
-        <span class="container__left__instruction">First things first, lets find your questions. Remind us what your
+        <span class="container__left__instruction" [ngStyle]="{'display': status? 'none': ''}">First things first, lets
+            find your questions. Remind us what your
             email is?</span>
-        <form class="container__left__form" [formGroup]="signIn">
+        <form class="container__left__form" [formGroup]="signIn" [ngStyle]="{'display': status? 'none': ''}">
 
             <span class="container__left__form__invalid"
                 *ngIf="!signIn.get('Email').valid && signIn.get('Email').touched">Please enter a valid email
@@ -11,16 +12,25 @@
 
             <app-input name="Email" label="E-mail" type="email" required=true placeHolder="Your Email"
                 [controlname]="signIn.controls['Email']"></app-input>
-            
         </form>
+
+        <app-user-question [label]="question" [ngStyle]="{'display': status? '': 'none'}"></app-user-question>
         <div class="container__left__buttons">
-            <app-button class="primary" label="Get my Questions" style="width:170px;" (clickHandler)="getQuestions()"></app-button>
-            <p>Don't have an account?</p>
-            <app-button routerLink="/register" class="tertiary" label="Register an account"
+            <app-button [ngStyle]="{'display': status? 'none': ''}"
+                [class]="signIn.controls['Email'].value === '' ? 'disabled' : 'primary'" label="Get user questions"
+                style="width:170px;" (clickHandler)="getQuestions()">
+            </app-button>
+
+            <app-button [ngStyle]="{'display': status? '': 'none'}"
+                [class]="signIn.controls['Answer'].value === '' ? 'disabled' : 'primary'" label="Go to dashboard"
+                style="width:170px;" (clickHandler)="checkAnswers()">
+            </app-button>
+            <p class="container__left__buttons__para">Don't have an account?</p>
+
+            <app-button routerLink="/register" class="tertiary" label="Register new account "
                 style="width:170px;"></app-button>
         </div>
     </div>
-
     <div class="container__right">
         <div class="container__right__triangle">
             <img src="../../../assets/FishMain.png" class="container__right__triangle__bg" alt="">

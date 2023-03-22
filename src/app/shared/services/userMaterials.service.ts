@@ -9,7 +9,9 @@ export class UserMaterialService{
     constructor(private http: HttpClient){}
     public userMaterials: UserMaterialModel[] = [];
     baseUrl:string = 'http://localhost:3000/';
+    user: string = sessionStorage.getItem('user');
+
     getAllUserMaterials(){
-        return this.http.get<UserMaterialModel[]>(`${this.baseUrl}user/materials/641844d8277d7c7c04bc73f6`)
+        return this.http.get<UserMaterialModel[]>(`${this.baseUrl}user/materials/${this.user}`)
     }
 }

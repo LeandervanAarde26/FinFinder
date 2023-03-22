@@ -27,6 +27,7 @@
 
 .primary {
     background-color: $orange;
+    width: 100%;
     &__text {
         font-weight: 600;
     }
@@ -38,7 +39,6 @@
     &__outlined {
         border: 3px solid $orange;
         
-
         &__text {
             font-weight: 600;
         }

@@ -32,6 +32,7 @@ import { RegistersteponeComponent } from './Components/registerstepone/registers
 import { RegistersteptwoComponent } from './Components/registersteptwo/registersteptwo.component';
 import { RegistersteptwoanswersComponent } from './Components/registersteptwoanswers/registersteptwoanswers.component';
 import { RegModalComponent } from './Components/reg-modal/reg-modal.component';
+import { UserQuestionComponent } from './Components/user-question/user-question.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { RegModalComponent } from './Components/reg-modal/reg-modal.component';
     RegistersteponeComponent,
     RegistersteptwoComponent,
     RegistersteptwoanswersComponent,
-    RegModalComponent
+    RegModalComponent,
+    UserQuestionComponent
   ],
   imports: [
     BrowserModule,
