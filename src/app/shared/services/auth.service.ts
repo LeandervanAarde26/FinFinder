@@ -4,7 +4,6 @@ import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { UserModel } from "../Models/User.model";
 import { Router } from "@angular/router";
-import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
