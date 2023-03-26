@@ -14,7 +14,7 @@
                 [controlname]="signIn.controls['Email']"></app-input>
         </form>
 
-        <app-user-question [label]="question" [ngStyle]="{'display': status? '': 'none'}"></app-user-question>
+        <app-user-question [answerCorrect]="correct" [label]="question" [ngStyle]="{'display': status? '': 'none'}"></app-user-question>
         <div class="container__left__buttons">
             <app-button [ngStyle]="{'display': status? 'none': ''}"
                 [class]="signIn.controls['Email'].value === '' ? 'disabled' : 'primary'" label="Get user questions"

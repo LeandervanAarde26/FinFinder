@@ -7,7 +7,6 @@
     flex-wrap: wrap;
     gap: 15px;
 
-
     &__top,
     &__right,
     &__left {
@@ -37,6 +36,12 @@
                 cursor: pointer;
                 text-align: center;
                 width: 50%;
+            
+                &__important{
+                    font-weight: bold;
+                    color: $orange; 
+                    font-size: 18px;
+                }
             }
 
             &__button {

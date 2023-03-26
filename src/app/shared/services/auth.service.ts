@@ -13,6 +13,7 @@ export class AuthService {
   regComplete: boolean = false;
   boolChange = new EventEmitter<boolean>();
   user: string;
+  public correct : boolean;
   // question =  new EventEmitter<{}>();
   public question: string;
 
@@ -44,13 +45,13 @@ export class AuthService {
   };
 
   answerQuestion(value) {
+    this.correct = true;
+
     if (this.signInForm.controls['Answer'].value === value) {
       this.Router.navigate(['/dashboard'])
-      console.log('right')
-      return true
+      return this.correct = true
     } else {
-      return false
+      return this.correct = false
     }
-
   }
 }

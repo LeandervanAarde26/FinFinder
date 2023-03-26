@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { Subscription } from 'rxjs';
@@ -11,7 +11,7 @@ import { UserMaterialService } from 'src/app/shared/services/userMaterials.servi
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   constructor(private loginService: AuthService, private materialsService : UserMaterialService){}
 
@@ -23,9 +23,11 @@ export class LoginComponent implements OnInit {
   status: boolean = false;
   value : boolean = false
   userId : any;
+  correct: boolean;
 
   ngOnInit() {
     this.signIn = this.loginService.signInForm
+    this.correct = true;
   }
 
   getQuestions(){
@@ -39,7 +41,11 @@ export class LoginComponent implements OnInit {
   };
 
   checkAnswers(){
-    this.loginService.answerQuestion(this.answer)
+    this.loginService.answerQuestion(this.answer);
+    this.correct = this.loginService.correct;
   };
 
+  ngOnDestroy(){
+    this.signIn.reset()
+  }
 }

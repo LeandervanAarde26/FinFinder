@@ -13,10 +13,10 @@ export class UserQuestionComponent implements OnInit{
 
   signIn: FormGroup;
   @Input() label : string; 
+  @Input() answerCorrect: boolean;
 
 
   ngOnInit(){
     this.signIn = this.loginService.signInForm
   }
-
 }
