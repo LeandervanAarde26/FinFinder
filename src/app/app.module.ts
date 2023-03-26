@@ -33,6 +33,7 @@ import { RegistersteptwoComponent } from './Components/registersteptwo/registers
 import { RegistersteptwoanswersComponent } from './Components/registersteptwoanswers/registersteptwoanswers.component';
 import { RegModalComponent } from './Components/reg-modal/reg-modal.component';
 import { UserQuestionComponent } from './Components/user-question/user-question.component';
+import { CompatibleFishCardComponent } from './Components/compatible-fish-card/compatible-fish-card.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { UserQuestionComponent } from './Components/user-question/user-question.
     RegistersteptwoComponent,
     RegistersteptwoanswersComponent,
     RegModalComponent,
-    UserQuestionComponent
+    UserQuestionComponent,
+    CompatibleFishCardComponent
   ],
   imports: [
     BrowserModule,

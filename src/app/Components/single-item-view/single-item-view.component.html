@@ -1,46 +1,35 @@
 <div class="container">
     <div class="container__left">
         <div class="container__left__image">
-            <img src="../../../assets/Puffer.png" class="container__left__image__img" alt="">
+            <img src="{{fish['imagePath']}}" class="container__left__image__img" alt="">
         </div>
         <div class="container__left__text">
-            <h2 class="heading">Puffer Fish</h2>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Diet</span>: Blood worm and
-                live souls</h6>
+            <h2 class="heading">{{fish['name']}}</h2>
+            <h6 class="container__left__text__key"><span class="container__left__text__span">Diet</span>: {{diet}} &nbsp; </h6>
             <h6 class="container__left__text__key"><span class="container__left__text__span">Required space</span>: This
-                fish required atleast 30L of tank space</h6>
+                fish required atleast {{fish['space']}}L of tank space</h6>
             <h6 class="container__left__text__key"><span class="container__left__text__span">Diet</span>: This fish
-                needs an optimal temprature of 2 6degrees Celcius</h6>
+                needs an optimal temprature of {{fish['temprature']}} degrees Celcius</h6>
         </div>
     </div>
 
     <div class="container__right">
-        <div class="container__right__inner">
-            <div class="container__right__inner__compatible">
-                <h4 class="container__right__inner__compatible__heading">Fish is compatible with</h4>
-                <ul class="container__right__inner__list">
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                </ul>
+        <div class="container__right__innerFish">
+            <h4 class="ontainer__right__innerFish__heading">Compatible with</h4>
+            <div class="container__right__innerFish__compatible">
+                    <div class="container__right__innerFish__compatible__cards">
+                        <app-compatible-fish-card *ngFor=" let item of compat; index as i" [name]="item.name" [image]="item.imagePath"></app-compatible-fish-card>
+                    </div>
             </div>
 
-            <div class="container__right__inner__noncompatible">
-                <h4 class="container__right__inner__noncompatible__heading">Fish is not compatible with</h4>
-                <ul class="container__right__inner__list">
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                    <li class="container__right__inner__list__Item">Fish Name</li>
-                </ul>
+            <h4 class="ontainer__right__innerFish__heading">Not Compatible with</h4>
+
+            <div class="container__right__innerFish__nonCompatible" >
+                    <div class="container__right__innerFish__compatible__cards">
+                        <app-compatible-fish-card *ngFor=" let item of nonCompat; index as i" [name]="item.name" [image]="item.imagePath"></app-compatible-fish-card>
+                    </div>
             </div>
+
         </div>
 
         <hr class="container__right__line">

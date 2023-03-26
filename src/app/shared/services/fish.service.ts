@@ -13,4 +13,8 @@ export class FishService{
     getAllFish(): Observable<FishModel[]> {
        return this.http.get<FishModel[]>(`${this.baseUrl}fish`)
     }
+
+    getIndividual(id):Observable<FishModel[]> {
+        return this.http.get<FishModel[]>(`${this.baseUrl}fish/${id}`)
+    }
 }

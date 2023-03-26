@@ -21,7 +21,7 @@ const routes: Routes = [
     path: 'dashboard', component: DashboardComponent, children: [
       { path: '', component: DashboardViewComponent, data: {animation: 'One'} },
       { path: 'inventory', component: InventoryViewComponent, data: {animation: 'Two'} },
-      { path: 'item', component: SingleItemViewComponent, data: {animation: 'Three'} },
+      { path: 'item/:id', component: SingleItemViewComponent, data: {animation: 'Three'} },
       { path: 'tanks', component: FishTanksComponent, data: {animation: 'Four'} },
       { path: 'tank', component: SingleTankViewComponent, data: {animation: 'Five'} },
       { path: 'create', component: CreateFishtankViewComponent, data: {animation: 'Six'} }
