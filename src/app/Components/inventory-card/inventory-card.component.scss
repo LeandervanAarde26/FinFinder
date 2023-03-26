@@ -52,5 +52,53 @@
         align-items: center;
         gap: 15px;
         justify-content: space-between;
+
+        &__edit {
+            display: flex;
+            flex-direction: column;
+            max-height: 100px;
+            width: 100%;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            // background-color: red;
+
+            &__amount,
+            &__buttons {
+                display: flex;
+                flex-direction: row;
+                max-height: 100px;
+                width: 100%;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+              
+
+                &__button {
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    min-height: 40px;
+                    min-width: 40px;
+                    align-items: center;
+                    justify-content: center;
+
+                    &__arrow {
+                        color: white;
+                        font-size: 40px;
+                        transition: 0.3s linear;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $orange;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+
+        }
     }
 }

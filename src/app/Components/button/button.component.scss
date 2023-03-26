@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-align: center;
 }
 
 
@@ -35,6 +36,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    
 
     &__outlined {
         border: 3px solid $orange;
@@ -147,6 +149,23 @@
     }
 }
 
+
+.danger {
+    background-color: $danger;
+
+    &__text {
+
+        font-weight: 600;
+    }
+
+    &__outlined {
+        border: 4px solid $danger;
+        cursor: pointer;
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+    }
+}
 
 @keyframes loadingWave {
     0% {
