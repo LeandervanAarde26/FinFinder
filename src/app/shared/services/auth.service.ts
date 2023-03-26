@@ -14,7 +14,6 @@ export class AuthService {
   boolChange = new EventEmitter<boolean>();
   user: string;
   public correct : boolean;
-  // question =  new EventEmitter<{}>();
   public question: string;
 
   regForm = new FormGroup({

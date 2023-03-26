@@ -6,6 +6,7 @@ import { CreateFishtankViewComponent } from './Components/create-fishtank-view/c
 import { DashboardViewComponent } from './Components/dashboard-view/dashboard-view.component';
 import { FishTanksComponent } from './Components/fish-tanks/fish-tanks.component';
 import { InventoryViewComponent } from './Components/inventory-view/inventory-view.component';
+import { SingleDecorViewComponent } from './Components/single-decor-view/single-decor-view.component';
 import { SingleItemViewComponent } from './Components/single-item-view/single-item-view.component';
 import { SingleTankViewComponent } from './Components/single-tank-view/single-tank-view.component';
 import { DashboardComponent } from './Routes/dashboard/dashboard.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: '', component: DashboardViewComponent, data: {animation: 'One'} },
       { path: 'inventory', component: InventoryViewComponent, data: {animation: 'Two'} },
       { path: 'item/:id', component: SingleItemViewComponent, data: {animation: 'Three'} },
+      { path: 'decor/:id', component: SingleDecorViewComponent, data: {animation: 'Three'} },
       { path: 'tanks', component: FishTanksComponent, data: {animation: 'Four'} },
       { path: 'tank', component: SingleTankViewComponent, data: {animation: 'Five'} },
       { path: 'create', component: CreateFishtankViewComponent, data: {animation: 'Six'} }

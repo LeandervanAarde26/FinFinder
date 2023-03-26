@@ -34,6 +34,7 @@ import { RegistersteptwoanswersComponent } from './Components/registersteptwoans
 import { RegModalComponent } from './Components/reg-modal/reg-modal.component';
 import { UserQuestionComponent } from './Components/user-question/user-question.component';
 import { CompatibleFishCardComponent } from './Components/compatible-fish-card/compatible-fish-card.component';
+import { SingleDecorViewComponent } from './Components/single-decor-view/single-decor-view.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { CompatibleFishCardComponent } from './Components/compatible-fish-card/c
     RegistersteptwoanswersComponent,
     RegModalComponent,
     UserQuestionComponent,
-    CompatibleFishCardComponent
+    CompatibleFishCardComponent,
+    SingleDecorViewComponent
   ],
   imports: [
     BrowserModule,
