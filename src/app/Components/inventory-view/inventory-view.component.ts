@@ -18,17 +18,23 @@ export class InventoryViewComponent implements OnInit {
   searchQuery = new FormControl('')
   fish: FishModel[] = []
   userMaterial: UserMaterialModel[] = [];
+  newmats: UserMaterialModel[] = []
   searchInventory() {
     console.log(this.searchQuery.value)
   }
 
   ngOnInit() {
-
     this.userMaterialService.getAllUserMaterials().subscribe((data) => {
       this.userMaterial = data
       console.log(this.userMaterial)
     })
 
+  }
+
+  searchItem() {
+     let query = this.searchQuery.value;
+      this.userMaterial = this.userMaterial['fish'].filter(item => item.name.includes(query))
+      console.log(this.userMaterial)
   }
 
   viewId(id) {

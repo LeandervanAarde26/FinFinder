@@ -8,13 +8,13 @@
         <app-button *ngFor="let filter of quickFilterItems; index as i" [label]="filter" class="{{!filterState ? 'filter' : 'filter__active'}}" ></app-button>
        </div>
        <div class="container__filters__search">
-        <app-search-input name="search" placeHolder="Inventory" [controlName]="searchQuery"></app-search-input>
-        <app-button class="filter" [label]="'Search item'" (clickHandler)="searchInventory()"></app-button>
+        <app-search-input name="search" placeHolder="Inventory" [controlName]="searchQuery" (change)="searchItem()"></app-search-input>
+        <app-button class="filter" [label]="'Search item'" (clickHandler)="searchItem()"></app-button>
        </div>
     </div>
 
     <div class="container__cards">
-        <app-inventory-card *ngFor="let item of userMaterial['fish'] " name="{{item.name}}" image="{{item.imagePath}}" quantity="{{item.quantity}}" routerLink="/dashboard/item/{{item._id}}" (clickHandler)="viewId(item._id)"></app-inventory-card>
+        <app-inventory-card *ngFor="let item of userMaterial['fish'] i as index" name="{{item.name}}" image="{{item.imagePath}}" quantity="{{item.quantity}}" routerLink="/dashboard/item/{{item._id}}" (clickHandler)="viewId(item._id)"></app-inventory-card>
         <app-inventory-card *ngFor="let item of userMaterial['decorations'] " name="{{item.name}}" image="{{item.imagePath}}" quantity="{{item.quantity}}" routerLink="/dashboard/decor/{{item._id}}" (clickHandler)="viewId(item._id)"></app-inventory-card>
 
     </div>
