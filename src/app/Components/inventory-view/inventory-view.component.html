@@ -16,6 +16,7 @@
     <div class="container__cards">
         <app-inventory-card *ngFor="let item of userMaterial['fish'] i as index" name="{{item.name}}" image="{{item.imagePath}}" quantity="{{item.quantity}}"  [id]="item._id"></app-inventory-card>
         <app-inventory-card *ngFor="let item of userMaterial['decorations'] " name="{{item.name}}" image="{{item.imagePath}}" quantity="{{item.quantity}}" routerLink="/dashboard/decor/{{item._id}}" (clickHandler)="viewId(item._id)"></app-inventory-card>
+        <app-inventory-card *ngFor="let item of userMaterial['utilities'] " name="{{item.name}}" image="{{item.imagePath}}" quantity="{{item.quantity}}" routerLink="/dashboard/decor/{{item._id}}" (clickHandler)="viewId(item._id)"></app-inventory-card>
 
     </div>
 </div>
