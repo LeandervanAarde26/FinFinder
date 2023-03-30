@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { UserQuestionInterface } from 'src/app/shared/Interfaces/UserQuestions.interface';
 import { UserMaterialModel } from 'src/app/shared/Models/userMaterials.model';
 import { UserMaterialService } from 'src/app/shared/services/userMaterials.service';
+import { UserModel } from 'src/app/shared/Models/User.model';
 
 @Component({
   selector: 'app-login',
@@ -13,39 +14,46 @@ import { UserMaterialService } from 'src/app/shared/services/userMaterials.servi
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  constructor(private loginService: AuthService, private materialsService : UserMaterialService){}
+  constructor(private loginService: AuthService, private materialsService: UserMaterialService) { }
 
-  signIn: FormGroup 
+  signIn: FormGroup
   emailFound: boolean;
   question: UserQuestionInterface;
   answer: UserQuestionInterface;
   error: boolean;
   status: boolean = false;
-  value : boolean = false
-  userId : any;
+  value: boolean = false
+  userId: string;
   correct: boolean;
+
+  userSpecifics: Observable<UserModel>;
 
   ngOnInit() {
     this.signIn = this.loginService.signInForm
     this.correct = true;
   }
 
-  getQuestions(){
-    if(this.signIn.controls['Email'].valid){
-       this.loginService.getQuestions(this.signIn.controls['Email'].value).subscribe((data) =>{   
-        this.userId = sessionStorage.setItem('user', data.user)
-        console.log(data.user)
-        return data.status ? [this.question = data.question.question, this.answer = data.question.answer ,this.status = true] : this.error = true;
-       });     
+  async getQuestions() {
+    if (this.signIn.controls['Email'].valid) {
+      this.userSpecifics = await this.loginService.getQuestions(this.signIn.controls['Email'].value)
+        if(this.userSpecifics){
+          this.status = this.userSpecifics['status']
+          this.question = this.userSpecifics['question'].question
+          this.answer = this.userSpecifics['question'].answer
+
+          console.log(this.userSpecifics)
+          console.log(this.loginService.user)
+        }
+
     }
   };
 
-  checkAnswers(){
+  checkAnswers() {
     this.loginService.answerQuestion(this.answer);
     this.correct = this.loginService.correct;
   };
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.signIn.reset()
   }
 }

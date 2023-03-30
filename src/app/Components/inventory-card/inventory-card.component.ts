@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { UserMaterialService } from 'src/app/shared/services/userMaterials.service';
 
 
 @Component({
@@ -7,10 +8,14 @@ import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
   styleUrls: ['./inventory-card.component.scss']
 })
 export class InventoryCardComponent implements OnInit {
+
+  constructor(private userMaterialService: UserMaterialService) { }
+
   @Input() name: string;
   @Input() image: string; 
   @Input() quantity: number;
   @Input() id : string;
+  @Input() category: string;
   @Output() clickHandler = new EventEmitter<any>();
   edit: boolean = false;
   newValue: number 
@@ -25,6 +30,16 @@ export class InventoryCardComponent implements OnInit {
 
   editItem(id){
     console.log(id)
+  }
+
+  updateQuantity(category, id){
+    let requestBody :{} = {
+        itemId: id,
+        category: category,
+        amount: this.newValue
+    }
+    this.userMaterialService.updateUserMaterial(requestBody)
+    this.quantity = this.newValue
   }
 
   Increment(){

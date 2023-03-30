@@ -12,9 +12,11 @@ export class AuthService {
   baseUrl: string = 'http://localhost:3000/'
   regComplete: boolean = false;
   boolChange = new EventEmitter<boolean>();
+
   user: string;
-  public correct : boolean;
-  public question: string;
+  backUpUser: any;
+  public correct: boolean;
+  public information: {};
 
   regForm = new FormGroup({
     'Username': new FormControl('', Validators.required),
@@ -40,7 +42,18 @@ export class AuthService {
   }
 
   getQuestions(email: string): Observable<UserModel> | any {
-    return this.http.get<UserModel>(`${this.baseUrl}user/${email}`)
+    this.http.get<UserModel>(`${this.baseUrl}user/${email}`).subscribe({
+      next: data => {
+        this.user = data['user'],
+        this.backUpUser = sessionStorage.setItem('user', data['user'] )
+        this.information = data
+      },
+      error: error => {
+        console.log(error)
+      }
+    })
+
+    return this.information
   };
 
   answerQuestion(value) {
@@ -48,6 +61,7 @@ export class AuthService {
 
     if (this.signInForm.controls['Answer'].value === value) {
       this.Router.navigate(['/dashboard'])
+      console.log(this.user)
       return this.correct = true
     } else {
       return this.correct = false

@@ -1,7 +1,9 @@
 import { OnInit, Component } from "@angular/core";
 import { FormControl } from '@angular/forms';
+import { lastValueFrom } from "rxjs";
 import { FishModel } from 'src/app/shared/Models/Fish.model';
 import { UserMaterialModel } from "src/app/shared/Models/userMaterials.model";
+import { AuthService } from "src/app/shared/services/auth.service";
 import { FishService } from 'src/app/shared/services/fish.service';
 import { UserMaterialService } from "src/app/shared/services/userMaterials.service";
 
@@ -11,7 +13,7 @@ import { UserMaterialService } from "src/app/shared/services/userMaterials.servi
   styleUrls: ['./inventory-view.component.scss']
 })
 export class InventoryViewComponent implements OnInit {
-  constructor(private fishService: FishService, private userMaterialService: UserMaterialService) { }
+  constructor(private fishService: FishService, private userMaterialService: UserMaterialService, private authService: AuthService) { }
   // allItems: FishModel[] | DecorModel [] | UtilityModel[] = [];
   quickFilterItems: string[] = ["Fish", "Utilities", "Decorations", "Tanks"];
   filterState: boolean = false;
@@ -19,6 +21,7 @@ export class InventoryViewComponent implements OnInit {
   fish: FishModel[] = []
   userMaterial: UserMaterialModel[] = [];
   newmats: UserMaterialModel[] = []
+  userId: string = this.authService.user
   searchInventory() {
     console.log(this.searchQuery.value)
   }
@@ -28,14 +31,16 @@ export class InventoryViewComponent implements OnInit {
       this.userMaterial = data
       console.log(this.userMaterial)
     })
-
-  }
+  };
 
   searchItem() {
      let query = this.searchQuery.value;
-      this.userMaterial = this.userMaterial['fish'].filter(item => item.name.includes(query))
+      this.userMaterial = this.userMaterial['fish'].filter(item => item.name.includes(query));
       console.log(this.userMaterial)
   }
+
+
+
 
   viewId(id) {
     console.log(id)

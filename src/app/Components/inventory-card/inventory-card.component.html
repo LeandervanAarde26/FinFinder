@@ -31,7 +31,7 @@
                 <app-button class="danger width" label="Cancel Update" (clickHandler)="changeUpdateState()"
                 [ngStyle]="{'display': edit ? '': 'none'}"></app-button>
                 
-                <app-button class="secondary width" label="update item" (clickHandler)="editItem(id)"
+                <app-button class="secondary width" label="update item" (clickHandler)="updateQuantity(category, id)"
                 [ngStyle]="{'display': edit ? '': 'none'}"></app-button>
             </div>
         </div>
