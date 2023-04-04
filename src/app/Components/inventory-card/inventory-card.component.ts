@@ -16,6 +16,7 @@ export class InventoryCardComponent implements OnInit {
   @Input() quantity: number;
   @Input() id : string;
   @Input() category: string;
+  @Input() routingType: string;
   @Output() clickHandler = new EventEmitter<any>();
   edit: boolean = false;
   newValue: number 
@@ -40,6 +41,7 @@ export class InventoryCardComponent implements OnInit {
     }
     this.userMaterialService.updateUserMaterial(requestBody)
     this.quantity = this.newValue
+    this.edit = !this.edit
   }
 
   Increment(){
@@ -47,7 +49,7 @@ export class InventoryCardComponent implements OnInit {
   }
 
   Decrement(){
-    this.newValue --
+    this.newValue <= 0 ? 0 : this.newValue --;
   }
 
   ngOnInit(){

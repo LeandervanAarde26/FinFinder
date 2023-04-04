@@ -9,7 +9,7 @@
         <h5><strong>{{name}}</strong></h5>
         <app-button class="secondary width" label="update item" (clickHandler)="changeUpdateState()"
             [ngStyle]="{'display': edit ? 'none': ''}"></app-button>
-        <app-button class="primary width" label="View Item" routerLink="/dashboard/item/{{id}}"
+        <app-button class="primary width" label="View Item" routerLink="/dashboard/{{routingType}}/{{category}}/{{id}}"
             [ngStyle]="{'display': edit ? 'none': ''}"></app-button>
         <h5 [ngStyle]="{'display': edit ? '': 'none'}">Edit Quantity</h5>
         <div class="card__body__edit" [ngStyle]="{'display': edit ? '': 'none'}">

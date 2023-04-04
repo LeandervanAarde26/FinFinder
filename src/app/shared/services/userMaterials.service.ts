@@ -11,6 +11,7 @@ export class UserMaterialService{
     public userMaterials: UserMaterialModel[] = [];
     baseUrl:string = 'http://localhost:3000/';
     user: string = this.authService.user
+    quantityUpdated: boolean = false;
 
     getAllUserMaterials(){
         return this.http.get<UserMaterialModel[]>(`${this.baseUrl}user/materials/${this.authService.user || sessionStorage.getItem('user')}`)
@@ -20,11 +21,15 @@ export class UserMaterialService{
        this.http.patch<any>(`${this.baseUrl}user/fish/${this.authService.user || sessionStorage.getItem('user')}`, body).subscribe((response: any) => {
         
         if(!response.acknowledged){
-            return false
+            return this.quantityUpdated = false
         }
 
         return this.getAllUserMaterials()
        
       });
+    }
+
+    getSingleMaterial(itemId: string, category: string){
+        return this.http.get<UserMaterialModel>(`${this.baseUrl}user/material/${this.authService.user || sessionStorage.getItem('user')}?itemId=${itemId}&category=${category}`)
     }
 }

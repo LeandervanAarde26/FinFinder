@@ -17,11 +17,12 @@ export class InventoryViewComponent implements OnInit {
   // allItems: FishModel[] | DecorModel [] | UtilityModel[] = [];
   quickFilterItems: string[] = ["Fish", "Utilities", "Decorations", "Tanks"];
   filterState: boolean = false;
-  searchQuery = new FormControl('')
-  fish: FishModel[] = []
+  searchQuery = new FormControl('');
+  fish: FishModel[] = [];
   userMaterial: UserMaterialModel[] = [];
-  newmats: UserMaterialModel[] = []
-  userId: string = this.authService.user
+  newmats: UserMaterialModel[] = [];
+  userId: string = this.authService.user;
+
   searchInventory() {
     console.log(this.searchQuery.value)
   }
@@ -31,6 +32,8 @@ export class InventoryViewComponent implements OnInit {
       this.userMaterial = data
       console.log(this.userMaterial)
     })
+
+
   };
 
   searchItem() {

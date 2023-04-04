@@ -1,0 +1,24 @@
+@import '../../../styles.scss';
+
+.container{
+    display: flexbox;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
+    // background-color: red;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    padding: 20px;
+
+    &__header{
+        display: flex;
+        height: 6vh;
+    }
+
+    &__builds{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

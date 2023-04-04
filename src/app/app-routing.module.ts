@@ -13,6 +13,7 @@ import { DashboardComponent } from './Routes/dashboard/dashboard.component';
 import { LandingComponent } from './Routes/landing/landing.component';
 import { LoginComponent } from './Routes/login/login.component';
 import { RegisterComponent } from './Routes/register/register.component';
+import { PreBuildsViewComponent } from './Components/pre-builds-view/pre-builds-view.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -22,11 +23,12 @@ const routes: Routes = [
     path: 'dashboard', component: DashboardComponent, children: [
       { path: '', component: DashboardViewComponent, data: {animation: 'One'} },
       { path: 'inventory', component: InventoryViewComponent, data: {animation: 'Two'} },
-      { path: 'item/:id', component: SingleItemViewComponent, data: {animation: 'Three'} },
-      { path: 'decor/:id', component: SingleDecorViewComponent, data: {animation: 'Three'} },
+      { path: 'item/:category/:id', component: SingleItemViewComponent, data: {animation: 'Three'} },
+      { path: 'innerTank/:category/:id', component: SingleDecorViewComponent, data: {animation: 'Three'} },
       { path: 'tanks', component: FishTanksComponent, data: {animation: 'Four'} },
       { path: 'tank', component: SingleTankViewComponent, data: {animation: 'Five'} },
-      { path: 'create', component: CreateFishtankViewComponent, data: {animation: 'Six'} }
+      { path: 'create', component: CreateFishtankViewComponent, data: {animation: 'Six'} },
+      {path: 'builds', component: PreBuildsViewComponent, data: {animation: 'Six'}}
     ]
   }
 ];

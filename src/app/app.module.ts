@@ -35,6 +35,8 @@ import { RegModalComponent } from './Components/reg-modal/reg-modal.component';
 import { UserQuestionComponent } from './Components/user-question/user-question.component';
 import { CompatibleFishCardComponent } from './Components/compatible-fish-card/compatible-fish-card.component';
 import { SingleDecorViewComponent } from './Components/single-decor-view/single-decor-view.component';
+import { PreBuildsViewComponent } from './Components/pre-builds-view/pre-builds-view.component';
+import { PrebuildCardsComponent } from './Components/prebuild-cards/prebuild-cards.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { SingleDecorViewComponent } from './Components/single-decor-view/single-
     RegModalComponent,
     UserQuestionComponent,
     CompatibleFishCardComponent,
-    SingleDecorViewComponent
+    SingleDecorViewComponent,
+    PreBuildsViewComponent,
+    PrebuildCardsComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ export class UserMaterialModel {
     constructor(_id: string, name: string, imagePath: string, quantity: number ) {
         this._id = _id;
         this.name = name
-        this.imagePath = imagePath
+        this.imagePath = imagePath;
         this.quantity = quantity;
     }
 }
