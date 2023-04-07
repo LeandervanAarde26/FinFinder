@@ -14,11 +14,11 @@
             <p class="container__left__overlay__text">
                 Add more fishtanks to your inventory! 
                 <br>
-
-                100 builds to choose from 
+                <span class="container__left__overlay__text__important">{{buildsLength}}</span>
+                 builds to choose from 
                 
             </p>
-            <h5 class="container__top__overlay__button">Go to My Fishtanks &rarr;</h5>
+            <h5 class="container__top__overlay__button" routerLink="/dashboard/builds">Build a new Fishtank &rarr;</h5>
         </div>
     </div>
 
@@ -26,11 +26,11 @@
         <div class="container__right__overlay">
            <h3 class="container__right__overlay__text">View my inventory</h3>
            <p class="container__left__overlay__text">
-                Total inventory size: <span class="container__left__overlay__text__important">{{inventorySize}}</span>
+                TOTAL fish inventory size: <span class="container__left__overlay__text__important">{{inventorySize}}</span>
                 <br>
-                Fish in current inventory: <span class="container__left__overlay__text__important">{{currentInventory}}</span>
+                Fish with HIGH inventory: <span class="container__left__overlay__text__important">{{currentInventory}}</span>
                 <br>
-                Low Stock on <span class="container__left__overlay__text__important">{{lowStock}}</span> Fish
+                Fish with LOW inventory: <span class="container__left__overlay__text__important">{{lowStock}}</span> 
             </p>
            <h5 class="container__top__overlay__button" routerLink="/dashboard/inventory">Go to My Fishtanks &rarr;</h5>
         </div>

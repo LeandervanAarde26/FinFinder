@@ -23,7 +23,6 @@ export class UserMaterialService{
         if(!response.acknowledged){
             return this.quantityUpdated = false
         }
-
         return this.getAllUserMaterials()
        
       });

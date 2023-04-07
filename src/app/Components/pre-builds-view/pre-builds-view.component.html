@@ -4,12 +4,7 @@
     </div>
 
     <div class="container__builds">
-        <app-prebuild-cards></app-prebuild-cards>
-        <app-prebuild-cards></app-prebuild-cards>
-        <app-prebuild-cards></app-prebuild-cards>
-        <app-prebuild-cards></app-prebuild-cards>
-        <app-prebuild-cards></app-prebuild-cards>
-        <app-prebuild-cards></app-prebuild-cards>
+        <app-prebuild-cards *ngFor="let build of prebuilds"[imagePath]="build['MainFish'].imagePath" [name]="build.name" [fish]="build.fish" [utilities]="build.utilities" [decorations]="build.decorations" [tank]="build.tank.Litres"></app-prebuild-cards>
     </div>
 
 </div>
