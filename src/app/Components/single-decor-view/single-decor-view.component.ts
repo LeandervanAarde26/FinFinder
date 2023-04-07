@@ -14,6 +14,7 @@ export class SingleDecorViewComponent implements OnInit {
   decoration: DecorModel[];
   getItem: any;
   category: string;
+  foundInBuilds: string
 
   constructor(private activatedRoute: ActivatedRoute, private materialService: UserMaterialService) {
     this.activatedRoute.params.subscribe((params) => {
@@ -26,6 +27,7 @@ export class SingleDecorViewComponent implements OnInit {
     this.materialService.getSingleMaterial(this.id, this.category).subscribe((data) => {
       console.log(data)
       this.decoration = data['mat']['item']
+      this.foundInBuilds = data['builds']
     });
   }
 }

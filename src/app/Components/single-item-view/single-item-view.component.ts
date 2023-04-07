@@ -32,7 +32,7 @@ export class SingleItemViewComponent implements OnInit{
       this.compat = data['compat'];
       this.nonCompat = data['nonCompat']
       this.quantity = 0
-      console.log(this.fish)
+      console.log(data)
    });
 
    

@@ -15,14 +15,14 @@ import { UserMaterialService } from "src/app/shared/services/userMaterials.servi
 export class InventoryViewComponent implements OnInit {
   constructor(private fishService: FishService, private userMaterialService: UserMaterialService, private authService: AuthService) { }
   // allItems: FishModel[] | DecorModel [] | UtilityModel[] = [];
-  quickFilterItems: string[] = ["fish", "utilities", "decorations", "Tanks"];
+  quickFilterItems: string[] = [ "All items", "Fish", "Utilities", "Decorations", "Tanks"];
   filterState: boolean = false;
   searchQuery = new FormControl('');
   fish: FishModel[] = [];
   userMaterial: UserMaterialModel[] = [];
-  newmats: UserMaterialModel[] = [];
+  allMaterials: any[];
   userId: string = this.authService.user;
-  filterSet: string = null;
+  filterSet: string = "All items";
 
   searchInventory() {
     console.log(this.searchQuery.value)
@@ -31,17 +31,32 @@ export class InventoryViewComponent implements OnInit {
   ngOnInit() {
     this.userMaterialService.getAllUserMaterials().subscribe((data) => {
       this.userMaterial = data
-      console.log(this.userMaterial)
+      let fish= this.userMaterial['fish'].map(i =>  i);
+      let decorations = this.userMaterial['decorations'].map(i =>  i);
+      let utilities = this.userMaterial['utilities'].map(i =>  i);
+      let tanks = this.userMaterial['tanks'].map(i =>  i);
+
+      this.allMaterials = fish.concat(tanks, decorations, utilities)
+      console.log(this.allMaterials)
     })
   };
 
 
 
   searchItem() {
-     let query = this.searchQuery.value;
-      this.userMaterial = this.userMaterial['fish'].filter(item => item.name.includes(query));
-      console.log(this.userMaterial)
+    let query = this.searchQuery.value;  
+    let filteredMaterials = this.userMaterial.filter(item => item.name.includes(query));
+    this.userMaterial = filteredMaterials
+    console.log(filteredMaterials);
   }
+
+
+  filterItems(category){
+    console.log(category)
+    this.filterSet = category;
+  }
+
+
 
 
 

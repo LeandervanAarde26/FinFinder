@@ -8,3 +8,63 @@ input{
     border: 2px solid $blue;
     @include body();
 }
+
+.container{
+    width: 20vw;
+    min-height: 100px;
+    max-height: 400px;
+    background-color: $darkestGrey;
+    position: fixed;
+    top: 13vh;
+    overflow: scroll;
+    z-index: +99;
+
+    &__searchable{
+        height: 100px;
+        width: 100%;
+        background-color: $darkestGrey;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-between;
+        transition: .3s linear;
+
+        &:hover {
+            @include shadowTwo();
+            background-color: darken($darkGrey, 10%);
+            ;
+        }
+
+        &__image{
+            height: 90%;
+            aspect-ratio: 1.2/1;
+            border-right: 1px solid white;
+            justify-content: center;
+            // align-items:;
+          
+
+            &__img{
+                height: 100%;
+                aspect-ratio: 1/1;
+                object-fit: contain;
+            }
+        }
+
+        &__amount{
+            max-width: 5 0px;
+            max-height: 40px;
+            padding: 6px;
+            border-radius: 55px;
+            border: 2px solid $blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+
+            &__content{
+                @include body();
+            }
+        }
+    }
+}

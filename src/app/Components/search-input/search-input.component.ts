@@ -11,5 +11,8 @@ export class SearchInputComponent {
   @Input() placeHolder: string;
   @Input() controlName: FormControl;
   @Input() name: string; 
-
+  @Input() itemName: string;
+  @Input() itemImage: string;
+  @Input() itemAmount: string;
+  @Input() itemId: string;
 }

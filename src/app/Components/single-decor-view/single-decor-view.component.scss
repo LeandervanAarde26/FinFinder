@@ -73,5 +73,15 @@
             border: 1px solid $orange;
             width: 90%;
         }
+
+        &__cards{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex-basis: 100%;
+            width: 90%;
+            // background-color: red;
+            overflow: scroll;
+        }
     }
 }
