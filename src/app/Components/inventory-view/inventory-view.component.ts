@@ -15,13 +15,14 @@ import { UserMaterialService } from "src/app/shared/services/userMaterials.servi
 export class InventoryViewComponent implements OnInit {
   constructor(private fishService: FishService, private userMaterialService: UserMaterialService, private authService: AuthService) { }
   // allItems: FishModel[] | DecorModel [] | UtilityModel[] = [];
-  quickFilterItems: string[] = ["Fish", "Utilities", "Decorations", "Tanks"];
+  quickFilterItems: string[] = ["fish", "utilities", "decorations", "Tanks"];
   filterState: boolean = false;
   searchQuery = new FormControl('');
   fish: FishModel[] = [];
   userMaterial: UserMaterialModel[] = [];
   newmats: UserMaterialModel[] = [];
   userId: string = this.authService.user;
+  filterSet: string = null;
 
   searchInventory() {
     console.log(this.searchQuery.value)
@@ -32,16 +33,15 @@ export class InventoryViewComponent implements OnInit {
       this.userMaterial = data
       console.log(this.userMaterial)
     })
-
-
   };
+
+
 
   searchItem() {
      let query = this.searchQuery.value;
       this.userMaterial = this.userMaterial['fish'].filter(item => item.name.includes(query));
       console.log(this.userMaterial)
   }
-
 
 
 

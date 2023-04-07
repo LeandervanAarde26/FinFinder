@@ -5,14 +5,12 @@
         </div>
         <div class="container__left__text">
             <h2 class="heading">{{decoration['name']}}</h2>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Category</span>: {{decoration['categories']}}</h6>
-            <h6 class="container__left__text__key"> <span class="container__left__text__span"> Space taken </span> {{decoration['space']}}L taken </h6>
+            <h6 class="container__left__text__key"><span class="container__left__text__span">Category</span>: {{decoration['categories'] || "Tanks"}}</h6>
+            <h6 class="container__left__text__key"> <span class="container__left__text__span"> Space taken </span> {{decoration['space'] || decoration['Litres'] }} L taken </h6>
         </div>
     </div>
 
     <div class="container__right">
         <h2 class="container__right__heading">Found in these builds</h2>
     </div>
-
-
 </div>

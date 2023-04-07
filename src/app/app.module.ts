@@ -37,6 +37,7 @@ import { CompatibleFishCardComponent } from './Components/compatible-fish-card/c
 import { SingleDecorViewComponent } from './Components/single-decor-view/single-decor-view.component';
 import { PreBuildsViewComponent } from './Components/pre-builds-view/pre-builds-view.component';
 import { PrebuildCardsComponent } from './Components/prebuild-cards/prebuild-cards.component';
+import { FilterPipePipe } from './Components/filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { PrebuildCardsComponent } from './Components/prebuild-cards/prebuild-car
     CompatibleFishCardComponent,
     SingleDecorViewComponent,
     PreBuildsViewComponent,
-    PrebuildCardsComponent
+    PrebuildCardsComponent,
+    FilterPipePipe
   ],
   imports: [
     BrowserModule,
