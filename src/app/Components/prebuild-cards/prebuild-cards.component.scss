@@ -1,6 +1,10 @@
 @import '../../../styles.scss';
 
-.container{
+.container__disabled{
+    filter: grayscale(80%);
+}
+
+.container, .container__disabled{
     padding: 12px;
     // @include boxShadow();
     background-color: $darkestGrey;
@@ -11,6 +15,8 @@
     gap: 15px;
     padding: 20px;
     max-width: 80vw;
+
+
 
     &:hover {
         @include shadowTwo();

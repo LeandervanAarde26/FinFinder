@@ -12,5 +12,6 @@ export class PrebuildCardsComponent {
   @Input() decorations: string[];
   @Input() imagePath: string[];
   @Input() tank: number;
-  quantity: 2
+  @Input() craftable: boolean;
+  @Input() buildable: boolean;
 }

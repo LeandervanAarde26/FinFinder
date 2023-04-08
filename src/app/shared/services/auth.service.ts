@@ -67,4 +67,10 @@ export class AuthService {
       return this.correct = false
     }
   }
+
+  userSignOut(){
+    sessionStorage.clear();
+    this.user = '';
+    this.Router.navigate(['/'])
+  }
 }

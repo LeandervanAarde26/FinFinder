@@ -1,44 +1,95 @@
-<div class="container">
-    <div class="container__image">
-        <img src="{{imagePath}}"class="container__image__img" alt="">
-        <h4 class="container__center__heading">{{tank}}L tank requried</h4>
-      
+<div [ngClass]="buildable ? 'container' : 'container__disabled'" >
+  <div class="container__image">
+    <img src="{{ imagePath }}" class="container__image__img" alt="" />
+    <h4 class="container__center__heading__text">{{ tank }}L tank requried</h4>
+  </div>
+
+  <div class="container__center">
+    <div class="container__center__heading">
+      <h4 class="container__center__heading">{{ tank }}L tank requried</h4>
+    </div>
+    <div class="container__center__section">
+      <h5 class="container__center__section__heading">Fish</h5>
+
+      <ul class="container__center__section__list">
+        <li
+          class="container__center__section__list"
+          *ngFor="let item of fish; let i = index"
+        >
+          <span class="container__center__section__list__ammount">{{
+            item.quantity
+          }}</span>
+          X {{ item.id.name }}
+          <span
+            *ngIf="item.craftable"
+            class="container__center__section__list__item"
+            >&#10003;</span
+          >
+          <span
+            *ngIf="!item.craftable"
+            class="container__center__section__list__item"
+            >&#10060;</span
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="container__center__section">
+      <h5 class="container__center__section__heading">utilities</h5>
+      <ul class="container__center__section__list">
+        <li
+          class="container__center__section__list"
+          *ngFor="let item of utilities; let i = index"
+        >
+          <span class="container__center__section__list__ammount">{{
+            item.quantity
+          }}</span>
+          X {{ item.id.name }}
+          <span
+            *ngIf="item.id.craftable"
+            class="container__center__section__list__item"
+            >&#10003;</span
+          >
+          <span
+            *ngIf="!item.id.craftable"
+            class="container__center__section__list__item"
+            >&#10060;</span
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="container__center__section">
+      <h5 class="container__center__section__heading">Decorations</h5>
+      <ul class="container__center__section__list">
+        <li
+          class="container__center__section__list"
+          *ngFor="let item of decorations; let i = index"
+        >
+          <span class="container__center__section__list__ammount">{{
+            item.quantity
+          }}</span>
+          X {{ item.id.name }}
+          <span
+            *ngIf="item.id.craftable"
+            class="container__center__section__list__item"
+            >&#10003;</span
+          >
+          <span
+            *ngIf="!item.id.craftable"
+            class="container__center__section__list__item"
+            >&#10060;</span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container__right">
+    <div class="container__right__button">
+      <app-button class="secondary" label="Build this tank!"></app-button>
     </div>
 
-    <div class="container__center">
-            <div class="container__center__heading">
-                <h4 class="container__center__heading__text">{{name}}</h4>
-            </div>
-            <div class="container__center__section">
-                <h5 class="container__center__section__heading">Fish</h5>
-
-                <ul class="container__center__section__list">
-                    <li class="container__center__section__list" *ngFor="let item of fish; let i = index" ><span class="container__center__section__list__ammount">{{item.quantity}}</span> X {{item.id.name}} <span *ngIf="item.id.craftable" class="container__center__section__list__item">&#10003;</span > <span *ngIf="!item.id.craftable" class="container__center__section__list__item">&#10060;</span></li>
-                </ul>
-
-            </div>
-            <div class="container__center__section">
-                <h5 class="container__center__section__heading">utilities</h5>
-                <ul class="container__center__section__list">
-                    <li class="container__center__section__list" *ngFor="let item of utilities; let i = index" ><span class="container__center__section__list__ammount">{{item.quantity}}</span> X {{item.id.name}} <span *ngIf="item.id.craftable" class="container__center__section__list__item">&#10003;</span > <span *ngIf="!item.id.craftable" class="container__center__section__list__item">&#10060;</span></li>
-                </ul>
-            </div>
-            <div class="container__center__section">
-                <h5 class="container__center__section__heading">Decorations</h5>
-                <ul class="container__center__section__list">
-                    <li class="container__center__section__list" *ngFor="let item of decorations; let i = index" ><span class="container__center__section__list__ammount">{{item.quantity}}</span> X {{item.id.name}} <span *ngIf="item.id.craftable" class="container__center__section__list__item">&#10003;</span > <span *ngIf="!item.id.craftable" class="container__center__section__list__item">&#10060;</span></li>
-                </ul>
-            </div>   
+    <div class="container__right__text">
+      <p>You have 0 of these builds</p>
     </div>
-
-    <div class="container__right">
-        <div class="container__right__button">
-            <app-button class="secondary" label="Build this tank!"></app-button>
-        </div>
-
-        <div class="container__right__text">
-            <p>You have 0 of these builds</p>
-        </div>
-
-    </div>
+  </div>
 </div>

@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit, OnDestroy {
           console.log(this.userSpecifics)
           console.log(this.loginService.user)
         }
-
     }
   };
 
