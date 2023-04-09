@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-fish-tank-card',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class MyFishTankCardComponent {
 
+  @Input() name: string;
+  @Input() place: string;
+  @Input() address: string;
+  @Input() image: string;
+  @Input() decorations: number;
+  @Input() fish: [];
+  @Input() remainingSpace: number
+  @Input() totalLiters: number;
+  @Input() id: string;
 }

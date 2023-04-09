@@ -20,6 +20,7 @@ export class PreBuildsViewComponent implements OnInit {
     allMaterials: any[];
     filterSet: string = "All items";
     buildable: [];
+    crafting: boolean = true;
 
   ngOnInit(): void {
       this.userId = this.authService.user

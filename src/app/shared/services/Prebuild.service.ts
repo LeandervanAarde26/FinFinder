@@ -17,12 +17,24 @@ export class PrebuildsService{
     }
 
     //add Build
-    addUserBuild(){
-        this.http.post<PrebuiltsModel>(`${baseUrl}userBuilds/${this.authService.user || sessionStorage.getItem('user')}`, null).subscribe((response: any) =>{
+    addUserBuild(buildId: string){
+        this.http.post<PrebuiltsModel>(`${baseUrl}builds/craft/${this.authService.user || sessionStorage.getItem('user')}?buildId=${buildId}`, null).subscribe((response: any) =>{
             console.log(response);
             if(response.created){
                 this.updatedFish.emit(true);
             }
         })
+    }
+
+    //Get the users builds
+
+    getUserBuilds(): Observable<PrebuiltsModel[]>{
+        return this.http.get<PrebuiltsModel[]>(`${baseUrl}userBuilds/${this.authService.user || sessionStorage.getItem('user')}`)
+    }
+
+    //View single builds 
+
+    getUserBuild(buildId: string): Observable<PrebuiltsModel>{
+        return this.http.get<PrebuiltsModel>(`${baseUrl}userBuild/${this.authService.user || sessionStorage.getItem('user')}?buildId=${buildId}`)
     }
 }

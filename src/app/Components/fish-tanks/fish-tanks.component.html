@@ -15,12 +15,14 @@
     </div>
 
     <div class="container__cards">
-        <app-my-fish-tank-card></app-my-fish-tank-card>
-        <app-my-fish-tank-card></app-my-fish-tank-card>
-        <app-my-fish-tank-card></app-my-fish-tank-card>
-        <app-my-fish-tank-card></app-my-fish-tank-card>
-        <app-my-fish-tank-card></app-my-fish-tank-card>
-        <app-my-fish-tank-card></app-my-fish-tank-card>
+        <app-my-fish-tank-card *ngFor="let tank of userBuilds index as i" 
+        [name]="tank.name"
+        [image]="tank.MainFish.imagePath"
+        [fish]="tank.fish"
+        [remainingSpace]="tank.remainingSpace"
+        [totalLiters]="tank.tank.Litres"
+        [id]="tank._id"></app-my-fish-tank-card>
+
 
     </div>
 </div>

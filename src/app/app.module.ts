@@ -40,6 +40,7 @@ import { PrebuildCardsComponent } from './Components/prebuild-cards/prebuild-car
 import { FoundInBuidsCardComponent } from './Components/found-in-buids-card/found-in-buids-card.component';
 import { BuildviewComponent } from './Components/buildview/buildview.component';
 import { AddFishComponent } from './Components/add-fish/add-fish.component';
+import { NotificationModalComponent } from './Components/notification-modal/notification-modal.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { AddFishComponent } from './Components/add-fish/add-fish.component';
     PrebuildCardsComponent,
     FoundInBuidsCardComponent,
     BuildviewComponent,
-    AddFishComponent
+    AddFishComponent,
+    NotificationModalComponent
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: 'item/:category/:id', component: SingleItemViewComponent, data: {animation: 'Three'} },
       { path: 'innerTank/:category/:id', component: SingleDecorViewComponent, data: {animation: 'Three'} },
       { path: 'tanks', component: FishTanksComponent, data: {animation: 'Four'} },
-      { path: 'tank', component: SingleTankViewComponent, data: {animation: 'Five'} },
+      { path: 'tank/:id', component: SingleTankViewComponent, data: {animation: 'Five'} },
       { path: 'create', component: CreateFishtankViewComponent, data: {animation: 'Six'} },
       {path: 'builds', component: PreBuildsViewComponent, data: {animation: 'Six'}}
     ]

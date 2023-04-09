@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { PrebuildsService } from 'src/app/shared/services/Prebuild.service';
 
 @Component({
   selector: 'app-prebuild-cards',
@@ -6,6 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./prebuild-cards.component.scss']
 })
 export class PrebuildCardsComponent {
+
+  constructor(private buildService: PrebuildsService){}
+
   @Input() name: string;
   @Input() fish: {};
   @Input() utilities: {};
@@ -17,6 +21,6 @@ export class PrebuildCardsComponent {
   @Input() id: string;
 
   craftBuild(id: string){
-    console.log(id)
+    this.buildService.addUserBuild(id)
   }
 }
