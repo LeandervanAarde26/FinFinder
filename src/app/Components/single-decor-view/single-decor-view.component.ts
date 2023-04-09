@@ -12,7 +12,6 @@ import { UserMaterialService } from 'src/app/shared/services/userMaterials.servi
 export class SingleDecorViewComponent implements OnInit {
   id: string;
   decoration: DecorModel[];
-  getItem: any;
   category: string;
   foundInBuilds: string
 

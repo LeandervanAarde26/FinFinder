@@ -33,10 +33,7 @@ export class SingleItemViewComponent implements OnInit{
       this.nonCompat = data['nonCompat']
       this.quantity = 0
       console.log(data)
-   });
-
-   
-    
+   }); 
   }
 
 }

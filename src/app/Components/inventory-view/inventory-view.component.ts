@@ -31,17 +31,21 @@ export class InventoryViewComponent implements OnInit {
   ngOnInit() {
     this.userMaterialService.getAllUserMaterials().subscribe((data) => {
       this.userMaterial = data
-      let fish= this.userMaterial['fish'].map(i =>  i);
-      let decorations = this.userMaterial['decorations'].map(i =>  i);
-      let utilities = this.userMaterial['utilities'].map(i =>  i);
-      let tanks = this.userMaterial['tanks'].map(i =>  i);
+      let fish= this.userMaterial['fish'].map(i =>  i).filter(item => item.quantity > 0);
+      let decorations = this.userMaterial['decorations'].map(i =>  i).map(i =>  i).filter(item => item.quantity > 0);
+      let utilities = this.userMaterial['utilities'].map(i =>  i).map(i =>  i).filter(item => item.quantity > 0);
+      let tanks = this.userMaterial['tanks'].map(i =>  i).map(i =>  i).filter(item => item.quantity > 0);
+      console.log(this.userMaterial)
 
-      this.allMaterials = fish.concat(tanks, decorations, utilities)
-      console.log(this.allMaterials)
+      // let filteredData = {
+      //   fish,
+      //   decorations,
+      //   utilities,
+      //   tanks,
+      // }
+
     })
   };
-
-
 
   searchItem() {
     let query = this.searchQuery.value;  
@@ -50,15 +54,10 @@ export class InventoryViewComponent implements OnInit {
     console.log(filteredMaterials);
   }
 
-
   filterItems(category){
     console.log(category)
     this.filterSet = category;
   }
-
-
-
-
 
   viewId(id) {
     console.log(id)

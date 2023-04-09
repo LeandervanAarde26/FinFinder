@@ -32,8 +32,7 @@ export class DashboardViewComponent implements OnInit{
       this.lowStock = newData.filter((j: number) => {return j['quantity'] < 4}).length;
 
     })
-
-
+    
     this.buildsService.getAllBuilds().subscribe((data) =>{
       this.buildsLength = data.length
     })

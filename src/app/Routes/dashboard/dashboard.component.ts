@@ -9,12 +9,6 @@ import { routeTransitionAnimations } from 'src/app/route-transition-animations';
   animations: [routeTransitionAnimations]
 })
 export class DashboardComponent {
-
-  // prepareRoute(outlet: RouterOutlet){
-  //   return outlet && 
-  //   outlet.activatedRouteData &&
-  //   outlet.activatedRouteData['animationState']
-  // }
   constructor(private contexts: ChildrenOutletContexts){}
 
   getRouteAnimationData() {

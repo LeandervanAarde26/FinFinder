@@ -4,12 +4,12 @@ import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { UserModel } from "../Models/User.model";
 import { Router } from "@angular/router";
+import { baseUrl } from "./baseUrl";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
   constructor(private http: HttpClient, private Router: Router) { }
-  baseUrl: string = 'http://localhost:3000/'
   regComplete: boolean = false;
   boolChange = new EventEmitter<boolean>();
 
@@ -35,14 +35,14 @@ export class AuthService {
   });
 
   registerNewUser(body: any): Observable<UserModel> | void {
-    this.http.post<UserModel>(`${this.baseUrl}user`, body).subscribe((response: any) => {
+    this.http.post<UserModel>(`${baseUrl}user`, body).subscribe((response: any) => {
       console.log(response.status)
       return response.status ? this.boolChange.emit(true) : null;
     })
   }
 
   getQuestions(email: string): Observable<UserModel> | any {
-    this.http.get<UserModel>(`${this.baseUrl}user/${email}`).subscribe({
+    this.http.get<UserModel>(`${baseUrl}user/${email}`).subscribe({
       next: data => {
         this.user = data['user'],
         this.backUpUser = sessionStorage.setItem('user', data['user'] )

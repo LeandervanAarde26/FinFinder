@@ -14,4 +14,9 @@ export class PrebuildCardsComponent {
   @Input() tank: number;
   @Input() craftable: boolean;
   @Input() buildable: boolean;
+  @Input() id: string;
+
+  craftBuild(id: string){
+    console.log(id)
+  }
 }

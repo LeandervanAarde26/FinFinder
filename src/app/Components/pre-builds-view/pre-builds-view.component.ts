@@ -24,10 +24,12 @@ export class PreBuildsViewComponent implements OnInit {
   ngOnInit(): void {
       this.userId = this.authService.user
       this.buildService.getAllBuilds().subscribe(data =>{
-        this.prebuilds = data;
+        let sorted = data.sort((a:any,b: any) => Number(b.complete) - Number(a.complete));
+        this.prebuilds = sorted
         // this.buildable = data[]
-
         console.log(data)
       });
+
+    
   }
 }

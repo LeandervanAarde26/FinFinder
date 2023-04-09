@@ -38,6 +38,8 @@ import { SingleDecorViewComponent } from './Components/single-decor-view/single-
 import { PreBuildsViewComponent } from './Components/pre-builds-view/pre-builds-view.component';
 import { PrebuildCardsComponent } from './Components/prebuild-cards/prebuild-cards.component';
 import { FoundInBuidsCardComponent } from './Components/found-in-buids-card/found-in-buids-card.component';
+import { BuildviewComponent } from './Components/buildview/buildview.component';
+import { AddFishComponent } from './Components/add-fish/add-fish.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +74,9 @@ import { FoundInBuidsCardComponent } from './Components/found-in-buids-card/foun
     SingleDecorViewComponent,
     PreBuildsViewComponent,
     PrebuildCardsComponent,
-    FoundInBuidsCardComponent
+    FoundInBuidsCardComponent,
+    BuildviewComponent,
+    AddFishComponent
   ],
   imports: [
     BrowserModule,
