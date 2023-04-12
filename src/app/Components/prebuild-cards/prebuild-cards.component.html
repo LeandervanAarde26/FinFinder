@@ -1,4 +1,4 @@
-<div [ngClass]="buildable ? 'container' : 'container__disabled'" >
+<div [ngClass]="buildable ? 'container' : 'container__disabled'">
   <div class="container__image">
     <img src="{{ imagePath }}" class="container__image__img" alt="" />
     <h4 class="container__center__heading__text">{{ tank }}L tank requried</h4>
@@ -34,7 +34,6 @@
             item.quantity
           }}</span>
           x {{ item.id.name }}
-    
         </li>
       </ul>
     </div>
@@ -55,8 +54,27 @@
   </div>
 
   <div class="container__right">
+    <app-input
+      *ngIf="buildable"
+      label="Build Address (Room) "
+      placeHolder="eg. Bedroom"
+      name="Room"
+      type="text"
+      [required]="true"
+      [controlname]="room.controls['RoomName']"
+    ></app-input>
+
     <div class="container__right__button">
-      <app-button class="secondary" label="{{buildable ? 'Build this tank!': 'Not enough inventory'}}" (clickHandler)="craftBuild(id)"></app-button>
+      <app-button
+        class="secondary"
+        *ngIf="
+          room.controls['RoomName'].touched &&
+          room.controls['RoomName'].valid &&
+          room.controls['RoomName'].value.length > 3
+        "
+        label="{{ buildable ? 'Build this tank!' : 'Not enough inventory' }}"
+        (clickHandler)="craftBuild(id)"
+      ></app-button>
     </div>
 
     <div class="container__right__text">

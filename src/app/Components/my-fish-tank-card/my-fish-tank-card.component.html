@@ -6,8 +6,7 @@
 
         <div class="cardBody__left__content">
             <h2 class="cardBody__left__content__name">{{name}}</h2>
-            <h5 class="cardBody__left__content__heading">Bedroom</h5>
-            <h5 class="cardBody__left__content__heading">Address of house</h5>
+            <h5 class="cardBody__left__content__heading">Tank Location: <span class="cardBody__left__content__heading__location">{{address}}</span></h5>
         </div>
     </div>
     <div class="cardBody__right">
@@ -19,7 +18,7 @@
             <P class="cardBody__right__content__item">{{remainingSpace}} L remaining</P>
         </div>
         <div class="cardBody__right__buttons">
-                <app-button label="Add Item" class="primary__outlined"></app-button>
+                <app-button label="Delete tank" class="danger" (clickHandler)="deleteBuild(id)"></app-button>
                 <app-button label="Update tank" class="secondary" routerLink="/dashboard/tank/{{id}}"></app-button>
         </div>
     </div>

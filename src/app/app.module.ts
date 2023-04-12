@@ -41,6 +41,7 @@ import { FoundInBuidsCardComponent } from './Components/found-in-buids-card/foun
 import { BuildviewComponent } from './Components/buildview/buildview.component';
 import { AddFishComponent } from './Components/add-fish/add-fish.component';
 import { NotificationModalComponent } from './Components/notification-modal/notification-modal.component';
+import { AddressModalComponent } from './Components/address-modal/address-modal.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { NotificationModalComponent } from './Components/notification-modal/noti
     FoundInBuidsCardComponent,
     BuildviewComponent,
     AddFishComponent,
-    NotificationModalComponent
+    NotificationModalComponent,
+    AddressModalComponent
   ],
   imports: [
     BrowserModule,

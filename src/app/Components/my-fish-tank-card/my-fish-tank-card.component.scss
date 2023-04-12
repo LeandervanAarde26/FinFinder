@@ -55,6 +55,10 @@
             }
             &__heading{
                 font-weight: 500;
+
+                &__location{
+                    color: $orange;
+                }
             }
         }
     }
