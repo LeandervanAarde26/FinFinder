@@ -1,28 +1,39 @@
 <div class="container">
-    <div class="container__header">
-        <h2>View all usernames FishTanks!</h2>
+  <div class="container__header">
+    <h2>View all usernames FishTanks!</h2>
+  </div>
+
+  <div class="container__filters">
+    <div class="container__filters__quick">
+      <app-button
+        *ngFor="let filter of quickFilterItems; index as i"
+        [label]="filter + ' Litres'"
+        class="{{ !filterState ? 'filter' : 'filter__active' }}"
+      ></app-button>
     </div>
-
-    <div class="container__filters">
-        <div class="container__filters__quick">
-            <app-button *ngFor="let filter of quickFilterItems; index as i" [label]="filter  +  ' Litres'"
-                class="{{!filterState ? 'filter' : 'filter__active'}}"></app-button>
-        </div>
-        <div class="container__filters__search">
-            <app-search-input name="search" placeHolder="My Fishtanks" [controlName]="searchQuery"></app-search-input>
-            <app-button class="filter" [label]="'Search item'" (clickHandler)="searchInventory()"></app-button>
-        </div>
+    <div class="container__filters__search">
+      <app-search-input
+        name="search"
+        placeHolder="My Fishtanks"
+        [controlName]="searchQuery"
+      ></app-search-input>
+      <app-button
+        class="filter"
+        [label]="'Search item'"
+        (clickHandler)="searchInventory()"
+      ></app-button>
     </div>
+  </div>
 
-    <div class="container__cards">
-        <app-my-fish-tank-card *ngFor="let tank of userBuilds index as i" 
-        [name]="tank.name"
-        [image]="tank.MainFish.imagePath"
-        [fish]="tank.fish"
-        [remainingSpace]="tank.remainingSpace"
-        [totalLiters]="tank.tank.Litres"
-        [id]="tank._id"></app-my-fish-tank-card>
-
-
-    </div>
+  <div class="container__cards">
+    <app-my-fish-tank-card
+      *ngFor="let tank of userBuilds; index as i"
+      [name]="tank.name"
+      [image]="tank.MainFish.imagePath"
+      [fish]="tank.fish"
+      [remainingSpace]="tank.remainingSpace"
+      [totalLiters]="tank.tank.Litres"
+      [id]="tank._id"
+    ></app-my-fish-tank-card>
+  </div>
 </div>

@@ -1,52 +1,73 @@
 <div class="container">
-    <div class="container__left">
-        <div class="container__left__image">
-            <img src="{{fish['imagePath']}}" class="container__left__image__img" alt="">
-        </div>
-        <div class="container__left__text">
-            <h2 class="heading">{{fish['name']}}</h2>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Diet</span>: {{diet}}.
-                &nbsp; </h6>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Required space</span>: This
-                fish required atleast {{fish['space']}}L of tank space</h6>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Diet</span>: This fish
-                needs an optimal temprature of {{fish['temprature']}} degrees Celcius</h6>
-        </div>
+  <div class="container__left">
+    <div class="container__left__image">
+      <img
+        src="{{ fish['imagePath'] }}"
+        class="container__left__image__img"
+        alt=""
+      />
     </div>
-    <div class="container__right">
-        <div class="container__right__innerFish">
-            <h4 class="ontainer__right__innerFish__heading">Compatible with</h4>
-            <div class="container__right__innerFish__compatible">
-                <div class="container__right__innerFish__compatible__cards">
-                    <app-compatible-fish-card *ngFor=" let item of compat; index as i" [name]="item.name"
-                        [image]="item.imagePath"></app-compatible-fish-card>
-                </div>
-            </div>
-            <h4 class="ontainer__right__innerFish__heading">Not Compatible with</h4>
-            <div class="container__right__innerFish__nonCompatible">
-                <div class="container__right__innerFish__compatible__cards">
-                    <app-compatible-fish-card *ngFor=" let item of nonCompat; index as i" [name]="item.name"
-                        [image]="item.imagePath"></app-compatible-fish-card>
-                </div>
-            </div>
-        </div>
-        <hr class="container__right__line">
-        <div class="container__right__inner">
-            <h4 class="container__right__inner__heading">My Inventory</h4>
-            <div class="container__right__inner__option">
-                <h5 class="container__right__inner__option__text">You have {{quantity}} {{fish['name']}} currently in
-                    you inventory</h5>
-                <app-button class="secondary" label="Update"></app-button>
-            </div>
-        </div>
-        <hr class="container__right__line">
-        <div class="container__right__inner2">
-            <h3 class="container__right__inner2__heading">Locations</h3>
-            <div class="container__right__inner2__grid">
-                <app-similiar-locations-card></app-similiar-locations-card>
-                <app-similiar-locations-card></app-similiar-locations-card>
-                <app-similiar-locations-card></app-similiar-locations-card>
-                <app-similiar-locations-card></app-similiar-locations-card>
-            </div>
-        </div>
+    <div class="container__left__text">
+      <h2 class="heading">{{ fish["name"] }}</h2>
+      <h6 class="container__left__text__key">
+        <span class="container__left__text__span">Diet</span>: {{ diet }}.
+        &nbsp;
+      </h6>
+      <h6 class="container__left__text__key">
+        <span class="container__left__text__span">Required space</span>: This
+        fish required atleast {{ fish["space"] }}L of tank space
+      </h6>
+      <h6 class="container__left__text__key">
+        <span class="container__left__text__span">Diet</span>: This fish needs
+        an optimal temprature of {{ fish["temprature"] }} degrees Celcius
+      </h6>
     </div>
+  </div>
+  <div class="container__right">
+    <div class="container__right__innerFish">
+      <h4 class="ontainer__right__innerFish__heading">Compatible with</h4>
+      <div class="container__right__innerFish__compatible">
+        <div class="container__right__innerFish__compatible__cards">
+          <app-compatible-fish-card
+            *ngFor="let item of compat; index as i"
+            [name]="item.name"
+            [image]="item.imagePath"
+          ></app-compatible-fish-card>
+        </div>
+      </div>
+      <h4 class="ontainer__right__innerFish__heading">Not Compatible with</h4>
+      <div class="container__right__innerFish__nonCompatible">
+        <div class="container__right__innerFish__compatible__cards">
+          <app-compatible-fish-card
+            *ngFor="let item of nonCompat; index as i"
+            [name]="item.name"
+            [image]="item.imagePath"
+          ></app-compatible-fish-card>
+        </div>
+      </div>
+    </div>
+    <hr class="container__right__line" />
+    <div class="container__right__inner">
+      <h4 class="container__right__inner__heading">My Inventory</h4>
+      <div class="container__right__inner__option">
+        <h5 class="container__right__inner__option__text">
+          You have {{ quantity }} {{ fish["name"] }} currently in you inventory
+        </h5>
+        <!-- <app-button class="secondary" label="Update"></app-button> -->
+      </div>
+    </div>
+    <hr class="container__right__line" />
+    <div class="container__right__inner2">
+      <h3 class="container__right__inner2__heading">
+        This fish is in {{ tanks.length }} of your locations
+      </h3>
+      <div class="container__right__inner2__grid">
+        <app-similiar-locations-card
+          *ngFor="let tank of tanks"
+          [tankName]="tank.name"
+          [tankId]="tank._id"
+        ></app-similiar-locations-card>
+      </div>
+    </div>
+  </div>
+</div>

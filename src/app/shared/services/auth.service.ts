@@ -15,6 +15,8 @@ export class AuthService {
 
   user: string;
   backUpUser: any;
+  userName: string;
+  backupUserName: any;
   public correct: boolean;
   public information: {};
 
@@ -68,9 +70,20 @@ export class AuthService {
     }
   }
 
+
+  getUserName(): Observable<any> | any{
+   this.http.get<any>(`${baseUrl}users/${this.user || sessionStorage.getItem('user')}`).subscribe((data) =>{
+      this.userName = data.name;
+      this.backupUserName = sessionStorage.setItem('username', data.name)
+      console.log(this.userName)
+   })
+  }
+
   userSignOut(){
     sessionStorage.clear();
     this.user = '';
     this.Router.navigate(['/'])
   }
+
+
 }

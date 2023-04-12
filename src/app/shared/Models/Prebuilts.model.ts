@@ -9,17 +9,17 @@ export class PrebuiltsModel {
     public MainFish: string;
     public tank: {};
     public fish: [];
-    public decoration: [];
+    public decorations: [];
     public utilities: [];
     public remainingSpace: number;
 
-    constructor(_id: string, name: string, MainFish: string, tank: {}, fish: [], decoration: [], utilities: [], remainingSpace: number ){
+    constructor(_id: string, name: string, MainFish: string, tank: {}, fish: [], decorations: [], utilities: [], remainingSpace: number ){
         this._id = _id;
         this.name = name;
         this.MainFish = MainFish;
         this.tank = tank;
         this.fish = fish;
-        this.decoration = decoration;
+        this.decorations = decorations;
         this.utilities = utilities;
         this.remainingSpace = remainingSpace
     }

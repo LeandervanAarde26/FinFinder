@@ -1,38 +1,42 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 .cardBody {
-    display: flex;
-    flex-basis: 100%;
-    background-color: darken($darkestGrey, 0%);
+  display: flex;
+  flex-basis: 100%;
+  background-color: darken($darkestGrey, 0%);
+  @include shadowTwo();
+  height: 15vh;
+  flex-direction: row;
+  transition: 0.3s linear;
+
+  &:hover {
     @include shadowTwo();
-    height: 15vh;
+    background-color: darken($darkGrey, 10%);
+  }
+
+  &__tankImage {
+    display: flex;
     flex-direction: row;
+    flex-basis: 40%;
+    // max-width: 40%;
+    height: 100%;
+    background-image: url("../../../assets/Tank.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
-    &__tankImage {
-        display: flex;
-        flex-direction: row;
-        flex-basis: 40%;
-        // max-width: 40%;
-        height: 100%;
-        background-image: url('../../../assets/Fishtank.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
+  &__TankName {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 60%;
+    // max-width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 
+    &__name {
+      color: $blue;
     }
-
-    &__TankName {
-        display: flex;
-        flex-direction: row;
-        flex-basis: 60%;
-        // max-width: 60%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-
-        &__name {
-            color: $blue;
-        }
-    }
-
+  }
 }

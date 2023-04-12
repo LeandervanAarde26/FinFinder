@@ -16,6 +16,7 @@ export class DashboardViewComponent implements OnInit{
   currentInventory : number;
   lowStock: number;
   buildsLength: number;
+  userBuildsLength: number;
 
   ngOnInit(): void {
     this.userMaterialService.getAllUserMaterials().subscribe((data) =>{
@@ -35,6 +36,10 @@ export class DashboardViewComponent implements OnInit{
     
     this.buildsService.getAllBuilds().subscribe((data) =>{
       this.buildsLength = data.length
+    })
+
+    this.buildsService.getUserBuilds().subscribe((data) =>{
+      this.userBuildsLength = data.length
     })
   }
 

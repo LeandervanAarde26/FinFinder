@@ -18,6 +18,7 @@ export class SingleItemViewComponent implements OnInit{
   compat: [];
   quantity: number;
   nonCompat: [];
+  tanks: [];
   constructor(private fishService: FishService, private activatedRoute: ActivatedRoute, private materialService: UserMaterialService){
     this.activatedRoute.params.subscribe(params =>{
       this.id = params['id']
@@ -32,6 +33,7 @@ export class SingleItemViewComponent implements OnInit{
       this.compat = data['compat'];
       this.nonCompat = data['nonCompat']
       this.quantity = data['mat'].fish.quantity
+      this.tanks = data['tanks']
       console.log(data)
    }); 
   }

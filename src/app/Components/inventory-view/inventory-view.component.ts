@@ -23,6 +23,7 @@ export class InventoryViewComponent implements OnInit {
   allMaterials: any[];
   userId: string = this.authService.user;
   filterSet: string = "All items";
+  userName: string
 
   searchInventory() {
     console.log(this.searchQuery.value)
@@ -35,8 +36,10 @@ export class InventoryViewComponent implements OnInit {
       let decorations = this.userMaterial['decorations'].map(i =>  i).map(i =>  i).filter(item => item.quantity > 0);
       let utilities = this.userMaterial['utilities'].map(i =>  i).map(i =>  i).filter(item => item.quantity > 0);
       let tanks = this.userMaterial['tanks'].map(i =>  i).map(i =>  i).filter(item => item.quantity > 0);
-      console.log(this.userMaterial)
 
+      this.authService.getUserName();
+      this.userName = sessionStorage.getItem('username');
+      
       // let filteredData = {
       //   fish,
       //   decorations,
