@@ -21,7 +21,7 @@ export class FishTanksComponent implements OnInit {
   ngOnInit(): void {
     this.buildsService.getUserBuilds().subscribe((data) =>{
       this.userBuilds = data;
-      console.log(data)
+      // console.log(data)
     })
 
     this.userName = sessionStorage.getItem('username')

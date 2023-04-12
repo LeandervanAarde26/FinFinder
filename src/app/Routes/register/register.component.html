@@ -1,28 +1,57 @@
 <div class="container">
-    <app-reg-modal *ngIf="regComplete"></app-reg-modal>
-    <div class="container__left">
-        <img class="container__left__img" src="../../../assets/discus.png" alt="discuss fish">
-    </div>
+  <app-reg-modal *ngIf="regComplete"></app-reg-modal>
+  <div class="container__left">
+    <img
+      class="container__left__img"
+      src="../../../assets/discus.png"
+      alt="discuss fish"
+    />
+  </div>
 
-    <div class="container__center" [ngStyle]="{'display': next ? 'flex' : 'flex'}">
-        <app-registerstepone (sub)="onSubmit()" [ngStyle]="{'display': next ? 'none' : ''}"></app-registerstepone>
-        <app-registersteptwo [ngStyle]="{'display': next ? '' : 'none'}"> </app-registersteptwo>
+  <div
+    class="container__center"
+    [ngStyle]="{ display: next ? 'flex' : 'flex' }"
+  >
+    <app-registerstepone
+      (sub)="onSubmit()"
+      [ngStyle]="{ display: next ? 'none' : '' }"
+    ></app-registerstepone>
+    <app-registersteptwo [ngStyle]="{ display: next ? '' : 'none' }">
+    </app-registersteptwo>
 
-        <app-button [ngStyle]="{'display': next ? 'none' : ''}"
-            [class]="registerForm.controls['Username'].value === '' || registerForm.controls['Email'].value === '' ? 'disabled' : 'secondary'"
-            label="Continue"
-            (clickHandler)="goNext()"
-            ></app-button>
-            
-    </div>
+    <app-button
+      [ngStyle]="{ display: next ? 'none' : '' }"
+      [class]="
+        registerForm.controls['Username'].value === '' ||
+        registerForm.controls['Email'].value === ''
+          ? 'disabled'
+          : 'secondary'
+      "
+      label="Continue"
+      (clickHandler)="goNext()"
+    ></app-button>
+  </div>
 
-    <div class="container__right">
-        <app-registersteptwoanswers [ngStyle]="{'display': next ? '' : 'none'}"></app-registersteptwoanswers>
-        <div class="container__right__btn" [ngStyle]="{'display': next ? '' : 'none'}">
-            <app-button class="secondary" label="Register user" style="width:170px;"
-                (clickHandler)="onSubmit()"></app-button>
-        </div>
-        <img [ngStyle]="{'display': next ? 'none' : ''}" class="container__left__img" src="../../../assets/Gourami.png"
-            alt="discuss fish">
+  <div class="container__right">
+    <app-registersteptwoanswers
+      [ngStyle]="{ display: next ? '' : 'none' }"
+    ></app-registersteptwoanswers>
+    <div
+      class="container__right__btn"
+      [ngStyle]="{ display: next ? '' : 'none' }"
+    >
+      <app-button
+        class="secondary"
+        label="Register user"
+        style="width: 170px"
+        (clickHandler)="onSubmit()"
+      ></app-button>
     </div>
+    <img
+      [ngStyle]="{ display: next ? 'none' : '' }"
+      class="container__left__img"
+      src="../../../assets/Gourami.png"
+      alt="discuss fish"
+    />
+  </div>
 </div>

@@ -1,5 +1,5 @@
-export interface subPrebuilds{
-    id: string, 
-    quantity: number,
-    craftable: boolean,
+export interface subPrebuilds {
+  id: string;
+  quantity: number;
+  craftable: boolean;
 }

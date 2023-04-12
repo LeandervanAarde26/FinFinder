@@ -1,74 +1,83 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 .container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+
+  &__left,
+  &__right {
     display: flex;
-    height: 100%;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-basis: 100%;
+  }
+
+  &__left {
+    background-color: darken($darkestGrey, 5%);
+    width: 40%;
+    @include shadowTwo();
+    align-items: center;
+
+    &__image {
+      // flex-basis: 20%;
+      width: 80%;
+      display: flex;
+      // background-color: red;
+      justify-content: center;
+
+      &__img {
+        object-fit: contain;
+        width: 90%;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      justify-content: center;
+      flex-basis: 60%;
+
+      &__key {
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      &__span {
+        color: $blue;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__right {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     overflow: scroll;
-    -ms-overflow-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
 
-    &__left,
-    &__right {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
+    &__heading {
+      // background-color: red;
+      width: 100%;
+      color: $orange;
     }
 
-    &__left {
-        background-color: darken($darkestGrey, 5%);
-        width: 40%;
-        @include shadowTwo();
-        align-items: center;
-
-        &__image {
-            // flex-basis: 20%;
-            width: 80%;
-            display: flex;
-            // background-color: red; 
-            justify-content: center;
-
-            &__img {
-                object-fit: contain;
-                width: 90%;
-            }
-        }
-
-        &__text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            justify-content: center;
-            flex-basis: 60%;
-
-            &__key {
-                color: $white;
-                font-weight: 400;
-                font-size: 16px
-            }
-
-            &__span {
-                color: $blue;
-                font-weight: 600;  
-            }
-        }
+    &__cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 15px;
+      width: 100%;
+      min-height: 80%;
     }
-
-    &__right {
-        width: 55%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        overflow: scroll;
-        gap: 15px;
-        flex-wrap: wrap;
-
-        &__heading{
-            // background-color: red;
-            width: 100%;
-            color: $orange;
-        }
-    }
+  }
 }

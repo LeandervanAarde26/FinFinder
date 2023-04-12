@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateFishtankViewComponent } from './Components/create-fishtank-view/create-fishtank-view.component';
 import { DashboardViewComponent } from './Components/dashboard-view/dashboard-view.component';
 import { FishTanksComponent } from './Components/fish-tanks/fish-tanks.component';
 import { InventoryViewComponent } from './Components/inventory-view/inventory-view.component';
@@ -52,11 +51,6 @@ const routes: Routes = [
         path: 'tank/:id',
         component: SingleTankViewComponent,
         data: { animation: 'Five' },
-      },
-      {
-        path: 'create',
-        component: CreateFishtankViewComponent,
-        data: { animation: 'Six' },
       },
       {
         path: 'builds',

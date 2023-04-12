@@ -31,14 +31,16 @@
 
   <div class="container__right">
     <h3 class="container__right__heading">Fish in this tank</h3>
-    <app-update-card
-      *ngFor="let fish of buildData.fish; index as i"
-      [fishImage]="fish.id.imagePath"
-      [currentAmount]="fish.quantity"
-      [userAmount]="matchedData[i].quantity"
-      [fishname]="fish.id.name"
-      [fishId]="fish.id._id"
-    [category]="'utilities'"
-    ></app-update-card>
+      <div class="container__right__cards">
+        <app-update-card
+        *ngFor="let fish of buildData.fish"
+        [fishImage]="fish.id.imagePath"
+        [currentAmount]="fish.quantity"
+        [userAmount]="matchedData[i].quantity"
+        [fishname]="fish.id.name"
+        [fishId]="fish.id._id"
+      [category]="'utilities'"
+      ></app-update-card>
+      </div>
   </div>
 </div>

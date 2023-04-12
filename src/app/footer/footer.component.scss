@@ -1,72 +1,76 @@
 @import "../../styles.scss";
 
 .footerContainer {
-    height: 12vh;
-    background: rgb(33, 33, 33);
-    background: linear-gradient(0deg, darken($darkestGrey, 12%) 2%, darken($darkGrey, 12%) 92%);
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: space-between;
+  height: 12vh;
+  background: rgb(33, 33, 33);
+  background: linear-gradient(
+    0deg,
+    darken($darkestGrey, 12%) 2%,
+    darken($darkGrey, 12%) 92%
+  );
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+
+  &__logo {
+    flex-basis: 20%;
     padding: 10px;
-    flex-grow: 1;
-    position: relative;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
 
-    &__logo {
-        flex-basis: 20%;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1px;
-
-        &__img {
-            height: 90%;
-        }
-
-        &__name {
-            @include smallText();
-            color: $white;
-        }
+    &__img {
+      height: 90%;
     }
 
-    &__text {
-        flex-basis: 40%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    &__name {
+      @include smallText();
+      color: $white;
+    }
+  }
 
-        &__wrapper {
-            display: flex;
-            flex-direction: column;
-            width: 30%;
-            align-items: center;
-            gap: 7px;
+  &__text {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-            &__about {
-                @include body();
-                cursor: pointer;
-            }
-        }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      align-items: center;
+      gap: 7px;
+
+      &__about {
+        @include body();
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__contact {
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
     }
 
-    &__contact {
-        flex-basis: 20%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-
-        &__wrapper {
-            display: flex;
-            justify-content: center;
-        }
-
-        &__btnCon {
-            width: 40%;
-        }
+    &__btnCon {
+      width: 40%;
     }
+  }
 }

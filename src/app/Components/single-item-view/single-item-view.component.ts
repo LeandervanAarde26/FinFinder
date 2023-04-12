@@ -11,7 +11,7 @@ import { UserMaterialModel } from 'src/app/shared/Models/userMaterials.model';
   templateUrl: './single-item-view.component.html',
   styleUrls: ['./single-item-view.component.scss'],
 })
-export class SingleItemViewComponent implements OnInit{
+export class SingleItemViewComponent implements OnInit {
   id: string;
   fish: UserMaterialModel;
   diet: string[];
@@ -19,23 +19,26 @@ export class SingleItemViewComponent implements OnInit{
   quantity: number;
   nonCompat: [];
   tanks: [];
-  constructor(private fishService: FishService, private activatedRoute: ActivatedRoute, private materialService: UserMaterialService){
-    this.activatedRoute.params.subscribe(params =>{
-      this.id = params['id']
-      
-    })
+  constructor(
+    private fishService: FishService,
+    private activatedRoute: ActivatedRoute,
+    private materialService: UserMaterialService
+  ) {
+    this.activatedRoute.params.subscribe((params) => {
+      this.id = params['id'];
+    });
   }
 
   ngOnInit(): void {
-  this.materialService.getSingleMaterial(this.id, 'fish').subscribe((data) =>{
-      this.fish = data['mat'].item
-      this.diet = this.fish['diet']
-      this.compat = data['compat'];
-      this.nonCompat = data['nonCompat']
-      this.quantity = data['mat'].fish.quantity
-      this.tanks = data['tanks']
-      console.log(data)
-   }); 
+    this.materialService
+      .getSingleMaterial(this.id, 'fish')
+      .subscribe((data) => {
+        this.fish = data['mat'].item;
+        this.diet = this.fish['diet'];
+        this.compat = data['compat'];
+        this.nonCompat = data['nonCompat'];
+        this.quantity = data['mat'].fish.quantity;
+        this.tanks = data['tanks'];
+      });
   }
-
 }

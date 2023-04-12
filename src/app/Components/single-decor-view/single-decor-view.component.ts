@@ -7,26 +7,31 @@ import { UserMaterialService } from 'src/app/shared/services/userMaterials.servi
 @Component({
   selector: 'app-single-decor-view',
   templateUrl: './single-decor-view.component.html',
-  styleUrls: ['./single-decor-view.component.scss']
+  styleUrls: ['./single-decor-view.component.scss'],
 })
 export class SingleDecorViewComponent implements OnInit {
   id: string;
   decoration: DecorModel[];
   category: string;
-  foundInBuilds: string
+  foundInBuilds: string;
 
-  constructor(private activatedRoute: ActivatedRoute, private materialService: UserMaterialService) {
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private materialService: UserMaterialService
+  ) {
     this.activatedRoute.params.subscribe((params) => {
-      this.id = params['id']
+      this.id = params['id'];
       this.category = params['category'];
-    })
+    });
   }
 
   ngOnInit(): void {
-    this.materialService.getSingleMaterial(this.id, this.category).subscribe((data) => {
-      console.log(data)
-      this.decoration = data['mat']['item']
-      this.foundInBuilds = data['builds']
-    });
+    this.materialService
+      .getSingleMaterial(this.id, this.category)
+      .subscribe((data) => {
+        console.log(data);
+        this.decoration = data['mat']['item'];
+        this.foundInBuilds = data['builds'];
+      });
   }
 }

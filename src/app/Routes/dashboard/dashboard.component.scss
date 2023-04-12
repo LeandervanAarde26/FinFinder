@@ -1,24 +1,23 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
-.container{
-    display: flex;   
-    flex-direction: row;
-    background-color: $darkGrey;
-    height: 88vh;
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: $darkGrey;
+  height: 88vh;
 
-    &__Nav{
-        background-color: $darkestGrey;
-        flex-basis: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        z-index: 1;
-    }
+  &__Nav {
+    background-color: $darkestGrey;
+    flex-basis: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
 
-    &__routes{
-        width: 100%;
-        padding: 10px;
-
-    }
+  &__routes {
+    width: 100%;
+    padding: 10px;
+  }
 }

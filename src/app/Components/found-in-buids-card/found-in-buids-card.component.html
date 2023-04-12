@@ -1,13 +1,32 @@
 <div class="cardBody">
-    <div class="cardBody__tankImage">
-        <img  class="cardBody__tankImage__img" src="{{image || '../../../assets/oscar.png'}}" alt="" >
+  <div class="cardBody__tankImage">
+    <img
+      class="cardBody__tankImage__img"
+      src="{{ image || '../../../assets/oscar.png' }}"
+      alt=""
+    />
+  </div>
+  <div class="cardBody__TankName">
+    <h4 class="cardBody__TankName__name">{{ name || "Fishtank" }}</h4>
+    <div class="cardBody__TankName__information">
+      <p class="cardBody__TankName__information__text">
+        <span class="cardBody__TankName__information__text__amount">{{
+          fishTotal || 0
+        }}</span>
+        Fish species
+      </p>
+      <p class="cardBody__TankName__information__text">
+        <span class="cardBody__TankName__information__text__amount">{{
+          utilitiesTotal || 0
+        }}</span>
+        total Utilities
+      </p>
+      <p class="cardBody__TankName__information__text">
+        <span class="cardBody__TankName__information__text__amount">{{
+          decorationsTotal || 0
+        }}</span>
+        total Decorations
+      </p>
     </div>
-    <div class="cardBody__TankName">
-        <h4 class="cardBody__TankName__name">{{name || "Fishtank"}}</h4>
-        <div class="cardBody__TankName__information">
-            <p class="cardBody__TankName__information__text"><span  class="cardBody__TankName__information__text__amount">{{fishTotal || 0}}</span> Fish species</p>
-            <p class="cardBody__TankName__information__text"><span  class="cardBody__TankName__information__text__amount">{{utilitiesTotal || 0}}</span> total Utilities</p>
-            <p class="cardBody__TankName__information__text"><span  class="cardBody__TankName__information__text__amount">{{decorationsTotal || 0}}</span> total Decorations</p>
-        </div>
-    </div>
+  </div>
 </div>

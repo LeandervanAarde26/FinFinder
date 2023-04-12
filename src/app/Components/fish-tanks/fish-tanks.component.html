@@ -8,7 +8,7 @@
     <div class="container__filters__search">
       <app-search-input
         name="search"
-        placeHolder="My Fishtanks"
+        placeHolder="my fishtanks by name"
         [controlName]="searchQuery"
       ></app-search-input>
       <app-button
@@ -21,7 +21,7 @@
 
   <div class="container__cards">
     <app-my-fish-tank-card
-      *ngFor="let tank of userBuilds; index as i"
+      *ngFor="let tank of userBuilds | filterpipe: searchQuery.value: 'name' || 'buildName'   "
       [name]="tank.name"
       [image]="tank.MainFish.imagePath"
       [fish]="tank.fish"

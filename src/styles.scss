@@ -1,159 +1,164 @@
-
-
-$white: #F7F7F7;
+$white: #f7f7f7;
 $grey: #424242;
 $darkGrey: #303030;
 $darkestGrey: #212121;
 $LigthBlack: #181818;
 $pureBlack: #000000;
 
-$orange: #F7931E;
-$Navy: #07407B;
+$orange: #f7931e;
+$Navy: #07407b;
 $blue: #53bbe7;
 
-// Sematic colours 
-$danger: #DE0000;
-$success: #00B112;
-$warning: #F5DD00;
+// Sematic colours
+$danger: #de0000;
+$success: #00b112;
+$warning: #f5dd00;
 
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
-$headings: 'Barlow Condensed', sans-serif;
-$body: 'Quicksand', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+$headings: "Barlow Condensed", sans-serif;
+$body: "Quicksand", sans-serif;
 // Text sizes
-@mixin boxShadow{
-    box-shadow: 6px 7px 25px -1px rgba(0,0,0,0.7);
--webkit-box-shadow: 6px 7px 25px -1px rgba(0,0,0,0.7);
--moz-box-shadow: 6px 7px 25px -1px rgba(0,0,0,0.7);
+@mixin boxShadow {
+  box-shadow: 6px 7px 25px -1px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 6px 7px 25px -1px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 6px 7px 25px -1px rgba(0, 0, 0, 0.7);
 }
 
-@mixin shadowTwo{
-    box-shadow: 5px 8px 24px 3px rgba(0,0,0,0.34);
--webkit-box-shadow: 5px 8px 24px 3px rgba(0,0,0,0.34);
--moz-box-shadow: 5px 8px 24px 3px rgba(0,0,0,0.34);
+@mixin shadowTwo {
+  box-shadow: 5px 8px 24px 3px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 5px 8px 24px 3px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 5px 8px 24px 3px rgba(0, 0, 0, 0.34);
 }
 @mixin Title {
-    font-family: $headings;
-    font-size: 65px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    color: $white;
+  font-family: $headings;
+  font-size: 65px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: $white;
 }
 
 @mixin headingOne {
-    font-family: $headings;
-    font-size: 40px;
-    letter-spacing: 2px;
-    color: $white;
+  font-family: $headings;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: $white;
 }
 
 @mixin headingTwo {
-    font-family: $headings;
-    font-size: 32px;
-    color: $white;
+  font-family: $headings;
+  font-size: 32px;
+  color: $white;
 }
 
 @mixin headingThree {
-    font-family: $headings;
-    font-size: 28px;
-    color: $white;
+  font-family: $headings;
+  font-size: 28px;
+  color: $white;
 }
 
 @mixin headingFour {
-    font-family: $headings;
-    font-size: 22px;
-    color: $white;
+  font-family: $headings;
+  font-size: 22px;
+  color: $white;
 }
 
 @mixin headingFive {
-    font-family: $headings;
-    font-size: 18px;
-    color: $white;
+  font-family: $headings;
+  font-size: 18px;
+  color: $white;
 }
 
 @mixin headingSix {
-    font-family: $headings;
-    font-size: 15px;
-    color: $white;
+  font-family: $headings;
+  font-size: 15px;
+  color: $white;
 }
 
 h1 {
-    @include headingOne();
-    width: fit-content;
-    height: fit-content;
+  @include headingOne();
+  width: fit-content;
+  height: fit-content;
 }
 
 h2 {
-    @include headingTwo();
-    width: fit-content;
-    height: fit-content;
+  @include headingTwo();
+  width: fit-content;
+  height: fit-content;
 }
 
 h3 {
-    @include headingThree();
-    width: fit-content;
-    height: fit-content;
+  @include headingThree();
+  width: fit-content;
+  height: fit-content;
 }
 
 h4 {
-    @include headingFour();
-    width: fit-content;
-    height: fit-content;
+  @include headingFour();
+  width: fit-content;
+  height: fit-content;
 }
 
 h5 {
-    @include headingFive();
-    width: fit-content;
-    height: fit-content;
+  @include headingFive();
+  width: fit-content;
+  height: fit-content;
 }
 
 h6 {
-    @include headingSix();
-    width: fit-content;
-    height: fit-content;
+  @include headingSix();
+  width: fit-content;
+  height: fit-content;
 }
 
 @mixin body {
-    font-family: $body;
-    font-weight: 400;
-    font-size: 14px;
-    color: $white;
+  font-family: $body;
+  font-weight: 400;
+  font-size: 14px;
+  color: $white;
 }
 
-p{
-    @include body();
-    width: fit-content;
-    height: fit-content;  
+p {
+  @include body();
+  width: fit-content;
+  height: fit-content;
 }
 
 @mixin smallText {
-    font-family: $body;
-    font-weight: 400;
-    font-size: 12px;
+  font-family: $body;
+  font-weight: 400;
+  font-size: 12px;
 }
 
-// General configuration. 
+// General configuration.
 
-html, body{
-    height: 100%;
-    background-color: $pureBlack;
+html,
+body {
+  height: 100%;
+  background-color: $pureBlack;
 }
 
 .App {
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -ms-overflow-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
 
-    &::-webkit-scrollbar {
-        display: none;
-      }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,200 +1,190 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 .container {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 15px;
-    overflow: scroll;
-    -ms-overflow-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  overflow: scroll;
+  -ms-overflow-style: none;
 
-    &__left,
-    &__right {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+
+  &__left {
+    background-color: darken($darkestGrey, 5%);
+    width: 40%;
+    @include shadowTwo();
+
+    &__image {
+      flex-basis: 60%;
+      max-height: 550px;
+      display: flex;
+      justify-content: center;
+
+      &__img {
+        object-fit: contain;
+        width: 100%;
+      }
     }
 
-    &__left {
-        background-color: darken($darkestGrey, 5%);
-        width: 40%;
-        @include shadowTwo();
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      justify-content: center;
+      flex-basis: 45%;
 
-        &__image {
-            flex-basis: 60%;
-            max-height: 550px;
-            display: flex;
-            justify-content: center;
+      &__key {
+        color: $white;
+        font-weight: 400;
+      }
 
-            &__img {
-                object-fit: contain;
-                width: 100%;
-            }
+      &__span {
+        color: $blue;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__right {
+    // background-color: blue;
+    // width: 58%;
+    display: flex;
+    flex-direction: column;
+    max-width: 58%;
+    overflow: scroll;
+    gap: 15px;
+
+    &__line {
+      border: 1px solid $orange;
+      width: 90%;
+    }
+
+    &__innerFish {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      &__heading {
+        color: $orange;
+        font-weight: 600;
+      }
+
+      &__compatible,
+      &__nonCompatible {
+        display: flex;
+        flex-flow: row;
+        // background-color: white;
+        // padding: 0 10px;
+        gap: 15px;
+        width: 100%;
+        max-width: 1400px;
+        max-height: 200px;
+        justify-content: space-between;
+        // background-color: red;
+
+        &__cards {
+          display: flex;
+          flex-basis: 100%;
+          flex-direction: row;
+          // background-color: orange;
+          height: 100%;
+          max-height: 400px;
+          width: 90%;
+          gap: 15px;
+          overflow: scroll;
+          flex-wrap: wrap;
         }
+
+        // &__button{
+        //     display: flex;
+        //     flex-direction: column;
+        //     background-color: orange;
+        //     height: 100%;
+        //     width: 5%;
+        // }
+
+        &__header {
+          color: $orange;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__inner {
+      height: 33%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      &__heading {
+        color: $orange;
+        font-weight: 600;
+        width: 100%;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: fit-content;
+        max-height: 175px;
+        -webkit-column-count: 2;
+        -moz-column-count: 3;
+        column-count: 3;
+        gap: 10px;
+        // background-color: red;
+
+        &__Item {
+          @include body();
+        }
+      }
+
+      &__option {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        max-height: fit-content;
+        align-content: center;
 
         &__text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            justify-content: center;
-            flex-basis: 45%;
-
-            &__key {
-                color: $white;
-                font-weight: 400;
-            }
-
-            &__span {
-                color: $blue;
-                font-weight: 600;
-            }
+          font-weight: 400;
         }
+      }
     }
 
-    &__right {
-        // background-color: blue;
-        // width: 58%;
-        display: flex;
+    &__inner2 {
+      display: flexbox;
+      height: 100%;
+      width: 95%;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px;
+
+      &__grid {
         flex-direction: column;
-        max-width: 58%;
-        overflow: scroll;
-        gap: 15px;
-    
-
-        &__line {
-            border: 1px solid $orange;
-            width: 90%;
-        }
-
-        &__innerFish{
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            gap: 20px;
-            flex-wrap: wrap;
-
-
-            &__heading {
-                color: $orange;
-                font-weight: 600;
-            }
-        
-            
-            &__compatible,
-            &__nonCompatible {
-                display: flex;
-                flex-flow: row;
-                // background-color: white;
-                // padding: 0 10px;
-                gap: 15px;
-                width: 100%;
-                max-width: 1400px;
-                max-height: 200px;
-                justify-content: space-between;
-                // background-color: red;
-
-
-            
-                &__cards{
-                    display: flex;
-                    flex-basis: 100%;
-                    flex-direction: row;
-                    // background-color: orange;
-                    height: 100%;
-                    max-height: 400px;
-                    width: 90%;
-                    gap: 15px;
-                    overflow: scroll;
-                    flex-wrap: wrap;
-                }
-
-                // &__button{
-                //     display: flex;
-                //     flex-direction: column;
-                //     background-color: orange;
-                //     height: 100%;
-                //     width: 5%;
-                // }
-
-
-
-                &__header {
-                    color: $orange;
-                    font-weight: 600;
-                }
-            }
-
-        }
-
-        &__inner {
-            height: 33%;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            padding: 20px;
-            gap: 20px;
-            flex-wrap: wrap;
-
-            &__heading {
-                color: $orange;
-                font-weight: 600;
-                width: 100%;
-            }
-
-            &__list {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                height: fit-content;
-                max-height: 175px;
-                -webkit-column-count: 2;
-                -moz-column-count: 3;
-                column-count: 3;
-                gap: 10px;
-                // background-color: red;
-
-                &__Item {
-                    @include body();
-                }
-            }
-
-
-
-            &__option {
-                flex-basis: 100%;
-                display: flex;
-                justify-content: space-between;
-                flex-direction: row;
-                max-height: fit-content;
-                align-content: center;
-
-                &__text {
-                    font-weight: 400;
-                }
-            }
-        }
-
-        &__inner2 {
-            display: flexbox;
-            height: 100%;
-            width: 95%;
-            flex-direction: column;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 20px;
-
-            &__grid {
-                flex-direction: column;
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                column-gap: 15px;
-                padding: 15px 0;
-                row-gap: 15px;
-                justify-content: center;
-            }
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        column-gap: 15px;
+        padding: 15px 0;
+        row-gap: 15px;
+        justify-content: center;
+      }
     }
+  }
 }

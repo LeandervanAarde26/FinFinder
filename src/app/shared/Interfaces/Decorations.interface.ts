@@ -1,5 +1,5 @@
 export interface DecorationsInterface {
-    id: string, 
-    name: String, 
-    quanitity: number
+  id: string;
+  name: String;
+  quanitity: number;
 }

@@ -1,45 +1,45 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 .service-card {
-    padding: 10px;
-    @include boxShadow();
-    background-color: $LigthBlack;
-    min-height: 400px;
+  padding: 10px;
+  @include boxShadow();
+  background-color: $LigthBlack;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transition: 0.34s ease-in;
+  padding: 20px;
+
+  &__imageContainer {
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-    transition: .34s ease-in;
-    padding: 20px;
 
-    &__imageContainer {
-        display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 40%;
+    min-height: 250px;
 
-        justify-content: center;
-        align-items: center;
-        flex-grow: 40%;
-        min-height: 250px;
+    &__image {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      max-width: 400px;
+      aspect-ratio: 16/9;
 
-        &__image {
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
-            max-width: 400px;
-            aspect-ratio: 16/9;
+      transition: 800ms ease-in;
 
-            transition: 800ms ease-in;
-
-            &:hover {
-                transform: scale(1.3);
-            }
-        }
+      &:hover {
+        transform: scale(1.3);
+      }
     }
+  }
 
-    &__heading {
-        width: 100%;
-        text-align: center;
-    }
+  &__heading {
+    width: 100%;
+    text-align: center;
+  }
 
-    &:hover {
-        border-bottom: 5px solid $orange;
-    }
+  &:hover {
+    border-bottom: 5px solid $orange;
+  }
 }

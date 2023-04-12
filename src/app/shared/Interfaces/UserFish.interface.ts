@@ -1,4 +1,4 @@
 export interface UserFishInterFace {
-    id: string, 
-    quantity: number
+  id: string;
+  quantity: number;
 }

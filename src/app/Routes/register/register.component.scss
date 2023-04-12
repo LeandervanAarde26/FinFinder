@@ -1,60 +1,63 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 .container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 88vh;
+  background: rgb(30, 30, 30);
+  background: linear-gradient(
+    0deg,
+    darken($darkGrey, 12%) 34%,
+    $darkestGrey 77%
+  );
+
+  &__left,
+  &__center,
+  &__right,
+  &__right2,
+  &__center2 {
     display: flex;
-    flex-direction: row;
-    flex: 1;
-    height: 88vh;
-    background: rgb(30, 30, 30);
-    background: linear-gradient(0deg, darken($darkGrey, 12%) 34%, $darkestGrey 77%);
+    flex-basis: 33.3%;
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    transition: 1s linear;
 
-    &__left,
-    &__center,
-    &__right,
-    &__right2,
-    &__center2 {
-        display: flex;
-        flex-basis: 33.3%;
-        padding: 20px 30px;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-        transition: 1s linear;
-
-        &__sectionHeading {
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        &__instruction {
-            color: $white;
-            @include headingSix();
-        }
-
-        &__form {
-            display: flex;
-            flex-direction: column;
-            gap: 23px;
-
-            &__invalid {
-                color: $danger;
-                font-size: 12px;
-            }
-        }
-
-        &__btn {
-            display: flex;
-
-            justify-content: end;
-            // align-items: end;s
-            width: 89%;
-
-        }
-
-        &__img {
-            max-width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: contain;
-        }
+    &__sectionHeading {
+      margin-bottom: 30px;
+      font-weight: 500;
     }
+
+    &__instruction {
+      color: $white;
+      @include headingSix();
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+
+      &__invalid {
+        color: $danger;
+        font-size: 12px;
+      }
+    }
+
+    &__btn {
+      display: flex;
+
+      justify-content: end;
+      // align-items: end;s
+      width: 89%;
+    }
+
+    &__img {
+      max-width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+    }
+  }
 }

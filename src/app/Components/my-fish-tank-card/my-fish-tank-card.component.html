@@ -1,25 +1,44 @@
 <div class="cardBody">
-    <div class="cardBody__left">
-        <div class="cardBody__left__image">
-            <img src="{{image}}" alt="" class="cardBody__left__image__img">
-        </div>
+  <div class="cardBody__left">
+    <div class="cardBody__left__image">
+      <img src="{{ image }}" alt="" class="cardBody__left__image__img" />
+    </div>
 
-        <div class="cardBody__left__content">
-            <h2 class="cardBody__left__content__name">{{name}}</h2>
-            <h5 class="cardBody__left__content__heading">Tank Location: <span class="cardBody__left__content__heading__location">{{address}}</span></h5>
-        </div>
+    <div class="cardBody__left__content">
+      <h2 class="cardBody__left__content__name">{{ name }}</h2>
+      <h5 class="cardBody__left__content__heading">
+        Tank Location:
+        <span class="cardBody__left__content__heading__location">{{
+          address
+        }}</span>
+      </h5>
     </div>
-    <div class="cardBody__right">
-        <div class="cardBody__right__content">
-            <h2 class="cardBody__right__content__name">Tank information</h2>
-            <p class="cardBody__right__content__item">{{totalLiters}} Litres (total)</p>
-            <p class="cardBody__right__content__item">12 Decorations</p>
-            <p class="cardBody__right__content__item" *ngFor="let item of fish">{{item.quantity +" x "+ item.id.name }}</p>
-            <P class="cardBody__right__content__item">{{remainingSpace}} L remaining</P>
-        </div>
-        <div class="cardBody__right__buttons">
-                <app-button label="Delete tank" class="danger" (clickHandler)="deleteBuild(id)"></app-button>
-                <app-button label="Update tank" class="secondary" routerLink="/dashboard/tank/{{id}}"></app-button>
-        </div>
+  </div>
+  <div class="cardBody__right">
+    <div class="cardBody__right__content">
+      <h2 class="cardBody__right__content__name">Tank information</h2>
+      <p class="cardBody__right__content__item">
+        {{ totalLiters }} Litres (total)
+      </p>
+      <p class="cardBody__right__content__item">12 Decorations</p>
+      <p class="cardBody__right__content__item" *ngFor="let item of fish">
+        {{ item.quantity + " x " + item.id.name }}
+      </p>
+      <P class="cardBody__right__content__item"
+        >{{ remainingSpace }} L remaining</P
+      >
     </div>
+    <div class="cardBody__right__buttons">
+      <app-button
+        label="Delete tank"
+        class="danger"
+        (clickHandler)="deleteBuild(id)"
+      ></app-button>
+      <app-button
+        label="Update tank"
+        class="secondary"
+        routerLink="/dashboard/tank/{{ id }}"
+      ></app-button>
+    </div>
+  </div>
 </div>

@@ -27,7 +27,6 @@ import { FishTanksComponent } from './Components/fish-tanks/fish-tanks.component
 import { MyFishTankCardComponent } from './Components/my-fish-tank-card/my-fish-tank-card.component';
 import { SingleTankViewComponent } from './Components/single-tank-view/single-tank-view.component';
 import { UpdateCardComponent } from './Components/update-card/update-card.component';
-import { CreateFishtankViewComponent } from './Components/create-fishtank-view/create-fishtank-view.component';
 import { RegistersteponeComponent } from './Components/registerstepone/registerstepone.component';
 import { RegistersteptwoComponent } from './Components/registersteptwo/registersteptwo.component';
 import { RegistersteptwoanswersComponent } from './Components/registersteptwoanswers/registersteptwoanswers.component';
@@ -38,10 +37,8 @@ import { SingleDecorViewComponent } from './Components/single-decor-view/single-
 import { PreBuildsViewComponent } from './Components/pre-builds-view/pre-builds-view.component';
 import { PrebuildCardsComponent } from './Components/prebuild-cards/prebuild-cards.component';
 import { FoundInBuidsCardComponent } from './Components/found-in-buids-card/found-in-buids-card.component';
-import { BuildviewComponent } from './Components/buildview/buildview.component';
-import { AddFishComponent } from './Components/add-fish/add-fish.component';
 import { NotificationModalComponent } from './Components/notification-modal/notification-modal.component';
-import { AddressModalComponent } from './Components/address-modal/address-modal.component';
+import { FilterpipePipe } from './Components/fish-tanks/filterpipe/filterpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -66,7 +63,7 @@ import { AddressModalComponent } from './Components/address-modal/address-modal.
     MyFishTankCardComponent,
     SingleTankViewComponent,
     UpdateCardComponent,
-    CreateFishtankViewComponent,
+
     RegistersteponeComponent,
     RegistersteptwoComponent,
     RegistersteptwoanswersComponent,
@@ -77,10 +74,8 @@ import { AddressModalComponent } from './Components/address-modal/address-modal.
     PreBuildsViewComponent,
     PrebuildCardsComponent,
     FoundInBuidsCardComponent,
-    BuildviewComponent,
-    AddFishComponent,
     NotificationModalComponent,
-    AddressModalComponent
+    FilterpipePipe,
   ],
   imports: [
     BrowserModule,
@@ -88,9 +83,9 @@ import { AddressModalComponent } from './Components/address-modal/address-modal.
     BrowserAnimationsModule,
     MatIconModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

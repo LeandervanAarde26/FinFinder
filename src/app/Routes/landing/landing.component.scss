@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 .container {
   display: flex;
@@ -7,13 +7,16 @@
   flex: 1;
   gap: 20px;
   background: rgb(30, 30, 30);
-  background: linear-gradient(0deg, darken($darkGrey, 12%) 34%, $darkestGrey 77%);
+  background: linear-gradient(
+    0deg,
+    darken($darkGrey, 12%) 34%,
+    $darkestGrey 77%
+  );
 
   h2 {
     width: 100%;
     text-align: center;
   }
-
 
   &__services {
     display: grid;
@@ -38,7 +41,6 @@
       justify-content: center;
       align-items: center;
       gap: 15px;
-
     }
 
     img {
@@ -46,8 +48,6 @@
       max-width: 80%;
       aspect-ratio: 1/0.8;
     }
-
-
 
     &__right {
       display: flex;
@@ -58,29 +58,25 @@
       flex-direction: column;
       gap: 15px;
 
-      &__imgCon{
+      &__imgCon {
         flex-grow: 100%;
         width: 100%;
         height: 50%;
-        background-image: url('../../../assets/shark.png');
+        background-image: url("../../../assets/shark.png");
         background-size: cover;
         background-position: center;
-        background-position-y:  55%;
+        background-position-y: 55%;
       }
     }
 
-    p{
+    p {
       max-width: 60%;
     }
 
-
-    .malawi{
+    .malawi {
       object-fit: contain;
       height: 40%;
       rotate: -8deg;
-
     }
   }
-
-
 }

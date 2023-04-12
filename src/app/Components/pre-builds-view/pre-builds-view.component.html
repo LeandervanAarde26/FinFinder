@@ -1,12 +1,10 @@
 <div class="container">
-
   <div class="container__header">
     <h2>Create Fish Tank</h2>
   </div>
 
   <div class="container__builds">
     <app-prebuild-cards
-
       *ngFor="let build of prebuilds"
       [imagePath]="build['imagePath'].imagePath"
       [name]="build.name"

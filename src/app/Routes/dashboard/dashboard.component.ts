@@ -6,13 +6,14 @@ import { routeTransitionAnimations } from 'src/app/route-transition-animations';
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  animations: [routeTransitionAnimations]
+  animations: [routeTransitionAnimations],
 })
 export class DashboardComponent {
-  constructor(private contexts: ChildrenOutletContexts){}
+  constructor(private contexts: ChildrenOutletContexts) {}
 
   getRouteAnimationData() {
-    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
+      'animation'
+    ];
   }
-
 }

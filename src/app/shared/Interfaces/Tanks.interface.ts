@@ -1,5 +1,5 @@
 export interface TankInterFace {
-    id: string, 
-    size: number,
-    quantity: number
+  id: string;
+  size: number;
+  quantity: number;
 }

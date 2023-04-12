@@ -1,28 +1,27 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
-.container{
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  transition: 300ms linear;
+  &__sectionHeading {
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+  &__instruction {
+    color: $white;
+    @include headingSix();
+  }
+
+  &__form {
     display: flex;
     flex-direction: column;
-    gap: 17px;
-    transition: 300ms linear;
-    &__sectionHeading {
-        margin-bottom: 30px;
-        font-weight: 500;
-    }
-    &__instruction {
-        color: $white;
-        @include headingSix();
-    }
+    gap: 23px;
 
-    &__form {
-        display: flex;
-        flex-direction: column;
-        gap: 23px;
-
-        &__invalid {
-            color: $danger;
-            font-size: 12px;
-        }
+    &__invalid {
+      color: $danger;
+      font-size: 12px;
     }
-
+  }
 }

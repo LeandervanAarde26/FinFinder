@@ -1,13 +1,20 @@
 <form class="container__left__form" [formGroup]="signIn">
+  <span
+    class="container__left__form__invalid"
+    *ngIf="!signIn.get('Answer').valid && signIn.get('Answer').touched"
+    >Please answer your question to access Inventory</span
+  >
 
-    <span class="container__left__form__invalid"
-        *ngIf="!signIn.get('Answer').valid && signIn.get('Answer').touched">Please answer your question to access
-        Inventory</span>
+  <span class="container__left__form__invalid" *ngIf="!answerCorrect"
+    >Wrong Answer provided</span
+  >
 
-        <span class="container__left__form__invalid"
-        *ngIf="!answerCorrect">Wrong Answer provided</span>
-
-    <app-input name="Answer" label="{{label}}?" type="text" required=true placeHolder="Your Answer"
-        [controlname]="signIn.controls['Answer']"></app-input>
-
+  <app-input
+    name="Answer"
+    label="{{ label }}?"
+    type="text"
+    required="true"
+    placeHolder="Your Answer"
+    [controlname]="signIn.controls['Answer']"
+  ></app-input>
 </form>
