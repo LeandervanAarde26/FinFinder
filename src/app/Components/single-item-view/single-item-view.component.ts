@@ -31,7 +31,7 @@ export class SingleItemViewComponent implements OnInit{
       this.diet = this.fish['diet']
       this.compat = data['compat'];
       this.nonCompat = data['nonCompat']
-      this.quantity = 0
+      this.quantity = data['mat'].fish.quantity
       console.log(data)
    }); 
   }

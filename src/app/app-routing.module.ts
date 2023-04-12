@@ -20,20 +20,54 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {
-    path: 'dashboard', component: DashboardComponent, children: [
-      { path: '', component: DashboardViewComponent, data: {animation: 'One'} },
-      { path: 'inventory', component: InventoryViewComponent, data: {animation: 'Two'} },
-      { path: 'item/:category/:id', component: SingleItemViewComponent, data: {animation: 'Three'} },
-      { path: 'innerTank/:category/:id', component: SingleDecorViewComponent, data: {animation: 'Three'} },
-      { path: 'tanks', component: FishTanksComponent, data: {animation: 'Four'} },
-      { path: 'tank/:id', component: SingleTankViewComponent, data: {animation: 'Five'} },
-      { path: 'create', component: CreateFishtankViewComponent, data: {animation: 'Six'} },
-      {path: 'builds', component: PreBuildsViewComponent, data: {animation: 'Six'}}
-    ]
-  }
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardViewComponent,
+        data: { animation: 'One' },
+      },
+      {
+        path: 'inventory',
+        component: InventoryViewComponent,
+        data: { animation: 'Two' },
+      },
+      {
+        path: 'item/:category/:id',
+        component: SingleItemViewComponent,
+        data: { animation: 'Three' },
+      },
+      {
+        path: 'innerTank/:category/:id',
+        component: SingleDecorViewComponent,
+        data: { animation: 'Three' },
+      },
+      {
+        path: 'tanks',
+        component: FishTanksComponent,
+        data: { animation: 'Four' },
+      },
+      {
+        path: 'tank/:id',
+        component: SingleTankViewComponent,
+        data: { animation: 'Five' },
+      },
+      {
+        path: 'create',
+        component: CreateFishtankViewComponent,
+        data: { animation: 'Six' },
+      },
+      {
+        path: 'builds',
+        component: PreBuildsViewComponent,
+        data: { animation: 'Six' },
+      },
+    ],
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

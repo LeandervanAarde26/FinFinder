@@ -1,18 +1,24 @@
 <div class="card">
-    <div class="card__image__amount">
-        <p >12</p>
+  <div class="card__image__amount">
+    <p>{{ newUserAmount }}</p>
+  </div>
+  <div class="card__image">
+    <img src="{{ fishImage }}" class="card__image__img" alt="" />
+  </div>
+  <div class="card__body">
+    <h5>
+      <strong>{{ fishname }}</strong>
+    </h5>
+    <div class="card__body__qty">
+      <p>Qty</p>
+      <p class="card__body__qty__decrement" (click)="Decrement()">-</p>
+      <p class="card__body__qty__ammount">{{ newValue }}</p>
+      <p class="card__body__qty__increment" (click)="Increment()">+</p>
     </div>
-    <div class="card__image">
-        <img src="../../../assets/Beta.png" class="card__image__img" alt="">
-    </div>
-    <div class="card__body">
-        <h5><strong>Beta Fish</strong></h5>
-        <div class="card__body__qty">
-            <p>Qty</p>
-            <p class="card__body__qty__decrement">-</p>
-            <p class="card__body__qty__ammount">15</p>
-            <p class="card__body__qty__increment">+</p>
-        </div>
-        <app-button class="secondary width" label="update item"></app-button>
-    </div>
+    <app-button
+      class="secondary width"
+      label="update item"
+      (click)="onClickHandler2($event)"
+    ></app-button>
+  </div>
 </div>

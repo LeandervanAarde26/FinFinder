@@ -1,37 +1,23 @@
 <div class="container">
     <div class="container__left">
         <div class="container__left__image">
-            <img src="../../../assets/Fishtank.png" class="container__left__image__img" alt="">
+            <img src="../../../assets/tank.png" class="container__left__image__img" alt="">
         </div>
         <div class="container__left__text">
-            <h2 class="heading">Build Name</h2>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Size (L)</span>: &nbsp; 100</h6>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Height (mm)</span>:  &nbsp;  40</h6>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Width (mm)</span>:  &nbsp; 300</h6>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">Length (mm)</span>: &nbsp; 400</h6>
-            <h6 class="container__left__text__key"><span class="container__left__text__span">In my Inventory</span>: &nbsp; 3</h6>
+            <h2 class="heading">{{buildData.name}}</h2>
+            <h6 class="container__left__text__key"><span class="container__left__text__span">Size (L)</span>: &nbsp; 
+                {{buildData.tank['Litres']}}
+            </h6>
+            <h6 class="container__left__text__key"><span class="container__left__text__span">Height (cm)</span>:  &nbsp;     {{buildData.tank['Height']}}</h6>
+            <h6 class="container__left__text__key"><span class="container__left__text__span">Width (cm)</span>:  &nbsp;    {{buildData.tank['Width']}}</h6>
+            <h6 class="container__left__text__key"><span class="container__left__text__span">Depth (cm)</span>: &nbsp;    {{buildData.tank['Depth']}}</h6>
             <app-button label="Update and Go back" class="secondary__outlined"></app-button>
         </div>
     </div>
 
     <div class="container__right">
         <h3 class="container__right__heading">Items in this tank</h3>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-        <app-update-card></app-update-card>
-
-
+        <app-update-card *ngFor="let fish of buildData.fish index as i" [fishImage]="fish.id.imagePath" [currentAmount]="fish.quantity" [userAmount]="matchedData[i].quantity" [fishname]="fish.id.name"
+        ></app-update-card>
         </div>
     </div>
