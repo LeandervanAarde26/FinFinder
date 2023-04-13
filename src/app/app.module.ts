@@ -39,6 +39,7 @@ import { PrebuildCardsComponent } from './Components/prebuild-cards/prebuild-car
 import { FoundInBuidsCardComponent } from './Components/found-in-buids-card/found-in-buids-card.component';
 import { NotificationModalComponent } from './Components/notification-modal/notification-modal.component';
 import { FilterpipePipe } from './Components/fish-tanks/filterpipe/filterpipe.pipe';
+import { PageNotFoundComponent } from './Routes/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { FilterpipePipe } from './Components/fish-tanks/filterpipe/filterpipe.pi
     FoundInBuidsCardComponent,
     NotificationModalComponent,
     FilterpipePipe,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

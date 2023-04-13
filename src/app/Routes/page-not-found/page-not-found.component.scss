@@ -1,0 +1,42 @@
+@import "../../../styles.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 88vh;
+  background: rgb(30, 30, 30);
+  background: linear-gradient(
+    0deg,
+    darken($darkGrey, 12%) 34%,
+    $darkestGrey 77%
+  );
+
+  background-image: url('../../../assets/LostFish.jpg');
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+
+  &__content{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // background-color: red;
+    padding: 60px;
+    gap: 20px;
+    
+
+    &__warning{
+        font-size: 80px;
+        color: $orange;
+    }
+
+    &__direction{
+        color: $blue
+    }
+  }
+  
+}

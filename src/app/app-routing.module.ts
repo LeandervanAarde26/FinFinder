@@ -13,6 +13,7 @@ import { LandingComponent } from './Routes/landing/landing.component';
 import { LoginComponent } from './Routes/login/login.component';
 import { RegisterComponent } from './Routes/register/register.component';
 import { PreBuildsViewComponent } from './Components/pre-builds-view/pre-builds-view.component';
+import { PageNotFoundComponent } from './Routes/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -59,6 +60,8 @@ const routes: Routes = [
       },
     ],
   },
+    {path: 'not-found', component: PageNotFoundComponent},
+    {path: '**', redirectTo: '/not-found'}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
