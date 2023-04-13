@@ -18,7 +18,7 @@ export class LandingComponent {
       'Not sure what you want to do for a tank? FinFinder can help you create amazing tanks! Pick one of our presets and start building today, if you dont like it, you can add more fish that are compatible!'
     ),
     new serviceCard(
-      '../../../assets/Puffer.png',
+      '../../../assets/Guppy.png',
       'View items',
       'View your inventory of all items, this includes all of your fish and everything that goes inside of your dream tank! Update quantities of items and manage your own tank like a pro with FinFinder today!'
     ),
