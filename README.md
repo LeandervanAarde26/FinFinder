@@ -135,9 +135,8 @@ Run the following in the command-line to install all the required dependencies:
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 
+![image2](https://drive.google.com/uc?export=view&id=1eHEyg7EDosaCBDD3KXpFT8KljRSXceLk)
 
-
-<img src="https://drive.google.com/uc?export=view&id=1eHEyg7EDosaCBDD3KXpFT8KljRSXceLk" alt="Mockup" width="100%">
 
 
 ### Personalised Inventory
@@ -157,7 +156,7 @@ Looking for a specific product? Fika has a searchbar that allows users to search
 ### Filter and search
 Seeing as the inventory is quite large, users hold the ability to filter their inventory based on the category (fish, decorations, utilities). They can also search their tanks in the My tanks section. 
 
-![image3](https://drive.google.com/uc?export=view&id=13fqsiSfRAUu6tCl278f3IpNFPU5YXa2a )
+![image3](https://drive.google.com/uc?export=view&id=13fqsiSfRAUu6tCl278f3IpNFPU5YXa2a)
 
 ### Like what you see? view it and review it on the individual product page
 Fika has an individual product page that holds 4 images of each product so that users can view it from every angle, colours are also visually showcased along with the sizes, discount and it will show if the shoe is in stock or not. If you are not sure about the shoe, take a look at the reviews and decide for yourself :D. Users also have the opportunity to leave a review and view other shoes on the site
