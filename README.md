@@ -29,7 +29,7 @@ Fin Finder is a website where users can manage their own inventory of fish and f
     <br />
    <br />
    <br />
-<h6 align="center"><a href="https://drive.google.com/uc?export=view&id=14hkEiHzcPIWxUBJUMf3PfueCY7b6r7cy">FinFinder walkthroug</a> </h6>
+<h6 align="center"><a href="https://drive.google.com/uc?export=view&id=14hkEiHzcPIWxUBJUMf3PfueCY7b6r7cy">FinFinder walkthrough</a> </h6>
    <!-- INSERT UP UP -->
     ·
     <a href="https://github.com/LeandervanAarde/FinFinder/issues">Report Bug</a>
@@ -43,15 +43,12 @@ Fin Finder is a website where users can manage their own inventory of fish and f
 * :tropical_fish: [About the Project](#about-the-project)
 * :tropical_fish: [Project Description](#project-description)
 * :tropical_fish: [Built With](#built-with)
-*:tropical_fish: [Getting Started](#getting-started)
+* :tropical_fish: [Getting Started](#getting-started)
 * :tropical_fish: [Prerequisites](#prerequisites)
 * :tropical_fish: [How to install](#how-to-install)
 * :tropical_fish: [Features and Functionality](#features-and-functionality)
 * :tropical_fish: [Concept Process](#concept-process)
-* :tropical_fish: [Ideation](#ideation)
-* :tropical_fish: [Wireframes](#wireframes)
 * :tropical_fish: [Development Process](#development-process)
-* :tropical_fish: [Implementation Process](#implementation-process)
 * :tropical_fish: [Highlights](#highlights)
 * :tropical_fish: [Challenges](#challenges)
 * :tropical_fish: [Future Implementation](#peer-reviews)
@@ -67,9 +64,8 @@ Fin Finder is a website where users can manage their own inventory of fish and f
 ## About the Project
 <!-- header image of project -->
 
-<img src="https://drive.google.com/uc?export=view&id=1MVesVdeQRPSL1pJgqw5yAf9LK7Lv9gcM" alt="Logo" width="100%">
 
-
+![image10](https://drive.google.com/uc?export=view&id=1eHEyg7EDosaCBDD3KXpFT8KljRSXceLk)
 ### Project Description
 
 FinFinder is a full stack MEAN stack project implemented Angular 6, Typegoose, MongoDB Atlas and NodeJS. The aim of the project is to allow users to manage their own inventory of fish and fish related itemsm ultimately giving them the ability to track and keep inventory up to date.
@@ -158,14 +154,17 @@ Seeing as the inventory is quite large, users hold the ability to filter their i
 
 ![image3](https://drive.google.com/uc?export=view&id=13fqsiSfRAUu6tCl278f3IpNFPU5YXa2a)
 
-### Like what you see? view it and review it on the individual product page
-Fika has an individual product page that holds 4 images of each product so that users can view it from every angle, colours are also visually showcased along with the sizes, discount and it will show if the shoe is in stock or not. If you are not sure about the shoe, take a look at the reviews and decide for yourself :D. Users also have the opportunity to leave a review and view other shoes on the site
+### Locations
+FinFinder considers Fishtanks to be a location where a user can store all their inventory, inventory can be updated in each location and can hold the items that were specififed in the build. 
 
-### Dont have an account? Sign up!
-Fika has an account system that will allow users to login/out of their accounts or sign up if they don't have an account. Viewers will only be able to add to their cart once they are logged in. 
+Users have the ability to craft their own locations based on their inventory, these locations are craftable based on the users inventory and will only become craftable once all the criteria is met.
 
-### All managed, in one place
-Admin page has been provided so that admins can edit/view update and delete stock. Admins can also dispatch any orders that have been placed. 
+### No passwords
+When users register for their own account, they are required to set up 3 security questions which will validate them upon logging in. Logging in will require users to answer one of these 3 questions.
+
+### Deployment
+This project has been deployed on <a href = "https://vercel.com/dashboard">Vercel</a>
+and the backend on <a href = "https://render.com/">Render</a>
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -173,22 +172,17 @@ Admin page has been provided so that admins can edit/view update and delete stoc
 ## Concept Process
 
 The `Conceptual Process` is the set of actions, activities and research that was done when starting this project. <br>
-For this application, I wanted to create something as close to a real ecommerce website as I possibly could while considering the time constraint that was set in place, I wanted to create something that would be attractive to the "users". Fika clothing was approached in more of a website, taking inspiration from websites such as the official VANS website and Takealot.  
+
+The goal of this application was to create an experience that felt personalised to each user to some extent, making it as clean as possible.  Considering the limit time constraint I was limited to my MVP (minimal viable product), I wanted to build an application which I could expand on if I needed to while learning the fundamentals of ANGULAR. 
 <br> 
 Throughout the conceptual process of this application , I had started taking more consideration of components and how the application should be structured, this would make it easier for myself to create reusable component and for future developers to uderstand how the project is structured. This would make the entire process smoother, I had also learned about MONGODB Atlas, a NoSQL database that would be used alongside NODE and Express. 
+
+Throuhgout the conceptual prcess, I had to carefully consider the structure of data while designing a front end that was attractive and informative, while exciting. Considering aspects such as the backend allowed me to identify where reusable components could be implemented, how services would be used and determine how my models would be setup. While there were challenges throughout the project, the conceptual process set a great fundamental start.
 
 
 ### Ideation
 
-![image7](https://drive.google.com/uc?export=view&id=1DyQ1Odspv3moaKG0TD8eC-hrzH0jjZea)
-### Wireframes
-Wireframing was one of the most important aspects of this project, I wanted to create an application that was pleasing to the viewer and that functioned well. Wireframing was the most time consuming aspect of this project considering that I had also created designs for this project beforehand. 
-![image6](https://drive.google.com/uc?export=view&id=1eVpD0UuiBSgq_hDE1oaZLEW4iznOIikz)
-![image8](https://drive.google.com/uc?export=view&id=1vKAs1lwSBQbaV_Wxx5T8lO3aFgWFiU4G)
-![image9](https://drive.google.com/uc?export=view&id=1FtlZz4_vqHLaMjifonwUaHfShA7czli8)
-![image10](https://drive.google.com/uc?export=view&id=1JyB1IyiGPcYHZyXKnvhh-WZuyorNXCh_)
-
-
+![image7](https://drive.google.com/uc?export=view&id=15Ak4f3V8ks2v-ODCgxR1PhZh5V9bj792)
 
 
 <!-- DEVELOPMENT PROCESS -->
@@ -200,77 +194,89 @@ The `Development Process` is the technical implementations and functionality don
 <!-- stipulate all of the functionality you included in the project -->
 <!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
 
-* Better management of components, giving each component a folder that will hold the stylesheet along with the component. 
-* Working with useContext in order to improve state management throughout the entire project, making less code do more. 
-* Working searchbar in the project that will return the correct data
-* SASS was implemented in order to make styling more efficient and easier to understand, this could also assist with consistency of colours throughout the project.
-* AWS buckets implemented for images, thus making the program run faster due to less memory taken up in the actual project. 
-* Filters and sorting implemented to aid users in the search for shoes. 
-* Colours loaded dynamically through the database along with the sizes 
-* Reviews section where users can leave a review and view all the other reviews 
-* Going back a page implemented through useNavigate(-1)
-* orders are tracked and dates are dynamically populated for dispatch 
+####    Front end Implementation
 
-#### Highlights
+* Implementation of models were used to structure my data appropriately ensuring that the project will not behave in ways it was not intended to.
+* Type checking, ensuring that variables do not change ensures that pages stay consistent. 
+* Services were set up as a way that all my data can be managed from one central place, making code easier to find and more readable. 
+* Animations were implemented in between routes to make the experience more pleasurable and can keep the useres more engaged. 
+* Updating inventory in tanks was quite the challenge, I showcase the users current inventory stock and the location stock, this was a challenge considering that they are in two seperate collections/documents. I overcame this by using the ```index as i``` in the forloop and using the users document to showcase users stock in their inventory.
+* Filtering by category was based on the structure of data, each category of data was looped through to showcase on the front end, I would then use a string to filter the data and show only the relevant data (achieved through *ngIF to filter on the loop)
+* Finding data on users builds and matching it to a fish ID to showcase in which of the users builds the fish can be found.
+* Angular routing and Activated route assisted me in getting individual views.
+
+
+#### Backend implementation
 <!-- stipulated the highlight you experienced with the project -->
-* Over the course of this project, one of the main highlights was the use of REACT, I have learned a lot about React recently and this was a way of testing it and really starting to make React work, this has been an exciting project in that regard and I will continue to learn more about REact so that I am able to use the full power of it. 
-* Using NodeJS and Express has been extremly exciting, Mongo has also been a highlight and a better experience than an SQL database. The use of Javascript as a backend language has been fantastic. 
-* I really enjoyed the complexity of this project, although I feel the project can be pushed further, I have done a lot and I am proud of the project as a whole. This project has definetly been my favorite project that I've done and I hope to improve it. 
+* Users:
+    * When users sign up , a document with fish, utilities and Decorations gets generated for each new user, meaning they have their own inventory to manage, this document gets placed in a collection of userMaterials that then holds the userMaterial ID, the user ID along with each items ID and quantity
+    * Users set up 3 Security question and when registering and one of the random questions will be asked upon logging in to authenticate the user. 
+    * Considering how the data is set up, users need to access subsections in their userMaterials document, avoiding 3 functions in this case was achieved by getting the materials category and sending it to the backend, this meant that I could use one function to access all of my data in the front end. 
+
+* Builds:
+    * Crafting builds was the most challenging part of the project, because of each user having their own inventory, I had to specify which build was craftable or not based only on the users ID , this mean taht I had to get the users Materials and the Build requirement. Looping through each of the requirement categories and user materials, I was able to match their ID's and loop through that array, checking if the quantities match or not, breaking at the first requirement that was not meat, ultimately making the tank uncraftable. By creating a new object with a complete value of true or false I was then able to manage that on the front end.  
+    * Crafting builds followed the same approach for updating quantitys, although it was a lot easier than getting builds, I would still be required to loop through each category and update the quantity of the users inventory based on the craft requirements.
+
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* One of my largest challenges in this project was considering how all the required fields were going to be laid out, this was more of a front end issue and I do thinnk I can improve on this aspect.  
-* The creation of my database has been a major struggle, I think I tried to make it more complex, but it has been a good struggle and I have definetly learned a lot about how to better structure things in the future 
-* One of my BIGGEST issues in this project lays within my cart, unfortunately the way I have set it up, it can only handle one variation at a time, this is a problem that I am actively investigating and will fix. 
+*   My largest challenge throughout any of my projects is my Data, setting up data and thinking like a backend Developer is a skill that I have not fully developed yet. This is something that I would have to improve and work on going forward in my career as a developer , however, I did come up with solutions to work around my data and make it meet all of the specified requirements for the outcome of the project
+* This challenge influenced all aspects of my project, because my goal is to make most of my data handling in the backend. 
+* Angular was a much steeper learning curve than react, with the more OOP based way of writing code, it was something that I had to adapt to. But this was overcome through doing an online course on Angular which aided me in understanding Angular a lot better. overall, this was not only a challenge, but a highlight considering that Angular is a fantastic tool to have.
+
+#### Highlights
+<!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
+* A challenge is always a highlight, finding a soluting to a problem was a great highlight of this term on top of learning the MEAN stack and its intergration. 
+* One click deployment of the project is a definite Highlight considering that I was able to deploy a project that I am proud of and still want to continue working on going forward. 
 
 #### Above And Beyond
 
 What aspects of this final build contribute to the `Above And Beyond` Component of your brief?
 <!-- what did you learn outside of the classroom and implement into your project-->
 * Implementation of reviews, this was fairly ease considering my DB structure, but it worked out for the best. 
-* AWS buckets
-* AWS buckets, this was used for image storage as opposed to using multer and the local machine. This was exciting because I dont think other students were able to achieve this.
-
-* Context state management
-* Context state management was implemented into the project in order to make code easier to read and make data easier to update, this was quite challenging and I dont fully understand Context as of yet, but I do have a good grasp on it and Im looking forward to learning more about it so that I can use something like REDUX or GraphQL 
-* SASS
-* Sass was used as a means to make Css more readable due to its structure. SCSS allows for external files to be linked. This was used to create more consistency in the front end of the application with the use of variables. The variables would allow me to predefine aspects such as fonts and colours to be re-used. Variables would also avoid aspects of too much repetition and making the code look un neat. 
+* Back end and front end deployment 
+* Each user gets their own managable inventory
+* Angular Models, using models instead of interfaces was something that I learned on my own. 
+* Backend implementation was taken more seriously and with users having their own inventory, I was able to really start testing my back end ability. 
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 * IN future I would like to do more server side rendering and focus on the backend.
  
-* A fututre implementation is making the project a more accurate ecommerce website, this would make it more appealing.
+* I would like to flesh the project out more as a whole. 
 
 <!-- MOCKUPS -->
 ## Final Outcome
 
 ### Mockups
 
-![image10](https://drive.google.com/uc?export=view&id=1D2ma2-aVcSnSGjWGr7jR-s6f7K2yYVIG)
+![image10](https://drive.google.com/uc?export=view&id=1zzX0_a9xiXxjoYKgPtl_Xt2tTMQ2aEOF)
 
 
-![image11](https://drive.google.com/uc?export=view&id=1MgG8gj8d_mE2aF25ZkXNcijICEb0zWNM)
+![image11](https://drive.google.com/uc?export=view&id=1IhHhwIUjGGTzSM-QQM9VIiDyU9uOaT8q)
 
-![image12](https://drive.google.com/uc?export=view&id=1DyQ1Odspv3moaKG0TD8eC-hrzH0jjZea)
+![image12](https://drive.google.com/uc?export=view&id=1FNTBQIx_5I9htBplz6mkH5Mu5UjqZfrU)
 
-![image13](https://drive.google.com/uc?export=view&id=1Y0L1dj2CV-1NOcrBL5Z2-uU_7vW-SSoG)
+![image13](https://drive.google.com/uc?export=view&id=1q9s6wPYBln5mQhK2TlcRmh4u9wxJf_ul)
 
-![image14](https://drive.google.com/uc?export=view&id=1oXXHJ75UTolK1Fx_yzHC1fjD-p1j339l)
+![image14](https://drive.google.com/uc?export=view&id=1BSNR9__Fe-ZxR01BQiAyxQH12mCM8J5R)
+![image15](https://drive.google.com/uc?export=view&id=1er5ijB9fxfpkoel7XEKQ1a-K2XZmMbP5)
 
 
 1AZRxRysJt9lKHe_fatdQWGNezd3PFrUv
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
 To see a run through of the application, click below:
-[View Demonstration](https://drive.google.com/uc?export=view&id=1cNGq8l3L4jkYujGfNEWfyXQMHyyK0_H3)
+[View Demonstration](https://drive.google.com/uc?export=view&id=14hkEiHzcPIWxUBJUMf3PfueCY7b6r7cy)
 
-See the [open issues](https://github.com/LeandervanAarde/cde-booking/issues) for a list of proposed features (and known issues).
+
+
+See the [open issues](https://github.com/LeandervanAarde/FinFinder/issues) for a list of proposed features (and known issues).
 
 <!-- AUTHORS -->
 ## Authors
 
-* [Leander van Aarde](https://github.com/LeandervanAarde/fikaclothing)
+* [Leander van Aarde](https://github.com/LeandervanAarde/FinFinder)
 
 <!-- LICENSE -->
 ## License
@@ -281,13 +287,17 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 * **leander van Aarde** -(mailto: Leander.vaonline@gmail.com) - [@instagram_handle](https://www.instagram.com/_.leander_e/) 
-* **Project Link** - https://github.com/LeandervanAarde/fikaclothing
+* **Project Link** - https://github.com/LeandervanAarde/FinFinder
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 <!-- all resources that you used and Acknowledgements here -->
 * [Stack overflow](https://stackoverflow.com/)
-* [Images](https://www.nike.com/za/)
-* [Images](https://www.adidas.co.za/outlet?cm_mmc=AdieSEM_Google_Search-_-adidas_Brand_GSN_Exact_AWO-_-Brand-_-adidas_brand-_-dv:eCom-_-cn:adidas_Brand_GSN_Exact_AWO-_-pc:Google_Search&cm_mmc1=ZA&cm_mmc2=PPC-Multiple-brand-Multiple-BM-ZA-EMEA-eCom-Paid_Search&gclid=Cj0KCQjw08aYBhDlARIsAA_gb0fw39zkUktuakE1CdeBlNpQDyePBn8pLW94A1wBcFBMpJRJ9OzMshgaAuKuEALw_wcB&gclsrc=aw.ds)
-* [AWS](https://aws.amazon.com/free/?trk=73c6744c-29f5-4966-bdc7-8599174c182d&sc_channel=ps&s_kwcid=AL!4422!3!444219541634!e!!g!!aws&ef_id=Cj0KCQjw08aYBhDlARIsAA_gb0dnWqHWmnxuX0ZVFEOC_r6m2A0mZyKIQs8dfv0rhrp3zZW2lVW1QPUaAkS7EALw_wcB:G:s&s_kwcid=AL!4422!3!444219541634!e!!g!!aws)
+* [Images](https://www.google.com/)
+* [Images](https://www.Unsplash.com/)
+* [SASS](https://sass-lang.com/)
+* [Angular](https://angular.io/)
+* [MongoDb Atlas](https://www.mongodb.com/)
+* [Express](https://expressjs.com/)
+* [Typegoose](https://typegoose.github.io/typegoose/)
 
