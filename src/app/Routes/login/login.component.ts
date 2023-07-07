@@ -29,27 +29,34 @@ export class LoginComponent implements OnInit, OnDestroy {
   correct: boolean;
 
   userSpecifics: Observable<UserModel>;
-
   ngOnInit() {
     this.signIn = this.loginService.signInForm;
     this.correct = true;
   }
-
-  async getQuestions() {
+  getUserQuestions() {
     if (this.signIn.controls['Email'].valid) {
-      this.userSpecifics = await this.loginService.getQuestions(
-        this.signIn.controls['Email'].value
-      );
-      if (this.userSpecifics) {
-        this.status = this.userSpecifics['status'];
-        this.question = this.userSpecifics['question'].question;
-        this.answer = this.userSpecifics['question'].answer;
-      }
+      this.loginService.getQuestions(this.signIn.controls['Email'].value)
+        .subscribe(
+          (userSpecifics : UserModel) => {
+            console.log(userSpecifics);
+            if (userSpecifics) {
+              this.status =  this.userSpecifics['status'];
+              this.question = this.userSpecifics['question'].question;
+              this.answer = this.userSpecifics['question'].answer;
+            }
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
     }
   }
 
-  checkAnswers() {
-    this.loginService.answerQuestion(this.answer);
+
+    
+    
+    checkAnswers() {
+    this.loginService.answerQuestion(this.answer.toString());
     this.correct = this.loginService.correct;
   }
 

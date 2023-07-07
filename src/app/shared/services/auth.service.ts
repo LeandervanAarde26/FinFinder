@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable, pipe, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { UserModel } from '../Models/User.model';
 import { Router } from '@angular/router';
@@ -43,22 +43,17 @@ export class AuthService {
       });
   }
 
-  getQuestions(email: string): Observable<UserModel> | any {
-    this.http.get<UserModel>(`${baseUrl}user/${email}`).subscribe({
-      next: (data) => {
-        (this.user = data['user']),
-          (this.backUpUser = sessionStorage.setItem('user', data['user']));
+  getQuestions(email: string): Observable<UserModel> {
+    return this.http.get<UserModel>(`${baseUrl}user/${email}`).pipe(
+      tap((data) => {
+        this.user = data['user'];
+        this.backUpUser = sessionStorage.setItem('user', data['user']);
         this.information = data;
-      },
-      error: (error) => {
-        console.log(error);
-      },
-    });
-
-    return this.information;
+      })
+    );
   }
 
-  answerQuestion(value) {
+  answerQuestion(value : string) {
     this.correct = true;
 
     if (this.signInForm.controls['Answer'].value === value) {
