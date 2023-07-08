@@ -13,7 +13,7 @@ export class FishTanksComponent implements OnInit {
   quickFilterItems: number[] = [60, 100, 200, 250];
   userBuilds: PrebuiltsModel[];
   userName: string;
-
+  isLoading: Boolean = true
   searchInventory(){
     console.log(this.searchQuery.value)
   }
@@ -22,8 +22,9 @@ export class FishTanksComponent implements OnInit {
     this.buildsService.getUserBuilds().subscribe((data) =>{
       this.userBuilds = data;
       // console.log(data)
-    })
-
+    }
+    )
+    this.isLoading = false
     this.userName = sessionStorage.getItem('username')
   }
 

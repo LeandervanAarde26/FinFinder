@@ -16,6 +16,8 @@ export class PreBuildsViewComponent implements OnInit {
     private userMaterialService: UserMaterialService,
     private authService: AuthService
   ) {}
+
+  isLoading: Boolean = true
   prebuilds: PrebuiltsModel[];
   userMaterial: UserMaterialModel[];
   filterState: boolean = false;
@@ -33,6 +35,7 @@ export class PreBuildsViewComponent implements OnInit {
         (a: any, b: any) => Number(b.complete) - Number(a.complete)
       );
       this.prebuilds = sorted;
+      this.isLoading = false
     });
   }
 }

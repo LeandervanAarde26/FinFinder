@@ -17,6 +17,7 @@ export class SingleTankViewComponent implements OnInit {
   userData: [] = [];
   filteredBuild: [] = [];
   matchedData: [] = []
+  isLoading: Boolean = true
   
 
   constructor(
@@ -51,6 +52,7 @@ export class SingleTankViewComponent implements OnInit {
           this.matchedData.push(userItem);
         }
       }
+      this.isLoading = false
     });
   }
 

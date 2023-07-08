@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!isLoading">
   <div class="container__header">
     <h2>Welcome, {{ userName }} to your inventory!</h2>
   </div>
@@ -71,3 +71,5 @@
     ></app-inventory-card>
   </div>
 </div>
+
+<app-loader-component [isLoading]="isLoading"></app-loader-component>

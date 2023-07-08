@@ -51,10 +51,6 @@ export class LoginComponent implements OnInit, OnDestroy {
         );
     }
   }
-
-
-    
-    
     checkAnswers() {
     this.loginService.answerQuestion(this.answer.toString());
     this.correct = this.loginService.correct;

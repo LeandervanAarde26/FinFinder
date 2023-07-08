@@ -34,6 +34,7 @@ export class InventoryViewComponent implements OnInit {
   userId: string = this.authService.user;
   filterSet: string = 'All items';
   userName: string;
+  isLoading: Boolean = true
 
   searchInventory() {
     console.log(this.searchQuery.value);
@@ -60,6 +61,8 @@ export class InventoryViewComponent implements OnInit {
 
       this.authService.getUserName();
       this.userName = sessionStorage.getItem('username');
+      this.isLoading = false
+      console.log("Done loading")
 
     });
   }

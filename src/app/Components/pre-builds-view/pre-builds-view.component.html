@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"  *ngIf="!isLoading" >
   <div class="container__header">
     <h2>Create Fish Tank</h2>
   </div>
@@ -17,3 +17,5 @@
     ></app-prebuild-cards>
   </div>
 </div>
+
+<app-loader-component [isLoading]="isLoading"></app-loader-component>

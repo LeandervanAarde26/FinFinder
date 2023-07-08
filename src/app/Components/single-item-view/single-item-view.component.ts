@@ -19,6 +19,7 @@ export class SingleItemViewComponent implements OnInit {
   quantity: number;
   nonCompat: [];
   tanks: [];
+  isLoading: Boolean = true
   constructor(
     private fishService: FishService,
     private activatedRoute: ActivatedRoute,
@@ -40,5 +41,7 @@ export class SingleItemViewComponent implements OnInit {
         this.quantity = data['mat'].fish.quantity;
         this.tanks = data['tanks'];
       });
+
+      this.isLoading = false
   }
 }

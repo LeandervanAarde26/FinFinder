@@ -40,6 +40,7 @@ import { FoundInBuidsCardComponent } from './Components/found-in-buids-card/foun
 import { NotificationModalComponent } from './Components/notification-modal/notification-modal.component';
 import { FilterpipePipe } from './Components/fish-tanks/filterpipe/filterpipe.pipe';
 import { PageNotFoundComponent } from './Routes/page-not-found/page-not-found.component';
+import { LoaderComponentComponent } from './components/loader-component/loader-component.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { PageNotFoundComponent } from './Routes/page-not-found/page-not-found.co
     NotificationModalComponent,
     FilterpipePipe,
     PageNotFoundComponent,
+    LoaderComponentComponent,
   ],
   imports: [
     BrowserModule,

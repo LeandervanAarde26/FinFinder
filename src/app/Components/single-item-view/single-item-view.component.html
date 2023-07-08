@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"  *ngIf="!isLoading" >
   <div class="container__left">
     <div class="container__left__image">
       <img
@@ -71,3 +71,4 @@
     </div>
   </div>
 </div>
+<app-loader-component [isLoading]="isLoading"></app-loader-component>
