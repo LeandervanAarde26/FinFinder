@@ -40,7 +40,7 @@ import { FoundInBuidsCardComponent } from './Components/found-in-buids-card/foun
 import { NotificationModalComponent } from './Components/notification-modal/notification-modal.component';
 import { FilterpipePipe } from './Components/fish-tanks/filterpipe/filterpipe.pipe';
 import { PageNotFoundComponent } from './Routes/page-not-found/page-not-found.component';
-import { LoaderComponentComponent } from './components/loader-component/loader-component.component';
+import { LoaderComponentComponent } from './Components/loader-component/loader-component.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +65,6 @@ import { LoaderComponentComponent } from './components/loader-component/loader-c
     MyFishTankCardComponent,
     SingleTankViewComponent,
     UpdateCardComponent,
-
     RegistersteponeComponent,
     RegistersteptwoComponent,
     RegistersteptwoanswersComponent,
@@ -79,7 +78,8 @@ import { LoaderComponentComponent } from './components/loader-component/loader-c
     NotificationModalComponent,
     FilterpipePipe,
     PageNotFoundComponent,
-    LoaderComponentComponent,
+    LoaderComponentComponent
+
   ],
   imports: [
     BrowserModule,
