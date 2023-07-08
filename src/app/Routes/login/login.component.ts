@@ -40,9 +40,9 @@ export class LoginComponent implements OnInit, OnDestroy {
           (userSpecifics : UserModel) => {
             console.log(userSpecifics);
             if (userSpecifics) {
-              this.status =  this.userSpecifics['status'];
-              this.question = this.userSpecifics['question'].question;
-              this.answer = this.userSpecifics['question'].answer;
+              this.status = userSpecifics['status'];
+              this.question = userSpecifics['question'].question;
+              this.answer = userSpecifics['question'].answer;
             }
           },
           (error) => {
