@@ -14,6 +14,7 @@ import { LoginComponent } from './Routes/login/login.component';
 import { RegisterComponent } from './Routes/register/register.component';
 import { PreBuildsViewComponent } from './Components/pre-builds-view/pre-builds-view.component';
 import { PageNotFoundComponent } from './Routes/page-not-found/page-not-found.component';
+import { AuthGuard } from './shared/services/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
