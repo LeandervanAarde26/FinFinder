@@ -14,7 +14,7 @@ export class AuthGuard implements CanActivate {
       const user = this.authService.user
       const sessionUser: string = sessionStorage.getItem('user')
 
-      if(!sessionUser){
+      if(!sessionUser ){
         return this.router.parseUrl("/")
       }
     return true;
