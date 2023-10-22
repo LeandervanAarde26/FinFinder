@@ -25,11 +25,11 @@
   <h3 align="center">Fin Finder | Fish inventory management</h3>
 
   <p align="center">
-Fin Finder is a website where users can manage their own inventory of fish and fish related items. Here you can view and edit your own fish, and if you have enough inventory,  build and craft one of the prebuilt tanks!
+    Find Findder is a Angular website with the aim to assist users with managing their fish and fish related inventory. The platform allows for basic CRUD functionallity including, building tanks, editing inventory and tanks, Deleting tanks and updating quantities. Lastly Fin Finder allows users to select one of the prebuilt tanks to build and start managing. 
     <br />
    <br />
    <br />
-<h6 align="center"><a href="https://drive.google.com/uc?export=view&id=14hkEiHzcPIWxUBJUMf3PfueCY7b6r7cy">FinFinder walkthrough</a> </h6>
+<h6 align="center"><a href="https://drive.google.com/file/d/1zIYd3Yj2wJeb64lnx9xvUwc8KE0YqRNW/view?usp=share_link">FinFinder walkthrough</a> </h6>
    <!-- INSERT UP UP -->
     ·
     <a href="https://github.com/LeandervanAarde/FinFinder/issues">Report Bug</a>
