@@ -68,7 +68,7 @@
 ![image10](/src/assets/Landing1.png)
 ### Project Description
 
-FinFinder is a full stack MEAN stack project implemented Angular 6, Typegoose, MongoDB Atlas and NodeJS. The aim of the project is to allow users to manage their own inventory of fish and fish related itemsm ultimately giving them the ability to track and keep inventory up to date.
+FinFinder is a comprehensive MEAN stack project that leverages  technologies including Angular 6, Typegoose, MongoDB Atlas, and NodeJS. The project's primary objective is to empower users to efficiently manage their fish inventory and related items, providing them with the capability to effortlessly track and maintain their inventory with up-to-date information.
 
 ### Built With
 * [SASS](https://sass-lang.com/)
@@ -92,13 +92,13 @@ To get a copied file of this repository, follow the steps below to get it instal
 ### Prerequisites
 
 Ensure that you have the latest version of [NPM](https://www.npmjs.com/) installed on your machine. The [GitHub Desktop](https://desktop.github.com/) program will also be required.
-Ensure that you have the Angular CLI installed on your local machine, you an install it by running the command  `npm install -g @angular/cli`
+Ensure that you have the Angular CLI installed on your local machine, you an install it by running the command 
+
+ `npm install -g @angular/cli`
 
 ### How to install
 
 ### Installation
-Here are a couple of ways to clone this repo:
-
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
@@ -121,7 +121,8 @@ Run the following in the command-line to install all the required dependencies:
 5. Once in the App, run  ```ng serve --open``` to compile in the browser.
 
 6. Go Clone the FinFinder server on my  <a href="https://github.com/LeandervanAarde/FinFinderServer">Github</a> and run 
-    ```npm i ``` to install all the dependancies. Access to the Mongo is restricted and will only be given access to upon request.
+    ```npm i ```
+    NOTE:  to install all the dependancies. Access to the Mongo is restricted and will only be given access to upon request.
 </br>
  </br>
 
@@ -146,8 +147,6 @@ Users can update inventory based on their inventory that they have and can view 
 *   Decorations, Utilities and Tanks
     * View in which of the prebuilts this item can be used.
 
-### Search Products
-Looking for a specific product? Fika has a searchbar that allows users to search for any available product that Fika has on the website. 
 
 ### Filter and search
 Seeing as the inventory is quite large, users hold the ability to filter their inventory based on the category (fish, decorations, utilities). They can also search their tanks in the My tanks section. 
@@ -229,7 +228,6 @@ The `Development Process` is the technical implementations and functionality don
 
 What aspects of this final build contribute to the `Above And Beyond` Component of your brief?
 <!-- what did you learn outside of the classroom and implement into your project-->
-* Implementation of reviews, this was fairly ease considering my DB structure, but it worked out for the best. 
 * Back end and front end deployment 
 * Each user gets their own managable inventory
 * Angular Models, using models instead of interfaces was something that I learned on my own. 
@@ -240,6 +238,8 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 * IN future I would like to do more server side rendering and focus on the backend.
  
 * I would like to flesh the project out more as a whole. 
+* The Database structure is not ideal, I have used this project too much like a SQL database, meaning there are issues with certain things, restructuring the database or switching to SQL is a future implementation to improve the project. 
+* Picking a better backend, while Node is a nice backend to use, I think something like PHP would be better suited to a project like this. 
 
 <!-- MOCKUPS -->
 ## Final Outcome
@@ -263,7 +263,7 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
 To see a run through of the application, click below:
-[View Demonstration](https://drive.google.com/uc?export=view&id=14hkEiHzcPIWxUBJUMf3PfueCY7b6r7cy)
+[View Demonstration](https://drive.google.com/file/d/1zIYd3Yj2wJeb64lnx9xvUwc8KE0YqRNW/view?usp=share_link)
 
 
 
@@ -296,4 +296,4 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 * [MongoDb Atlas](https://www.mongodb.com/)
 * [Express](https://expressjs.com/)
 * [Typegoose](https://typegoose.github.io/typegoose/)
-
+* [MaximilianSchwarzMuller](https://www.udemy.com/course/the-complete-guide-to-angular-2/)
