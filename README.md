@@ -65,7 +65,7 @@ Fin Finder is a website where users can manage their own inventory of fish and f
 <!-- header image of project -->
 
 
-![image10](https://drive.google.com/uc?export=view&id=1eHEyg7EDosaCBDD3KXpFT8KljRSXceLk)
+![image10](/src/assets/Landing1.png)
 ### Project Description
 
 FinFinder is a full stack MEAN stack project implemented Angular 6, Typegoose, MongoDB Atlas and NodeJS. The aim of the project is to allow users to manage their own inventory of fish and fish related itemsm ultimately giving them the ability to track and keep inventory up to date.
@@ -131,7 +131,7 @@ Run the following in the command-line to install all the required dependencies:
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 
-![image2](assets/Landing2.png)
+![image2](/src/assets/Login.png)
 
 
 
@@ -152,7 +152,7 @@ Looking for a specific product? Fika has a searchbar that allows users to search
 ### Filter and search
 Seeing as the inventory is quite large, users hold the ability to filter their inventory based on the category (fish, decorations, utilities). They can also search their tanks in the My tanks section. 
 
-![image3](https://drive.google.com/uc?export=view&id=13fqsiSfRAUu6tCl278f3IpNFPU5YXa2a)
+![image3](/src/assets/Artboard%201.png)
 
 ### Locations
 FinFinder considers Fishtanks to be a location where a user can store all their inventory, inventory can be updated in each location and can hold the items that were specififed in the build. 
@@ -182,17 +182,13 @@ Throuhgout the conceptual prcess, I had to carefully consider the structure of d
 
 ### Ideation
 
-![image7](https://drive.google.com/uc?export=view&id=15Ak4f3V8ks2v-ODCgxR1PhZh5V9bj792)
-
-
-<!-- DEVELOPMENT PROCESS -->
+![image7](/src/assets/features.png)
 ## Development Process
 
 The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
 
 ### Implementation Process
-<!-- stipulate all of the functionality you included in the project -->
-<!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
+
 
 ####    Front end Implementation
 
@@ -250,17 +246,17 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 ### Mockups
 
-![image10](https://drive.google.com/uc?export=view&id=1zzX0_a9xiXxjoYKgPtl_Xt2tTMQ2aEOF)
+![image10](/src/assets/mock2.png)
 
 
-![image11](https://drive.google.com/uc?export=view&id=1IhHhwIUjGGTzSM-QQM9VIiDyU9uOaT8q)
+![image11](/src/assets/mockup.png)
 
-![image12](https://drive.google.com/uc?export=view&id=1FNTBQIx_5I9htBplz6mkH5Mu5UjqZfrU)
+![image12](/src/assets/Artboard%201.png)
 
-![image13](https://drive.google.com/uc?export=view&id=1q9s6wPYBln5mQhK2TlcRmh4u9wxJf_ul)
+![image13](/src/assets/landing3.png)
 
-![image14](https://drive.google.com/uc?export=view&id=1BSNR9__Fe-ZxR01BQiAyxQH12mCM8J5R)
-![image15](https://drive.google.com/uc?export=view&id=1er5ijB9fxfpkoel7XEKQ1a-K2XZmMbP5)
+![image14](/src/assets/Landing2.png)
+![image15](/src/assets/Login.png)
 
 
 1AZRxRysJt9lKHe_fatdQWGNezd3PFrUv
