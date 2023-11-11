@@ -1,13 +1,14 @@
 @import "../../../styles.scss";
 
 .card {
-  padding: 12px;
+  padding: 18px;
   // @include boxShadow();
   background-color: $darkestGrey;
   display: flex;
   flex-direction: column;
   aspect-ratio: 9/12;
   transition: 0.3s linear;
+  justify-content: space-between;
   // justify-content: space-between;
 
   &:hover {
@@ -15,65 +16,74 @@
     background-color: darken($darkGrey, 10%);
   }
 
-  &__image {
+  &__top {
+    width: 100%;
     display: flex;
-    max-width: 100%;
-    height: 60%;
-    justify-content: center;
-    align-items: center;
-    // background-color: orange;
+    height: 15%;
+    flex-direction: row;
 
-    &__img {
-      height: 90%;
-      width: inherit;
-      max-width: 250px;
-      // background-color: red;
-      aspect-ratio: 12/9;
-      object-fit: cover;
-      object-position: center;
-    }
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
 
     &__amount {
-      border: 2px solid $blue;
-      padding: 10px;
-      border-radius: 55px;
-      max-width: 15px;
+      border: 1px solid $orange;
+      padding: 5px;
+      height: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      aspect-ratio: 1/1;
+      border-radius: 55px;
+      aspect-ratio: 1/1 !important;
+    }
+
+    &__update {
+      color: $white;
+      cursor: pointer;
+      @include body();
+
+      &:hover {
+        color: $blue;
+      }
     }
   }
 
-  &__body {
+  &__image {
+    width: 100%;
+    height: 50%;
+    // background-color: red;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
-    justify-content: space-between;
+    gap: 7px;
 
-    &__edit {
+    &__img {
+      width: 80%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &__h5{
+      color: $blue;
+    }
+  }
+
+  &__body{
+    &__edit{
+      width: 100%;
+      height: 100px;
       display: flex;
       flex-direction: column;
-      max-height: 100px;
-      width: 100%;
-      gap: 10px;
-      align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      // background-color: red;
+      align-items: center;
 
-      &__amount,
-      &__buttons {
+      &__amount{
         display: flex;
         flex-direction: row;
-        max-height: 100px;
-        width: 100%;
-        gap: 10px;
-        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-
+        align-items: center;
+        
         &__button {
           display: flex;
           width: fit-content;
@@ -82,13 +92,11 @@
           min-width: 40px;
           align-items: center;
           justify-content: center;
-
           &__arrow {
             color: white;
             font-size: 40px;
             transition: 0.3s linear;
             cursor: pointer;
-
             &:hover {
               color: $orange;
               transform: scale(1.2);
@@ -98,4 +106,45 @@
       }
     }
   }
+
+  
+  // &__image {
+  //   display: flex;
+  //   max-width: 90%;
+  //   height: 55%;
+  //   justify-content: center;
+  //   align-items: center;
+  //   // background-color: orange;
+
+  //   &__img {
+  //     height: 90%;
+  //     width: inherit;
+  //     max-width: 250px;
+  //     // background-color: red;
+  //     aspect-ratio: 12/9;
+  //     object-fit: contain;
+  //     object-position: center;
+  //   }
+
+  //   &__amount {
+  //     border: 2px solid $blue;
+  //     padding: 10px;
+  //     border-radius: 55px;
+  //     max-width: 15px;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     aspect-ratio: 1/1;
+  //   }
+  // }
+
+  // &__body {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   gap: 15px;
+  //   justify-content: space-between;
+
+  
+  // }
 }

@@ -17,6 +17,7 @@
     font-weight: 600;
     color: darken($white, 20%);
     cursor: none;
+    background-color: transparent;
   }
   transition: all 0.3s;
   position: relative;
@@ -40,6 +41,7 @@
 
     &__text {
       font-weight: 600;
+      background-color: transparent;
     }
   }
 
@@ -85,6 +87,7 @@
 
   &__text {
     font-weight: 600;
+    background-color: transparent;
   }
 }
 
@@ -93,6 +96,7 @@
 
   &__text {
     font-weight: 600;
+    background-color: transparent;
   }
 
   &__outlined {
@@ -137,6 +141,7 @@
 
   &__text {
     font-weight: 600;
+    background-color: transparent;
   }
 }
 
@@ -145,6 +150,7 @@
 
   &__text {
     font-weight: 600;
+    background-color: transparent;
   }
 
   &__outlined {

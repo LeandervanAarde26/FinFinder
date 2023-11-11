@@ -18,6 +18,12 @@
         >Please enter a valid email address</span
       >
 
+      <span
+      class="container__left__form__retrieve"
+      *ngIf="retrieving"
+      >Getting user Inventory...</span
+    >
+
       <app-input
         name="Email"
         label="E-mail"

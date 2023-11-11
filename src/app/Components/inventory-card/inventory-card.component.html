@@ -1,56 +1,59 @@
-<div class="card" (click)="onClickHandler($event)">
-  <div class="card__image__amount">
-    <p>{{ quantity }}</p>
+<div class="card">
+  <div class="card__top">
+    <div class="card__top__amount">
+      <p>{{ quantity }}</p>
+    </div>
+
+    <span
+      class="card__top__update"
+      (click)="changeUpdateState()"
+      [ngStyle]="{ display: edit ? 'none' : '' }"
+      >&#x270E; Update
+    </span>
+
+    <span
+      class="card__top__update"
+      (click)="changeUpdateState()"
+      [ngStyle]="{ display: edit ? '' : 'none' }"
+      >&#10060; Cancel
+    </span>
   </div>
+
   <div class="card__image">
     <img src="{{ image }}" class="card__image__img" alt="" />
-  </div>
-  <div class="card__body">
-    <h5>
-      <strong>{{ name }}</strong>
+    <h5 class="card__image__h5">
+      <strong>{{ edit ? "Update " + name : name }}</strong>
     </h5>
-    <app-button
-      class="secondary width"
-      label="update item"
-      (clickHandler)="changeUpdateState()"
-      [ngStyle]="{ display: edit ? 'none' : '' }"
-    ></app-button>
+  </div>
+
+  <div class="card__body">
     <app-button
       class="primary width"
       label="View Item"
       routerLink="/dashboard/{{ routingType }}/{{ category }}/{{ id }}"
       [ngStyle]="{ display: edit ? 'none' : '' }"
     ></app-button>
-    <h5 [ngStyle]="{ display: edit ? '' : 'none' }">Edit Quantity</h5>
-    <div class="card__body__edit" [ngStyle]="{ display: edit ? '' : 'none' }">
-      <div class="card__body__edit__amount">
-        <div class="card__body__edit__amount__button" (click)="Decrement()">
-          <span class="card__body__edit__amount__button__arrow">&#8249;</span>
+    <div class="card__body__edit"[ngStyle]="{ display: edit ? '' : 'none' }" >
+
+        <div class="card__body__edit__amount">
+          <div class="card__body__edit__amount__button" (click)="Decrement()">
+            <span class="card__body__edit__amount__button__arrow">&#8249;</span>
+          </div>
+  
+          <h5 class="card__body__edit__amount__quantity">
+            {{ newValue }}
+          </h5>
+          <div class="card__body__edit__amount__button" (click)="Increment()">
+            <span class="card__body__edit__amount__button__arrow">&#8250;</span>
+          </div>
         </div>
 
-        <h5 class="card__body__edit__amount__quantity">
-          {{ newValue }}
-        </h5>
-        <div class="card__body__edit__amount__button" (click)="Increment()">
-          <span class="card__body__edit__amount__button__arrow">&#8250;</span>
-        </div>
-      </div>
-
-      <div class="card__body__edit__buttons">
         <app-button
-          class="danger width"
-          label="Cancel Update"
-          (clickHandler)="changeUpdateState()"
-          [ngStyle]="{ display: edit ? '' : 'none' }"
-        ></app-button>
-
-        <app-button
-          class="secondary width"
-          label="update item"
-          (clickHandler)="updateQuantity(category, id)"
-          [ngStyle]="{ display: edit ? '' : 'none' }"
-        ></app-button>
-      </div>
+        class="secondary width"
+        label="update item"
+        (clickHandler)="updateQuantity(category, id)"
+        [ngStyle]="{ display: edit ? '' : 'none' }"
+      ></app-button>
     </div>
   </div>
 </div>

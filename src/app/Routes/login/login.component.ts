@@ -27,13 +27,16 @@ export class LoginComponent implements OnInit, OnDestroy {
   value: boolean = false;
   userId: string;
   correct: boolean;
+  retrieving: boolean = false;
 
   userSpecifics: Observable<UserModel>;
   ngOnInit() {
     this.signIn = this.loginService.signInForm;
     this.correct = true;
+   
   }
   getUserQuestions() {
+    this.retrieving = !this.retrieving
     if (this.signIn.controls['Email'].valid) {
       this.loginService.getQuestions(this.signIn.controls['Email'].value)
         .subscribe(
@@ -43,6 +46,7 @@ export class LoginComponent implements OnInit, OnDestroy {
               this.status = userSpecifics['status'];
               this.question = userSpecifics['question'].question;
               this.answer = userSpecifics['question'].answer;
+              this.retrieving = !this.retrieving
             }
           },
           (error) => {
